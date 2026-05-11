@@ -1,0 +1,79 @@
+/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Orbitron:wght@400;500;700;900&display=swap');
+
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+@layer utilities {
+  .neon-text-cyan {
+    text-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+  }
+  .neon-text-pink {
+    text-shadow: 0 0 5px #ff00e5, 0 0 10px #ff00e5, 0 0 20px #ff00e5;
+  }
+  .neon-box-cyan {
+    box-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff, inset 0 0 5px #00f0ff;
+  }
+  .neon-box-pink {
+    box-shadow: 0 0 5px #ff00e5, 0 0 10px #ff00e5, inset 0 0 5px #ff00e5;
+  }
+  .neon-border-cyan {
+    border-color: #00f0ff;
+    box-shadow: 0 0 10px #00f0ff, inset 0 0 10px #00f0ff;
+  }
+  .neon-border-pink {
+    border-color: #ff00e5;
+    box-shadow: 0 0 10px #ff00e5, inset 0 0 10px #ff00e5;
+  }
+}
+body {
+  background-color: #050505;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+.scanlines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0) 50%,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0.2)
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0.3;
+}
+.crt-flicker {
+  animation: flicker 0.15s infinite;
+}
+@keyframes flicker {
+  0% { opacity: 0.95; }
+  50% { opacity: 0.85; }
+  100% { opacity: 0.95; }
+}
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+}
+.dev-theme ::-webkit-scrollbar-thumb {
+  background: #00f0ff;
+}
+.dj-theme ::-webkit-scrollbar-thumb {
+  background: #ff00e5;
+}
