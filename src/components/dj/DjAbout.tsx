@@ -85,7 +85,7 @@ export function DjAbout() {
             <div className="absolute -inset-4 bg-gradient-to-tr from-neon-pink to-neon-purple opacity-30 blur-2xl rounded-full"></div>
             <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border-2 border-neon-pink/50">
               <img
-                src="https://images.unsplash.com/photo-1571266028243-d220bc31e2c5?w=800&q=80"
+                src="Dj Jay P.png"
                 alt="DJ Pro Jay DJing"
                 className="w-full h-full object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-700" />
               

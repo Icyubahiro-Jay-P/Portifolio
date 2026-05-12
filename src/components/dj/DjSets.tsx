@@ -16,7 +16,7 @@ const sets = [
   duration: '2:15:30',
   plays: '8.9K',
   image:
-  'https://images.unsplash.com/photo-1558369178-6656d79ce2be?w=600&q=80'
+  'dj 2.png'
 },
 {
   title: 'NEON DREAMS MIX',
@@ -24,7 +24,7 @@ const sets = [
   duration: '0:58:20',
   plays: '15.2K',
   image:
-  'https://images.unsplash.com/photo-1493225457124-a1a2a5f0fa05?w=600&q=80'
+  'dj 3.png'
 },
 {
   title: 'SYSTEM OVERRIDE (LIVE)',

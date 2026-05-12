@@ -29,7 +29,8 @@ export function DevAbout() {
             
             <div className="absolute inset-0 transition-transform translate-x-4 translate-y-4 bg-neon-cyan -z-10 group-hover:translate-x-2 group-hover:translate-y-2"></div>
             <img
-              src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=800&q=80"
+              // src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=800&q=80"
+              src="Dev Jay P.png"
               alt="Irakoze Icyubahiro Jean Pierre - Developer"
               className="w-full h-[500px] object-cover grayscale group-hover:grayscale-0 transition-all duration-500 border border-dark-border" />
             
