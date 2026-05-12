@@ -56,7 +56,7 @@ export function DevAbout() {
 
             <p className="font-sans text-lg leading-relaxed text-gray-300">
               I'm a full-stack engineer obsessed with performance, architecture,
-              and pixel-perfect UIs. With over 6 years of experience building
+              and pixel-perfect UIs. With over 3 years of experience building
               scalable applications, I thrive in the space where complex backend
               systems meet intuitive user experiences.
             </p>
@@ -70,13 +70,13 @@ export function DevAbout() {
 
             <div className="grid grid-cols-3 gap-6 pt-8 border-t border-dark-border">
               <div>
-                <div className="mb-2 text-3xl text-white font-display">6+</div>
+                <div className="mb-2 text-3xl text-white font-display">3+</div>
                 <div className="font-mono text-xs tracking-widest text-gray-500">
                   YEARS EXP
                 </div>
               </div>
               <div>
-                <div className="mb-2 text-3xl text-white font-display">40+</div>
+                <div className="mb-2 text-3xl text-white font-display">30+</div>
                 <div className="font-mono text-xs tracking-widest text-gray-500">
                   PROJECTS
                 </div>

@@ -5,7 +5,7 @@ const projects = [
   title: 'BEST DECOR v 3.0',
   description:
   'A high-performance system that allows users to manage their rental products efficiently.',
-  tech: ['React', 'Javascript', 'Node.js', 'MongoDB'],
+  tech: ['React JS', 'Express JS', 'Node.js', 'MongoDB'],
   links: {
     github: 'https://github.com/Icyubahiro-Jay-P/BEST-DECOR-v3',
     live: '#'
@@ -15,7 +15,7 @@ const projects = [
   title: 'BEST DECOR v 2.0',
   description:
   'A high-performance system that allows users to manage their rental products efficiently.',
-  tech: ['PHP', 'Javascript', 'Ajax',],
+  tech: ['PHP', 'Javascript', 'Ajax', 'MySQL'],
   links: {
     github: 'https://github.com/Icyubahiro-Jay-P/BEST-DECOR-v2',
     live: '#'

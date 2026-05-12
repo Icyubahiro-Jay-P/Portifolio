@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { PlayIcon, ChevronDownIcon } from 'lucide-react';
+import { PlayIcon } from 'lucide-react';
 export function DjHero() {
   return (
     <section className="relative flex flex-col items-center justify-center min-h-screen px-6 pt-20 overflow-hidden">
@@ -64,16 +64,15 @@ export function DjHero() {
           DJ <span className="text-neon-pink">/</span> Producer
         </h2>
 
-        <p className="max-w-2xl mx-auto mb-12 font-sans text-xl leading-relaxed text-gray-300">
-          Blending underground techno with heavy basslines. Creating atmospheres
-          that move the mind and the body.
+        <p className="max-w-2xl mx-auto mb-12 font-sans text-xl leading-relaxed text-gray-200 neon-text-pink">
+          Pro sound · Pro vibe
         </p>
 
         <div className="flex flex-col items-center justify-center gap-6 sm:flex-row">
-          <button className="w-full px-10 py-5 text-xl font-bold tracking-widest text-white transition-all duration-300 rounded-full sm:w-auto bg-neon-pink font-display hover:bg-white hover:text-neon-pink neon-box-pink">
+          <button className="w-full px-10 py-5 text-xl font-bold tracking-widest text-white transition-all duration-300 rounded-full sm:w-auto bg-neon-pink font-display hover:bg-white hover:text-neon-pink neon-box-pink" onClick={()=> window.scrollTo(0, 3400)}>
             BOOK A SET
           </button>
-          <button className="flex items-center justify-center w-full gap-3 px-10 py-5 text-xl font-bold tracking-widest transition-all duration-300 border-2 rounded-full sm:w-auto border-neon-pink text-neon-pink font-display hover:bg-neon-pink/20">
+          <button className="flex items-center justify-center w-full gap-3 px-10 py-5 text-xl font-bold tracking-widest transition-all duration-300 border-2 rounded-full sm:w-auto border-neon-pink text-neon-pink font-display hover:bg-neon-pink/20" onClick={()=> window.scrollTo(0,1800)}>
             <PlayIcon className="w-6 h-6" /> LISTEN NOW
           </button>
         </div>

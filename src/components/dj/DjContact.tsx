@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { InstagramIcon, MailIcon, MusicIcon, SendIcon } from "lucide-react";
+import { InstagramIcon, MailIcon, MusicIcon, SendIcon, YoutubeIcon} from "lucide-react";
 export function DjContact() {
   return (
     <section className="py-32 px-6 relative pb-48">
@@ -51,7 +51,7 @@ export function DjContact() {
                   {
                     icon: InstagramIcon,
                     label: "Instagram",
-                    href: "https://www.instagram.com/dj_pro_jay",
+                    href: "https://instagram.com/dj_pro_jay",
                   },
                   {
                     icon: MusicIcon,
@@ -59,9 +59,9 @@ export function DjContact() {
                     href: "https://soundcloud.com/djprojay/"
                   },
                   {
-                    icon: MusicIcon,
-                    label: "Spotify",
-                    href: ""
+                    icon: YoutubeIcon,
+                    label: "Youtube",
+                    href: "https://youtube.com/@djprojay"
                   }, // Using MusicIcon as placeholder for Spotify/SoundCloud
                 ].map((social, idx) => (
                   <a
@@ -106,7 +106,7 @@ export function DjContact() {
                   </label>
                   <input
                     type="text"
-                    className="w-full bg-dark border-b-2 border-dark-border focus:border-neon-pink focus:outline-none text-white py-3 font-sans transition-colors"
+                    className="w-full bg-dark border-b-2 border-dark-border focus:border-neon-pink focus:outline-none text-white p-3 font-sans transition-colors"
                     placeholder="Your Name"
                   />
                 </div>
@@ -116,7 +116,7 @@ export function DjContact() {
                   </label>
                   <input
                     type="email"
-                    className="w-full bg-dark border-b-2 border-dark-border focus:border-neon-pink focus:outline-none text-white py-3 font-sans transition-colors"
+                    className="w-full bg-dark border-b-2 border-dark-border focus:border-neon-pink focus:outline-none text-white p-3 font-sans transition-colors"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -126,7 +126,7 @@ export function DjContact() {
                 <label className="block font-sans font-bold text-gray-400 tracking-widest uppercase text-xs mb-3">
                   EVENT TYPE / INQUIRY
                 </label>
-                <select className="w-full bg-dark border-b-2 border-dark-border focus:border-neon-pink focus:outline-none text-white py-3 font-sans transition-colors appearance-none">
+                <select className="w-full bg-dark border-b-2 border-dark-border focus:border-neon-pink focus:outline-none text-white p-3 font-sans transition-colors appearance-none">
                   <option>Club Booking</option>
                   <option>Festival Booking</option>
                   <option>Private Event</option>
@@ -141,7 +141,7 @@ export function DjContact() {
                 </label>
                 <textarea
                   rows={4}
-                  className="w-full bg-dark border-b-2 border-dark-border focus:border-neon-pink focus:outline-none text-white py-3 font-sans transition-colors resize-none"
+                  className="w-full bg-dark border-b-2 border-dark-border focus:border-neon-pink focus:outline-none text-white p-3 font-sans transition-colors resize-none"
                   placeholder="Tell me about your event..."
                 ></textarea>
               </div>

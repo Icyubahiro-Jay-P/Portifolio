@@ -24,14 +24,14 @@ export function DjAbout() {
             </h2>
 
             <p className="font-sans text-gray-300 text-xl leading-relaxed">
-              What started as late-night coding sessions with underground mixes
+              What started as late night coding sessions with mixes
               playing in the background evolved into a full-blown obsession with
               sound design and crowd psychology.
             </p>
 
             <p className="font-sans text-gray-400 text-lg leading-relaxed">
-              As VEX, I bring the same analytical precision from software
-              engineering into my sets—building tension, managing energy levels,
+              As DJ Pro Jay, I bring the same analytical precision from software
+              engineering into my sets building tension, managing energy levels,
               and executing flawless transitions. Whether it's a dark warehouse
               techno set or a high-energy house mix, the goal is always to
               create an immersive sonic architecture.
@@ -86,7 +86,7 @@ export function DjAbout() {
             <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border-2 border-neon-pink/50">
               <img
                 src="https://images.unsplash.com/photo-1571266028243-d220bc31e2c5?w=800&q=80"
-                alt="VEX DJing"
+                alt="DJ Pro Jay DJing"
                 className="w-full h-full object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-700" />
               
               <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent"></div>
