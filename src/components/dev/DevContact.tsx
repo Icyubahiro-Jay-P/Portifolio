@@ -70,7 +70,7 @@ export function DevContact() {
                   {
                     icon: InstagramIcon,
                     label: "Instagram",
-                    href: "https://www.instagram.com/dj_pro_jay"
+                    href: "https://www.instagram.com/__j.a.y.p__"
                   },
                 ].map((social, idx) => (
                   <a
