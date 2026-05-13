@@ -8,7 +8,7 @@ const sets = [
   duration: '1:02:45',
   plays: '12.4K',
   image:
-  'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&q=80'
+  'Mix 1.png'
 },
 {
   title: 'WAREHOUSE SESSIONS 004',
@@ -16,7 +16,7 @@ const sets = [
   duration: '2:15:30',
   plays: '8.9K',
   image:
-  'dj 2.png'
+  'Mix 2.png'
 },
 {
   title: 'NEON DREAMS MIX',
@@ -24,7 +24,7 @@ const sets = [
   duration: '0:58:20',
   plays: '15.2K',
   image:
-  'dj 3.png'
+  'Mix 3.png'
 },
 {
   title: 'SYSTEM OVERRIDE (LIVE)',
@@ -32,7 +32,7 @@ const sets = [
   duration: '1:30:00',
   plays: '22.1K',
   image:
-  'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&q=80'
+  'Mix 4.png'
 }];
 
 export function DjSets() {
