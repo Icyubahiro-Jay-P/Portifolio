@@ -10,12 +10,12 @@ const faqs = [
 {
   question: 'DO YOU PLAY PRIVATE EVENTS?',
   answer:
-  'Yes, I am available for select private events, provided the musical direction aligns with my style. I do not take open-format or top-40 requests.'
+  'Yes, I am available for select private events, provided the musical direction aligns with my style.'
 },
 {
   question: 'WHAT IS YOUR TECHNICAL RIDER?',
   answer:
-  'Standard setup requires 3x Pioneer CDJ-3000s and 1x DJM-900NXS2 or V10 mixer. High-quality monitors are essential. Full rider will be provided upon booking confirmation.'
+  'Any setup would work, and on certain bookings the full rider is to be provided upon booking.'
 },
 {
   question: 'DO YOU TRAVEL INTERNATIONALLY?',

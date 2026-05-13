@@ -34,7 +34,8 @@ export function DevAbout() {
               alt="Irakoze Icyubahiro Jean Pierre - Developer"
               className="w-full h-[500px] object-cover grayscale group-hover:grayscale-0 transition-all duration-500 border border-dark-border" />
             
-            <div className="absolute inset-0 transition-opacity duration-500 bg-neon-cyan/20 mix-blend-overlay group-hover:opacity-0"></div>
+            {/* <div className="absolute inset-0 transition-opacity duration-500 bg-neon-cyan/20 mix-blend-overlay group-hover:opacity-0"></div> */}
+            <div className="absolute inset-0 transition-opacity duration-500 bg-neon-cyan/20 mix-blend-overlay"></div>
           </motion.div>
 
           <motion.div
