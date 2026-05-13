@@ -6,7 +6,7 @@ Yo, what's good? This is the README for https://djprojay.vercel.app/  my slick-a
 
 # Overview
 
-A modern, dual-themed (light/dark or whatever portals you got popping), high-performance developer portfolio showcasing my skills as a Black male American dev who's out here building shit that slaps. Clean UI, smooth animations, mobile-first, and zero fluff.
+A modern, dark-themed, high-performance developer portfolio showcasing my skills as a dev who's out here building shit that slaps. Clean UI, smooth animations, mobile-first, and zero fluff.
 
 It's not just a portfolio – it's a whole vibe.
 
@@ -17,7 +17,7 @@ Deployed on Vercel because speed and reliability matter, fam.
 # Features
 
 - **Dual Portal Design**  
-  Switch between two fire modes/portals (probably light/dark or creative splits – you already know it's clean).
+  Switch between two fire modes/portals
 
 - **Fully Responsive**  
   Looks elite on phone, tablet, or desktop.
