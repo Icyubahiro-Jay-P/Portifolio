@@ -14,7 +14,7 @@ export function DevContact() {
           <h2 className="text-3xl font-bold tracking-wider text-white font-display md:text-5xl">
             <span className="text-neon-cyan">05.</span> ESTABLISH_CONNECTION
           </h2>
-          <div className="flex-1 h-px bg-gradient-to-r from-neon-cyan/50 to-transparent"></div>
+          <div className="flex-1 h-px bg-linear-to-r from-neon-cyan/50 to-transparent"></div>
         </div>
 
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
@@ -102,7 +102,7 @@ export function DevContact() {
             }}
             className="relative p-8 border bg-dark-surface border-dark-border"
           >
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-neon-cyan to-transparent"></div>
+            <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-neon-cyan to-transparent"></div>
 
             <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
               <div>

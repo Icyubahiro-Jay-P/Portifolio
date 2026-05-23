@@ -1,4 +1,3 @@
-import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { HomeIcon, Code2Icon, Disc3Icon } from 'lucide-react';
@@ -13,13 +12,9 @@ export function RealmNav() {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 1 }}
-      className="fixed z-50 bottom-6 flex items-center justify-center w-full 
-                 " // added subtle shadow for that premium pop
+      className="fixed z-50 flex items-center justify-center w-full bottom-6 " // added subtle shadow for that premium pop
     >
-      <div className='flex items-center gap-2 p-2 
-                 bg-dark-surface/90 backdrop-blur-md 
-                 border border-dark-border rounded-full
-                 shadow-2xl w-fit'>
+      <div className='flex items-center gap-2 p-2 border rounded-full shadow-2xl bg-dark-surface/90 backdrop-blur-md border-dark-border w-fit'>
         {/* Home Button */}
         <button
           onClick={() => navigate('/')}
