@@ -2,13 +2,13 @@ const SoundCloud = () => {
   return (
     <svg
       fill="currentColor"
-      height="40px"
-      width="40px"
+      height="56px"
+      width="56px"
       version="1.1"
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="-271 345.8 256 111.2"
-      className="text-gray-400 transition-colors group-hover:text-neon-pink"
+      className="text-gray-400 transition-colors group-hover:text-neon-pink group-hover:scale-110"
       stroke="currentColor"
     >
       <g>

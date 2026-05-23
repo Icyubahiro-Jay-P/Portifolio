@@ -2,14 +2,14 @@
 const Discord = () => {
   return (
     <svg
-      width="40px"
-      height="40px"
+      width="55px"
+      height="55px"
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
       stroke="currentColor"
       stroke-width="1.536"
-      className="text-gray-400 transition-colors group-hover:text-neon-pink"
+      className="text-gray-400 transition-colors group-hover:text-neon-pink group-hover:scale-110"
     >
       <g id="SVGRepo_bgCarrier" stroke-width="0" />
 

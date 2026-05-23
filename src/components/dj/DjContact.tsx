@@ -2,18 +2,21 @@ import { motion } from "framer-motion";
 import {
   InstagramIcon,
   MailIcon,
-  MusicIcon,
   SendIcon,
   YoutubeIcon,
+  PhoneIcon
 } from "lucide-react";
 import Spotify from "../../assets/icons/Spotify";
 import Tiktok from "../../assets/icons/Tiktok";
 import Twitch from "../../assets/icons/Twitch";
 import SoundCloud from "../../assets/icons/SoundCloud";
 import Discord from "../../assets/icons/Discord";
+import Whatsapp from "../../assets/icons/Whatsapp";
+import Snapchat from "../../assets/icons/Snapchat";
+import Linktree from "../../assets/icons/Linktree";
 export function DjContact() {
   // Custom Spotify SVG with hover support
-  
+
   return (
     <section className="relative px-6 py-32 pb-48">
       <div className="mx-auto max-w-7xl">
@@ -53,7 +56,8 @@ export function DjContact() {
               </a>
 
               {/* Social Icons */}
-              <div className="flex gap-6">
+              {/* Social Icons */}
+              <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
                 {[
                   {
                     icon: InstagramIcon,
@@ -78,7 +82,7 @@ export function DjContact() {
                   {
                     icon: Spotify,
                     label: "Spotify",
-                    href: "https://open.spotify.com/artist/YOUR_SPOTIFY_ID_HERE", // ← Change this bro
+                    href: "https://open.spotify.com/artist/YOUR_SPOTIFY_ID_HERE",
                   },
                   {
                     icon: YoutubeIcon,
@@ -88,7 +92,32 @@ export function DjContact() {
                   {
                     icon: Tiktok,
                     label: "Tiktok",
-                    href: "https://tiktok.com/djprojay", // ← Change this bro
+                    href: "https://tiktok.com/djprojay",
+                  },
+                  {
+                    icon: Whatsapp,
+                    label: "Whatsapp",
+                    href: "https://wa.me/25078912435",
+                  },
+                  {
+                    icon: Snapchat,
+                    label: "Snapchat",
+                    href: "https://snapchat.com/add/djprojay",
+                  },
+                  {
+                    icon: PhoneIcon,
+                    label: "Call",
+                    href: "tel:0789124135",
+                  },
+                  {
+                    icon: Linktree,
+                    label: "Linktree",
+                    href: "https://linktr.ee/djprojay",
+                  },
+                  {
+                    icon: Linktree,
+                    label: "Mixcloud",
+                    href: "https://mixcloud/djprojay",
                   },
                 ].map((social, idx) => (
                   <a
@@ -96,10 +125,10 @@ export function DjContact() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex flex-col items-center justify-center flex-1 p-8 transition-all border-2 group rounded-2xl bg-dark-surface border-dark-border hover:border-neon-pink"
+                    className="flex flex-col items-center justify-center p-8 transition-all border-2 group rounded-2xl bg-dark-surface border-dark-border hover:border-neon-pink"
                   >
                     <social.icon className="w-10 h-10 mb-4 text-gray-400 transition-all duration-300 group-hover:text-neon-pink group-hover:scale-110" />
-                    <span className="font-sans text-xs font-bold tracking-widest text-gray-500 uppercase transition-colors group-hover:text-white">
+                    <span className="font-sans text-xs font-bold tracking-widest text-center text-gray-500 uppercase transition-colors group-hover:text-white">
                       {social.label}
                     </span>
                   </a>

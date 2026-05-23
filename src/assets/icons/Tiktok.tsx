@@ -2,13 +2,14 @@ const Tiktok = () => {
   return (
     <svg
       fill="currentColor"
-      width="40px"
-      height="40px"
+      width="55px"
+      height="55px"
       viewBox="0 0 32 32"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
       stroke="currentColor"
-      strokeWidth="1.8"
+      strokeWidth="0.00001"
+      className="text-gray-400 transition-colors group-hover:text-neon-pink group-hover:scale-110"
     >
       <g id="SVGRepo_bgCarrier" stroke-width="0" />
 

@@ -6,7 +6,7 @@ const Spotify = () => {
         viewBox="0 0 48 48"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="text-gray-400 transition-colors group-hover:text-neon-pink"
+        className="text-gray-400 transition-colors group-hover:text-neon-pink group-hover:scale-110"
         stroke="currentColor" // ← This is the key
         strokeWidth="1.8" // Adjusted a bit for better look
         strokeLinecap="round"
