@@ -14,6 +14,7 @@ import Discord from "../../assets/icons/Discord";
 import Whatsapp from "../../assets/icons/Whatsapp";
 import Snapchat from "../../assets/icons/Snapchat";
 import Linktree from "../../assets/icons/Linktree";
+import Mixcloud from "../../assets/icons/Mixcloud";
 export function DjContact() {
   // Custom Spotify SVG with hover support
 
@@ -115,7 +116,7 @@ export function DjContact() {
                     href: "https://linktr.ee/djprojay",
                   },
                   {
-                    icon: Linktree,
+                    icon: Mixcloud,
                     label: "Mixcloud",
                     href: "https://mixcloud/djprojay",
                   },
