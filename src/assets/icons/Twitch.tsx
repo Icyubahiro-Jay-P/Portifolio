@@ -9,15 +9,15 @@ const Twitch = () => {
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
       stroke="currentColor"
-      stroke-width="1.8"
+      strokeWidth="1.8"
       className="text-gray-400 transition-colors group-hover:text-neon-pink group-hover:scale-110"
     >
-      <g id="SVGRepo_bgCarrier" stroke-width="0" />
+      <g id="SVGRepo_bgCarrier" strokeWidth="0" />
 
       <g
         id="SVGRepo_tracerCarrier"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
 
       <g id="SVGRepo_iconCarrier">

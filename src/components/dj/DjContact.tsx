@@ -1,11 +1,14 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 import {
   InstagramIcon,
   MailIcon,
   SendIcon,
   YoutubeIcon,
-  PhoneIcon
+  PhoneIcon,
+  LoaderIcon,
 } from "lucide-react";
+
 import Spotify from "../../assets/icons/Spotify";
 import Tiktok from "../../assets/icons/Tiktok";
 import Twitch from "../../assets/icons/Twitch";
@@ -15,14 +18,33 @@ import Whatsapp from "../../assets/icons/Whatsapp";
 import Snapchat from "../../assets/icons/Snapchat";
 import Linktree from "../../assets/icons/Linktree";
 import Mixcloud from "../../assets/icons/Mixcloud";
+
 export function DjContact() {
-  // Custom Spotify SVG with hover support
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    eventType: "Club Booking",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
+
+  const handleInputChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >,
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = () => {
+    setLoading(true);
+  };
 
   return (
     <section className="relative px-6 py-32 pb-48">
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 gap-20 lg:grid-cols-2">
-          {/* Left Side - Text & Links */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -31,14 +53,12 @@ export function DjContact() {
             <h2 className="mb-8 text-5xl font-black tracking-tighter text-white uppercase font-display md:text-7xl">
               LET'S <span className="text-neon-pink">CONNECT</span>
             </h2>
-
             <p className="mb-12 font-sans text-xl leading-relaxed text-gray-400">
               For bookings, remixes, or general inquiries, fill out the form or
-              reach out directly via email.
+              reach out directly.
             </p>
 
             <div className="flex flex-col gap-6">
-              {/* Email Box */}
               <a
                 href="mailto:icyubahiro1980@gmail.com"
                 className="flex items-center gap-6 p-6 transition-all border-2 group rounded-2xl bg-dark-surface border-dark-border hover:border-neon-pink"
@@ -56,8 +76,6 @@ export function DjContact() {
                 </div>
               </a>
 
-              {/* Social Icons */}
-              {/* Social Icons */}
               <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
                 {[
                   {
@@ -66,24 +84,9 @@ export function DjContact() {
                     href: "https://instagram.com/dj_pro_jay",
                   },
                   {
-                    icon: SoundCloud,
-                    label: "SoundCloud",
-                    href: "https://soundcloud.com/djprojay/",
-                  },
-                  {
-                    icon: Discord,
-                    label: "Discord",
-                    href: "https://discord.com/djprojay/",
-                  },
-                  {
-                    icon: Twitch,
-                    label: "Twitch",
-                    href: "https://twitch.com/djprojay/",
-                  },
-                  {
-                    icon: Spotify,
-                    label: "Spotify",
-                    href: "https://open.spotify.com/artist/YOUR_SPOTIFY_ID_HERE",
+                    icon: Whatsapp,
+                    label: "Whatsapp",
+                    href: "https://wa.me/25078912435",
                   },
                   {
                     icon: YoutubeIcon,
@@ -91,25 +94,36 @@ export function DjContact() {
                     href: "https://youtube.com/@djprojay",
                   },
                   {
-                    icon: Tiktok,
-                    label: "Tiktok",
-                    href: "https://tiktok.com/djprojay",
+                    icon: SoundCloud,
+                    label: "SoundCloud",
+                    href: "https://soundcloud.com/djprojay",
                   },
                   {
-                    icon: Whatsapp,
-                    label: "Whatsapp",
-                    href: "https://wa.me/25078912435",
+                    icon: Discord,
+                    label: "Discord",
+                    href: "https://discord.com/users/yourid",
+                  },
+                  {
+                    icon: Twitch,
+                    label: "Twitch",
+                    href: "https://twitch.tv/djprojay",
+                  },
+                  {
+                    icon: Spotify,
+                    label: "Spotify",
+                    href: "https://open.spotify.com/artist/YOUR_SPOTIFY_ID_HERE",
+                  },
+                  {
+                    icon: Tiktok,
+                    label: "Tiktok",
+                    href: "https://tiktok.com/@djprojay",
                   },
                   {
                     icon: Snapchat,
                     label: "Snapchat",
                     href: "https://snapchat.com/add/djprojay",
                   },
-                  {
-                    icon: PhoneIcon,
-                    label: "Call",
-                    href: "tel:0789124135",
-                  },
+                  { icon: PhoneIcon, label: "Call", href: "tel:0789124135" },
                   {
                     icon: Linktree,
                     label: "Linktree",
@@ -118,7 +132,7 @@ export function DjContact() {
                   {
                     icon: Mixcloud,
                     label: "Mixcloud",
-                    href: "https://mixcloud/djprojay",
+                    href: "https://mixcloud.com/djprojay",
                   },
                 ].map((social, idx) => (
                   <a
@@ -138,7 +152,6 @@ export function DjContact() {
             </div>
           </motion.div>
 
-          {/* Right Side - Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -149,7 +162,9 @@ export function DjContact() {
 
             <form
               className="relative z-10 space-y-8"
-              onSubmit={(e) => e.preventDefault()}
+              action="https://formsubmit.co/icyubahiro1980@gmail.com"
+              method="POST"
+              onSubmit={handleSubmit}
             >
               <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
                 <div>
@@ -158,8 +173,12 @@ export function DjContact() {
                   </label>
                   <input
                     type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
                     className="w-full p-3 font-sans text-white transition-colors border-b-2 bg-dark border-dark-border focus:border-neon-pink focus:outline-none"
                     placeholder="Your Name"
+                    required
                   />
                 </div>
                 <div>
@@ -168,8 +187,12 @@ export function DjContact() {
                   </label>
                   <input
                     type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
                     className="w-full p-3 font-sans text-white transition-colors border-b-2 bg-dark border-dark-border focus:border-neon-pink focus:outline-none"
                     placeholder="your@email.com"
+                    required
                   />
                 </div>
               </div>
@@ -178,7 +201,12 @@ export function DjContact() {
                 <label className="block mb-3 font-sans text-xs font-bold tracking-widest text-gray-400 uppercase">
                   EVENT TYPE / INQUIRY
                 </label>
-                <select className="w-full p-3 font-sans text-white transition-colors border-b-2 appearance-none bg-dark border-dark-border focus:border-neon-pink focus:outline-none">
+                <select
+                  name="eventType"
+                  value={formData.eventType}
+                  onChange={handleInputChange}
+                  className="w-full p-3 font-sans text-white transition-colors border-b-2 appearance-none bg-dark border-dark-border focus:border-neon-pink focus:outline-none"
+                >
                   <option>Club Booking</option>
                   <option>Festival Booking</option>
                   <option>Private Event</option>
@@ -193,15 +221,37 @@ export function DjContact() {
                 </label>
                 <textarea
                   rows={4}
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
                   className="w-full p-3 font-sans text-white transition-colors border-b-2 resize-none bg-dark border-dark-border focus:border-neon-pink focus:outline-none"
                   placeholder="Tell me about your event..."
-                ></textarea>
+                  required
+                />
               </div>
 
-              <button className="flex items-center justify-center w-full gap-3 py-5 mt-8 text-xl font-bold tracking-widest text-white transition-all duration-300 rounded-full bg-neon-pink font-display hover:bg-white hover:text-neon-pink group">
-                SEND REQUEST
-                <SendIcon className="w-5 h-5 transition-transform group-hover:translate-x-2" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value={window.location.href} />
+
+              <button
+                type="submit"
+                disabled={loading}
+                className="flex items-center justify-center w-full gap-3 py-5 mt-8 text-xl font-bold tracking-widest text-white transition-all duration-300 rounded-full bg-neon-pink font-display hover:bg-white hover:text-neon-pink group disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {loading ? (
+                  <>
+                    SENDING... <LoaderIcon className="w-5 h-5 animate-spin" />
+                  </>
+                ) : (
+                  <>
+                    SEND REQUEST{" "}
+                    <SendIcon className="w-5 h-5 transition-transform group-hover:translate-x-2" />
+                  </>
+                )}
               </button>
+              <p className="text-xs text-gray-400 text-center">
+                You'll be redirected after submission
+              </p>
             </form>
           </motion.div>
         </div>
