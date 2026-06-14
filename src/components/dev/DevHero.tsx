@@ -21,12 +21,12 @@ export function DevHero() {
         
         <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 border rounded-full border-neon-cyan/30 bg-neon-cyan/5">
           <TerminalIcon className="w-4 h-4 text-neon-cyan" />
-          <span className="font-mono text-sm tracking-wider text-neon-cyan">
+          <span className="font-mono text-sm tracking-wider text-neon-cyan select-none">
             SYSTEM.ONLINE
           </span>
         </div>
 
-        <h1 className="mb-6 text-5xl font-black tracking-tighter text-white font-display md:text-7xl lg:text-8xl crt-flicker neon-text-cyan">
+        <h1 className="select-none mb-6 text-5xl font-black tracking-tighter text-white font-display md:text-7xl lg:text-8xl crt-flicker neon-text-cyan">
           IRAKOZE ICYUBAHIRO JEAN PIERRE
         </h1>
 

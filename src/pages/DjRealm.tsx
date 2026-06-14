@@ -6,7 +6,7 @@ import { DjSets } from '../components/dj/DjSets';
 import { DjSkills } from '../components/dj/DjSkills';
 import { DjFAQ } from '../components/dj/DjFAQ';
 import { DjContact } from '../components/dj/DjContact';
-import { RealmNav } from '../components/shared/RealmNav';
+import RealmNav from '@/components/shared/RealmNav';
 export function DjRealm() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -27,14 +27,6 @@ export function DjRealm() {
       }}
       className="min-h-screen bg-dark text-white dj-theme relative">
       
-      {/* Subtle Noise/Texture Background */}
-      <div
-        className="fixed inset-0 z-0 opacity-[0.03] pointer-events-none"
-        style={{
-          backgroundImage:
-          'url("https://grainy-gradients.vercel.app/noise.svg")'
-        }}>
-      </div>
 
       <div className="relative z-10">
         <DjHero />

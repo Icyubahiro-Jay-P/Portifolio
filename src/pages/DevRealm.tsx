@@ -6,7 +6,7 @@ import { DevProjects } from '../components/dev/DevProjects';
 import { DevSkills } from '../components/dev/DevSkills';
 import { DevFAQ } from '../components/dev/DevFAQ';
 import { DevContact } from '../components/dev/DevContact';
-import { RealmNav } from '../components/shared/RealmNav';
+import RealmNav from '@/components/shared/RealmNav';
 export function DevRealm() {
   useEffect(() => {
     window.scrollTo(0, 0);

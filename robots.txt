@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://djprojay.vercel.app/sitemap.xml

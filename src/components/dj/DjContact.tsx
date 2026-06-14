@@ -76,7 +76,7 @@ export function DjContact() {
                 </div>
               </a>
 
-              <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
+              <div className="grid grid-cols-2 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                 {[
                   {
                     icon: InstagramIcon,
@@ -98,42 +98,42 @@ export function DjContact() {
                     label: "SoundCloud",
                     href: "https://soundcloud.com/djprojay",
                   },
-                  {
-                    icon: Discord,
-                    label: "Discord",
-                    href: "https://discord.com/users/yourid",
-                  },
-                  {
-                    icon: Twitch,
-                    label: "Twitch",
-                    href: "https://twitch.tv/djprojay",
-                  },
-                  {
-                    icon: Spotify,
-                    label: "Spotify",
-                    href: "https://open.spotify.com/artist/YOUR_SPOTIFY_ID_HERE",
-                  },
-                  {
-                    icon: Tiktok,
-                    label: "Tiktok",
-                    href: "https://tiktok.com/@djprojay",
-                  },
-                  {
-                    icon: Snapchat,
-                    label: "Snapchat",
-                    href: "https://snapchat.com/add/djprojay",
-                  },
-                  { icon: PhoneIcon, label: "Call", href: "tel:0789124135" },
-                  {
-                    icon: Linktree,
-                    label: "Linktree",
-                    href: "https://linktr.ee/djprojay",
-                  },
-                  {
-                    icon: Mixcloud,
-                    label: "Mixcloud",
-                    href: "https://mixcloud.com/djprojay",
-                  },
+                  // {
+                  //   icon: Discord,
+                  //   label: "Discord",
+                  //   href: "https://discord.com/users/yourid",
+                  // },
+                  // {
+                  //   icon: Twitch,
+                  //   label: "Twitch",
+                  //   href: "https://twitch.tv/djprojay",
+                  // },
+                  // {
+                  //   icon: Spotify,
+                  //   label: "Spotify",
+                  //   href: "https://open.spotify.com/artist/YOUR_SPOTIFY_ID_HERE",
+                  // },
+                  // {
+                  //   icon: Tiktok,
+                  //   label: "Tiktok",
+                  //   href: "https://tiktok.com/@djprojay",
+                  // },
+                  // {
+                  //   icon: Snapchat,
+                  //   label: "Snapchat",
+                  //   href: "https://snapchat.com/add/djprojay",
+                  // },
+                  // { icon: PhoneIcon, label: "Call", href: "tel:0789124135" },
+                  // {
+                  //   icon: Linktree,
+                  //   label: "Linktree",
+                  //   href: "https://linktr.ee/djprojay",
+                  // },
+                  // {
+                  //   icon: Mixcloud,
+                  //   label: "Mixcloud",
+                  //   href: "https://mixcloud.com/djprojay",
+                  // },
                 ].map((social, idx) => (
                   <a
                     key={idx}

@@ -33,7 +33,7 @@ export function DevFAQ() {
           <h2 className="font-display text-3xl md:text-5xl font-bold text-white tracking-wider">
             <span className="text-neon-cyan">04.</span> QUERY_DB
           </h2>
-          <div className="h-px flex-1 bg-gradient-to-r from-neon-cyan/50 to-transparent"></div>
+          <div className="h-px flex-1 bg-linear-to-r from-neon-cyan/50 to-transparent"></div>
         </div>
 
         <div className="space-y-4">
