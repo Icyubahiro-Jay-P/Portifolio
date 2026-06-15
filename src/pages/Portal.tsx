@@ -37,7 +37,7 @@ export function Portal() {
             opacity: 1,
             y: 0
           }}
-          className="p-2 mb-4 text-4xl font-black tracking-widest text-white font-display md:text-6xl">
+          className="p-1 text-4xl font-black tracking-widest text-white font-display md:text-6xl">
           
           IRAKOZE ICYUBAHIRO JEAN PIERRE
         </motion.h1>

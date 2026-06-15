@@ -7,6 +7,7 @@ import { DjSkills } from '../components/dj/DjSkills';
 import { DjFAQ } from '../components/dj/DjFAQ';
 import { DjContact } from '../components/dj/DjContact';
 import RealmNav from '@/components/shared/RealmNav';
+import { ScrollProgress } from "@/components/ui/scroll-progress"
 export function DjRealm() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -26,7 +27,7 @@ export function DjRealm() {
         duration: 0.5
       }}
       className="min-h-screen bg-dark text-white dj-theme relative">
-      
+      <ScrollProgress className='h-1 bg-neon-pink' />
 
       <div className="relative z-10">
         <DjHero />

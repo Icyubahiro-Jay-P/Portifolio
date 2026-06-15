@@ -7,6 +7,8 @@ import { DevSkills } from '../components/dev/DevSkills';
 import { DevFAQ } from '../components/dev/DevFAQ';
 import { DevContact } from '../components/dev/DevContact';
 import RealmNav from '@/components/shared/RealmNav';
+import { ScrollProgress } from "@/components/ui/scroll-progress"
+
 export function DevRealm() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -26,6 +28,7 @@ export function DevRealm() {
         duration: 0.5
       }}
       className="relative min-h-screen text-white bg-dark dev-theme">
+      <ScrollProgress className='h-1 bg-neon-cyan' />
       
       <div className="scanlines"></div>
 
