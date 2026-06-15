@@ -77,7 +77,7 @@ export function Portal() {
           onClick={() => navigate('/dev')}
           className="flex-1 cursor-pointer group">
           
-          <div className="h-[280px] md:h-[380px] border-2 border-dark-border group-hover:neon-border-cyan bg-dark-surface/80 backdrop-blur-sm flex flex-col items-center justify-center relative overflow-hidden transition-all duration-500">
+          <div className="h-70 md:h-95 border-2 border-dark-border group-hover:neon-border-cyan bg-dark-surface/80 backdrop-blur-sm flex flex-col items-center justify-center relative overflow-hidden transition-all duration-500">
             {/* Hover Effects */}
             <div className="absolute inset-0 transition-opacity duration-500 opacity-0 bg-neon-cyan/5 group-hover:opacity-100"></div>
 
