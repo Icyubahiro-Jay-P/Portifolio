@@ -165,7 +165,7 @@ const RealmNav = () => {
             </a>
           </DockIcon>
           <DockIcon className="text-gray-400 rounded-full hover:bg-white/10 hover:text-white">
-            <a href="https://instagram.com/dj_pro_jay" target="_blank" rel="noopener noreferrer">
+            <a href="https://instagram.com/dj_pro_jay/?utm_source=google-business-profile&utm_medium=social&utm_campaign=profile-clicks" target="_blank" rel="noopener noreferrer">
               <Tooltip>
                 <TooltipTrigger asChild>
                   <InstagramIcon className="size-6" />

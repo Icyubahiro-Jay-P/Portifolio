@@ -82,17 +82,17 @@ export function DjContact() {
                   {
                     icon: InstagramIcon,
                     label: "Instagram",
-                    href: "https://instagram.com/dj_pro_jay",
+                    href: "https://www.instagram.com/dj_pro_jay/?utm_source=google-business-profile&utm_medium=social&utm_campaign=profile-clicks",
                   },
                   {
                     icon: Whatsapp,
                     label: "Whatsapp",
-                    href: "https://wa.me/25078912435",
+                    href: "https://wa.me/25078912435/?utm_source=google-business-profile&utm_medium=social&utm_campaign=profile-clicks",
                   },
                   {
                     icon: YoutubeIcon,
                     label: "Youtube",
-                    href: "https://youtube.com/@djprojay",
+                    href: "https://youtube.com/@djprojay/?utm_source=google-business-profile&utm_medium=social&utm_campaign=profile-clicks",
                   },
                   // {
                   //   icon: SoundCloud,
