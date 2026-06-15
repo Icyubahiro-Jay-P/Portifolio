@@ -2,6 +2,16 @@ import { motion } from "framer-motion";
 import { ExternalLinkIcon, GithubIcon, FolderGit2Icon } from "lucide-react";
 const projects = [
   {
+    title: "THIS PORTIFOLIO",
+    description:
+      "My personal portifolio that showcases my skills, projects, and achievements in the fields of both web development and being a dj.",
+    tech: ["React", "TypeScript", "TailwindCSS", "Shadcn"],
+    links: {
+      github: "https://github.com/Icyubahiro-Jay-P/Portifolio",
+      live: "https://djprojay.vercel.app",
+    },
+  },
+  {
     title: "BEST DECOR v 3.0",
     description:
       "A high-performance system that allows users to manage their rental products efficiently.",
@@ -18,16 +28,6 @@ const projects = [
     tech: ["PHP", "Javascript", "Ajax", "MySQL"],
     links: {
       github: "https://github.com/Icyubahiro-Jay-P/BEST-DECOR-v2",
-      live: "#",
-    },
-  },
-  {
-    title: "AURA_COMMERCE",
-    description:
-      "Headless e-commerce engine with AI-driven product recommendations and dynamic pricing.",
-    tech: ["Vue", "Python", "FastAPI", "AWS"],
-    links: {
-      github: "#",
       live: "#",
     },
   },
