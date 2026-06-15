@@ -1,8 +1,21 @@
 import { useNavigate, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-import { HomeIcon, Code2Icon, Disc3Icon } from "lucide-react";
-
-// This was PLAN
+import {
+  HomeIcon,
+  Code2Icon,
+  Disc3Icon,
+  InstagramIcon,
+  Github,
+  Linkedin,
+} from "lucide-react";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { Separator } from "@/components/ui/separator";
+// This was PLAN A but i never used it, i ended up making a more generic dock component that i can reuse in other places, but i left this here for posterity and to show the evolution of the design
 
 // export function RealmNav() {
 //   const navigate = useNavigate();
@@ -75,34 +88,108 @@ const RealmNav = () => {
       transition={{ delay: 1 }}
       className="fixed z-50 flex items-center justify-center w-full bottom-6 " // added subtle shadow for that premium pop
     >
-      <Dock direction="middle" className="transform-gpu border-dark-border rounded-full">
-        <DockIcon
-          onClick={() => navigate("/")}
-          className="text-gray-400 rounded-full hover:bg-white/10 hover:text-white"
+      <TooltipProvider>
+        <Dock
+          direction="middle"
+          className="transform-gpu border-dark-border rounded-full"
         >
-          <HomeIcon className="size-6" />
-        </DockIcon>
-        <DockIcon
-          onClick={() => navigate("/dev")}
-          className={`${
-            isDev
-              ? "bg-neon-cyan/20 text-neon-cyan neon-box-cyan"
-              : "text-gray-400 hover:text-neon-cyan hover:bg-neon-cyan/10"
-          }`}
-        >
-          <Code2Icon className="size-6" />
-        </DockIcon>
-        <DockIcon
-          onClick={() => navigate("/dj")}
-          className={`${
-            !isDev
-              ? "bg-neon-pink/20 text-neon-pink neon-box-pink"
-              : "text-gray-400 hover:text-neon-pink hover:bg-neon-pink/10"
-          }`}
-        >
-          <Disc3Icon className="size-6" />
-        </DockIcon>
-      </Dock>
+          <DockIcon
+            onClick={() => navigate("/")}
+            className="text-gray-400 rounded-full hover:bg-white/10 hover:text-white"
+          >
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <HomeIcon className="size-6" />
+              </TooltipTrigger>
+              <TooltipContent className="h-10 w-fit text-center flex justify-center items-center text-md rounded-lg -translate-y-2 bg-[#0a0a0a] border border-dark-border">
+                <p>Portal</p>
+              </TooltipContent>
+            </Tooltip>
+          </DockIcon>
+          <Separator
+            orientation="vertical"
+            className="h-full mr-2 bg-dark-border"
+          />
+          <DockIcon
+            onClick={() => navigate("/dev")}
+            className={`${
+              isDev
+                ? "bg-neon-cyan/20 text-neon-cyan neon-box-cyan"
+                : "text-gray-400 hover:text-neon-cyan hover:bg-neon-cyan/10"
+            }`}
+          >
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Code2Icon className="size-6" />
+              </TooltipTrigger>
+              <TooltipContent className="h-10 w-fit text-center flex justify-center items-center text-md rounded-lg -translate-y-2 bg-[#0a0a0a] border border-dark-border">
+                <p>Dev Matrix</p>
+              </TooltipContent>
+            </Tooltip>
+          </DockIcon>
+          <DockIcon
+            onClick={() => navigate("/dj")}
+            className={`${
+              !isDev
+                ? "bg-neon-pink/20 text-neon-pink neon-box-pink"
+                : "text-gray-400 hover:text-neon-pink hover:bg-neon-pink/20"
+            }`}
+          >
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Disc3Icon className="size-6" />
+              </TooltipTrigger>
+              <TooltipContent className="h-10 w-fit text-center flex justify-center items-center text-md rounded-lg -translate-y-2 bg-[#0a0a0a] border border-dark-border">
+                <p>DJ Den</p>
+              </TooltipContent>
+            </Tooltip>
+          </DockIcon>
+          <Separator
+            orientation="vertical"
+            className="h-full ml-2 bg-dark-border"
+          />
+          <DockIcon className="text-gray-400 rounded-full hover:bg-white/10 hover:text-white">
+            <a
+              href="https://github.com/Icyubahiro-Jay-P"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Github className="size-6" />
+                </TooltipTrigger>
+                <TooltipContent className="h-10 w-fit text-center flex justify-center items-center text-md rounded-lg -translate-y-2 bg-[#0a0a0a] border border-dark-border">
+                  <p>Github</p>
+                </TooltipContent>
+              </Tooltip>
+            </a>
+          </DockIcon>
+          <DockIcon className="text-gray-400 rounded-full hover:bg-white/10 hover:text-white">
+            <a href="https://instagram.com/dj_pro_jay" target="_blank" rel="noopener noreferrer">
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <InstagramIcon className="size-6" />
+                </TooltipTrigger>
+                <TooltipContent className="h-10 w-fit text-center flex justify-center items-center text-md rounded-lg -translate-y-2 bg-[#0a0a0a] border border-dark-border">
+                  <p>Instagram</p>
+                </TooltipContent>
+              </Tooltip>
+            </a>
+          </DockIcon>
+          <DockIcon className="text-gray-400 rounded-full hover:bg-white/10 hover:text-white">
+            <a href="https://www.linkedin.com/in/dj-pro-jay-4956293ba/" target="_blank" rel="noopener noreferrer">
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Linkedin className="size-6" />
+              </TooltipTrigger>
+              <TooltipContent className="h-10 w-fit text-center flex justify-center items-center text-md rounded-lg -translate-y-2 bg-[#0a0a0a] border border-dark-border">
+                <p>LinkedIn</p>
+              </TooltipContent>
+            </Tooltip>
+            </a>
+          </DockIcon>
+        </Dock>
+      </TooltipProvider>
     </motion.div>
   );
 };

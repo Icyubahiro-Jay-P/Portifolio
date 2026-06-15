@@ -61,7 +61,7 @@ export function DjContact() {
             <div className="flex flex-col gap-6">
               <a
                 href="mailto:icyubahiro1980@gmail.com"
-                className="flex items-center gap-6 p-6 transition-all border-2 group rounded-2xl bg-dark-surface border-dark-border hover:border-neon-pink"
+                className="flex min-w-110 w-full items-center gap-6 p-6 transition-all border-2 group rounded-2xl bg-dark-surface border-dark-border hover:border-neon-pink"
               >
                 <div className="flex items-center justify-center w-16 h-16 transition-colors rounded-full bg-dark group-hover:bg-neon-pink/20">
                   <MailIcon className="w-8 h-8 text-gray-400 transition-colors group-hover:text-neon-pink" />
@@ -76,7 +76,8 @@ export function DjContact() {
                 </div>
               </a>
 
-              <div className="grid grid-cols-2 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {/* <div className="grid grid-cols-2 gap-6 sm:grid-cols-2 lg:grid-cols-4"> */}
+              <div className="flex gap-4">
                 {[
                   {
                     icon: InstagramIcon,
@@ -93,11 +94,11 @@ export function DjContact() {
                     label: "Youtube",
                     href: "https://youtube.com/@djprojay",
                   },
-                  {
-                    icon: SoundCloud,
-                    label: "SoundCloud",
-                    href: "https://soundcloud.com/djprojay",
-                  },
+                  // {
+                  //   icon: SoundCloud,
+                  //   label: "SoundCloud",
+                  //   href: "https://soundcloud.com/djprojay",
+                  // },
                   // {
                   //   icon: Discord,
                   //   label: "Discord",
@@ -140,7 +141,7 @@ export function DjContact() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex flex-col items-center justify-center p-8 transition-all border-2 group rounded-2xl bg-dark-surface border-dark-border hover:border-neon-pink"
+                    className="flex flex-col items-center justify-center p-8 transition-all border-2 group rounded-2xl bg-dark-surface border-dark-border hover:border-neon-pink w-full"
                   >
                     <social.icon className="w-10 h-10 mb-4 text-gray-400 transition-all duration-300 group-hover:text-neon-pink group-hover:scale-110" />
                     <span className="font-sans text-xs font-bold tracking-widest text-center text-gray-500 uppercase transition-colors group-hover:text-white">
