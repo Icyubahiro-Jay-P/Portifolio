@@ -15,6 +15,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { Separator } from "@/components/ui/separator";
+import Whatsapp from "@/assets/icons/Whatsapp";
 // This was PLAN A but i never used it, i ended up making a more generic dock component that i can reuse in other places, but i left this here for posterity and to show the evolution of the design
 
 // export function RealmNav() {
@@ -184,6 +185,20 @@ const RealmNav = () => {
               </TooltipTrigger>
               <TooltipContent className="h-10 w-fit text-center flex justify-center items-center text-md rounded-lg -translate-y-2 bg-[#0a0a0a] border border-dark-border">
                 <p>LinkedIn</p>
+              </TooltipContent>
+            </Tooltip>
+            </a>
+          </DockIcon>
+          <DockIcon className="text-gray-400 rounded-full hover:bg-white/10 hover:text-white">
+            <a href="https://wa.me/250789124135/?utm_source=google-business-profile&utm_medium=social&utm_campaign=profile-clicks" target="_blank" rel="noopener noreferrer">
+            <Tooltip>
+                <TooltipTrigger asChild>
+                  <div className="scale-50">
+                <Whatsapp />
+                  </div>
+              </TooltipTrigger>
+              <TooltipContent className="h-10 w-fit text-center flex justify-center items-center text-md rounded-lg -translate-y-2 bg-[#0a0a0a] border border-dark-border">
+                <p>Whatsapp</p>
               </TooltipContent>
             </Tooltip>
             </a>
