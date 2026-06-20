@@ -45,7 +45,7 @@ const projects = [
 
 export function DevProjects() {
   return (
-    <section className="relative px-6 py-24 border-t border-dark-border/50">
+    <section id="deployments" className="relative px-6 py-24 border-t border-dark-border/50">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center gap-4 mb-16">
           <h2 className="text-3xl font-bold tracking-wider text-white font-display md:text-5xl">

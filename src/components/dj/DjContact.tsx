@@ -9,7 +9,6 @@ import {
   LoaderIcon,
 } from "lucide-react";
 
-import Whatsapp from "../../assets/icons/Whatsapp";
 
 const socials = [
   {
@@ -29,13 +28,7 @@ const socials = [
     label: "YouTube",
     value: "@djprojay",
     href: "https://youtube.com/@djprojay/?utm_source=google-business-profile&utm_medium=social&utm_campaign=profile-clicks",
-  },
-  {
-    icon: Whatsapp,
-    label: "WhatsApp",
-    value: "+250 789 124 35",
-    href: "https://wa.me/25078912435/?utm_source=google-business-profile&utm_medium=social&utm_campaign=profile-clicks",
-  },
+  }
 ];
 
 export function DjContact() {
@@ -85,8 +78,8 @@ export function DjContact() {
   };
 
   return (
-    <section id="dj-contact" className="py-32 px-6 relative">
-      <div className="max-w-7xl mx-auto">
+    <section id="dj-contact" className="relative px-6 py-32">
+      <div className="mx-auto max-w-7xl">
         {/* Section label */}
         <div className="flex items-center gap-6 mb-6">
           <span className="font-mono text-xs text-white/20 tracking-[0.3em] uppercase">
@@ -95,7 +88,7 @@ export function DjContact() {
           <div className="flex-1 h-px bg-white/8" />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+        <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-24">
           {/* Left: info */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -103,10 +96,10 @@ export function DjContact() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <h2 className="font-display text-4xl md:text-6xl font-black text-white tracking-tighter uppercase mb-4">
+            <h2 className="mb-4 text-4xl font-black tracking-tighter text-white uppercase font-display md:text-6xl">
               Let's <span className="text-neon-pink">Connect</span>
             </h2>
-            <p className="font-sans text-gray-400 text-base leading-relaxed mb-12 max-w-sm">
+            <p className="max-w-sm mb-12 font-sans text-base leading-relaxed text-gray-400">
               For bookings, remix requests, or general inquiries — fill out the
               form or reach out directly via any of the channels below.
             </p>
@@ -118,14 +111,14 @@ export function DjContact() {
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 py-4 border-b border-white/6 group hover:border-neon-pink/40 transition-colors duration-200"
+                  className="flex items-center gap-4 py-4 transition-colors duration-200 border-b border-white/6 group hover:border-neon-pink/40"
                 >
-                  <s.icon className="w-4 h-4 text-white/20 group-hover:text-neon-pink flex-shrink-0 transition-colors" />
+                  <s.icon className="flex-shrink-0 w-4 h-4 transition-colors text-white/20 group-hover:text-neon-pink" />
                   <div className="flex-1 min-w-0">
                     <div className="font-mono text-xs text-white/20 tracking-widest uppercase mb-0.5">
                       {s.label}
                     </div>
-                    <div className="font-sans text-sm text-white/60 group-hover:text-white transition-colors truncate">
+                    <div className="font-sans text-sm truncate transition-colors text-white/60 group-hover:text-white">
                       {s.value}
                     </div>
                   </div>
@@ -142,7 +135,7 @@ export function DjContact() {
             transition={{ duration: 0.7 }}
           >
             {/* Top accent bar */}
-            <div className="w-8 h-px bg-neon-pink mb-8" />
+            <div className="w-8 h-px mb-8 bg-neon-pink" />
 
             <form className="space-y-7" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-7">
@@ -155,7 +148,7 @@ export function DjContact() {
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    className="w-full bg-transparent border-b border-white/10 focus:border-neon-pink outline-none py-3 font-sans text-white text-sm placeholder:text-white/20 transition-colors duration-200"
+                    className="w-full py-3 font-sans text-sm text-white transition-colors duration-200 bg-transparent border-b outline-none border-white/10 focus:border-neon-pink placeholder:text-white/20"
                     placeholder="Your name"
                     required
                   />
@@ -169,7 +162,7 @@ export function DjContact() {
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full bg-transparent border-b border-white/10 focus:border-neon-pink outline-none py-3 font-sans text-white text-sm placeholder:text-white/20 transition-colors duration-200"
+                    className="w-full py-3 font-sans text-sm text-white transition-colors duration-200 bg-transparent border-b outline-none border-white/10 focus:border-neon-pink placeholder:text-white/20"
                     placeholder="your@email.com"
                     required
                   />
@@ -184,7 +177,7 @@ export function DjContact() {
                   name="eventType"
                   value={formData.eventType}
                   onChange={handleInputChange}
-                  className="w-full bg-dark border-b border-white/10 focus:border-neon-pink outline-none py-3 font-sans text-white text-sm appearance-none transition-colors duration-200 cursor-pointer"
+                  className="w-full py-3 font-sans text-sm text-white transition-colors duration-200 border-b outline-none appearance-none cursor-pointer bg-dark border-white/10 focus:border-neon-pink"
                 >
                   <option>Club Booking</option>
                   <option>Festival Booking</option>
@@ -203,7 +196,7 @@ export function DjContact() {
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
-                  className="w-full bg-transparent border-b border-white/10 focus:border-neon-pink outline-none py-3 font-sans text-white text-sm placeholder:text-white/20 resize-none transition-colors duration-200"
+                  className="w-full py-3 font-sans text-sm text-white transition-colors duration-200 bg-transparent border-b outline-none resize-none border-white/10 focus:border-neon-pink placeholder:text-white/20"
                   placeholder="Tell me about your event or project..."
                   required
                 />
@@ -213,7 +206,7 @@ export function DjContact() {
                 id="dj-contact-submit"
                 type="submit"
                 disabled={loading}
-                className="group flex items-center gap-3 px-8 py-4 bg-neon-pink text-white font-display font-bold tracking-widest uppercase text-sm transition-all duration-300 hover:bg-white hover:text-neon-pink disabled:opacity-40 disabled:cursor-not-allowed"
+                className="flex items-center gap-3 px-8 py-4 text-sm font-bold tracking-widest text-white uppercase transition-all duration-300 group bg-neon-pink font-display hover:bg-white hover:text-neon-pink disabled:opacity-40 disabled:cursor-not-allowed"
               >
                 {loading ? (
                   <>

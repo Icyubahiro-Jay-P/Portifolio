@@ -1,8 +1,8 @@
 const Whatsapp = () => {
   return (
     <svg
-      width="15px"
-      height="15px"
+      width="55px"
+      height="55px"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

@@ -1,30 +1,28 @@
 import { motion } from "framer-motion";
 
 const genres = [
-  "Techno",
-  "Tech House",
-  "Deep House",
-  "Afro House",
-  "Drum & Bass",
-  "Industrial",
-  "Melodic Techno",
-  "Peak Time",
+  "AFROBEAT",
+  "AMAPIANO",
+  "DANCEHALL",
+  "AFRO HOUSE",
+  "KOMPA",
+  "3-STEP",
+  "RNB",
+  "HIP HOP",
 ];
 
 const equipment = [
   "CDJ-3000s",
-  "DJM-900NXS2",
-  "Ableton Live",
-  "Push 2",
-  "Moog Sub37",
-  "Roland TR-8S",
+  "Pioneer DJ SB 3",
+  "Hercules Inpulse 300",
+  "Pioneer DJ Rev 1",
 ];
 
 const software = [
   "Serato DJ Pro",
   "Rekordbox",
-  "Logic Pro",
-  "iZotope RX",
+  "Virtual DJ",
+  "FL Studio",
 ];
 
 const containerVariants = {
@@ -41,8 +39,8 @@ const itemVariants = {
 
 export function DjSkills() {
   return (
-    <section className="py-32 px-6 relative">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative px-6 py-32">
+      <div className="mx-auto max-w-7xl">
         {/* Section label */}
         <div className="flex items-center gap-6 mb-6">
           <span className="font-mono text-xs text-white/20 tracking-[0.3em] uppercase">
@@ -51,11 +49,11 @@ export function DjSkills() {
           <div className="flex-1 h-px bg-white/8" />
         </div>
 
-        <h2 className="font-display text-4xl md:text-6xl font-black text-white tracking-tighter uppercase mb-16">
+        <h2 className="mb-16 text-4xl font-black tracking-tighter text-white uppercase font-display md:text-6xl">
           Sonic <span className="text-neon-pink">Arsenal</span>
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-3 lg:gap-16">
           {/* Genres */}
           <motion.div
             variants={containerVariants}
@@ -71,7 +69,7 @@ export function DjSkills() {
                 <motion.span
                   key={idx}
                   variants={itemVariants}
-                  className="inline-block px-4 py-2 border border-white/10 font-mono text-xs text-white/50 tracking-widest uppercase hover:border-neon-pink hover:text-white transition-all duration-200 cursor-default"
+                  className="inline-block px-4 py-2 font-mono text-xs tracking-widest uppercase transition-all duration-200 border cursor-default border-white/10 text-white/50 hover:border-neon-pink hover:text-white"
                 >
                   {genre}
                 </motion.span>
@@ -96,8 +94,8 @@ export function DjSkills() {
                   variants={itemVariants}
                   className="flex items-center gap-3 group"
                 >
-                  <div className="w-1 h-1 bg-neon-pink/40 group-hover:bg-neon-pink transition-colors duration-200" />
-                  <span className="font-sans text-sm text-white/50 group-hover:text-white transition-colors duration-200">
+                  <div className="w-1 h-1 transition-colors duration-200 bg-neon-pink/40 group-hover:bg-neon-pink" />
+                  <span className="font-sans text-sm transition-colors duration-200 text-white/50 group-hover:text-white">
                     {item}
                   </span>
                 </motion.div>
@@ -122,8 +120,8 @@ export function DjSkills() {
                   variants={itemVariants}
                   className="flex items-center gap-3 group"
                 >
-                  <div className="w-1 h-1 bg-neon-pink/40 group-hover:bg-neon-pink transition-colors duration-200" />
-                  <span className="font-sans text-sm text-white/50 group-hover:text-white transition-colors duration-200">
+                  <div className="w-1 h-1 transition-colors duration-200 bg-neon-pink/40 group-hover:bg-neon-pink" />
+                  <span className="font-sans text-sm transition-colors duration-200 text-white/50 group-hover:text-white">
                     {item}
                   </span>
                 </motion.div>

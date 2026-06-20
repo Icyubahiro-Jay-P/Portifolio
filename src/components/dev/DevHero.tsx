@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { TerminalIcon } from 'lucide-react';
+import { TerminalIcon, GithubIcon } from 'lucide-react';
 export function DevHero() {
   return (
     <section className="relative flex flex-col items-center justify-center min-h-screen px-6 pt-20">
@@ -41,10 +41,19 @@ export function DevHero() {
         </p>
 
         <div className="flex flex-col items-center justify-center gap-6 sm:flex-row">
-          <button className="w-full px-8 py-4 font-mono font-bold tracking-widest transition-all duration-300 border sm:w-auto bg-neon-cyan/10 border-neon-cyan text-neon-cyan hover:bg-neon-cyan hover:text-dark neon-box-cyan outline-none" onClick={()=> window.scrollTo(0,1600)}>
+          <button 
+            className="w-full px-8 py-4 font-mono font-bold tracking-widest transition-all duration-300 border sm:w-auto bg-neon-cyan/10 border-neon-cyan text-neon-cyan hover:bg-neon-cyan hover:text-dark neon-box-cyan outline-none" 
+            onClick={() => document.getElementById('deployments')?.scrollIntoView({ behavior: 'smooth' })}
+          >
             VIEW PROJECTS
           </button>
-          <a href="https://github.com/Icyubahiro-Jay-P" target="_blank" rel="noopener noreferrer" className="w-full px-8 py-4 font-mono font-bold tracking-widest text-white transition-all duration-300 border sm:w-auto border-dark-border hover:border-gray-500">
+          <a 
+            href="https://github.com/Icyubahiro-Jay-P" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="group flex items-center justify-center gap-3 w-full px-8 py-4 font-mono font-bold tracking-widest text-white transition-all duration-300 border sm:w-auto border-dark-border hover:border-neon-cyan hover:text-neon-cyan hover:bg-neon-cyan/5"
+          >
+            <GithubIcon className="w-5 h-5 transition-transform group-hover:scale-110" />
             GITHUB
           </a>
         </div>
