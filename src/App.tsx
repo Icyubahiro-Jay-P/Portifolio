@@ -8,6 +8,8 @@ import { AnimatePresence } from 'framer-motion';
 import { Portal } from './pages/Portal';
 import { DevRealm } from './pages/DevRealm';
 import { DjRealm } from './pages/DjRealm';
+import { Toaster } from './components/ui/sonner';
+
 function AnimatedRoutes() {
   const location = useLocation();
   return (
@@ -24,6 +26,7 @@ export function App() {
   return (
     <Router>
       <AnimatedRoutes />
-    </Router>);
-
+      <Toaster theme="dark" richColors position='top-center'/>
+    </Router>
+  );
 }

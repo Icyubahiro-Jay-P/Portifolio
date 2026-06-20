@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { toast } from "sonner";
 import {
   MailIcon,
   GithubIcon,
@@ -24,8 +25,31 @@ export function DevContact() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
     setLoading(true);
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/icyubahiro1980@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        toast.success("Message sent successfully!");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        toast.error("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      toast.error("An error occurred. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -113,8 +137,6 @@ export function DevContact() {
 
             <form
               className="space-y-6"
-              action="https://formsubmit.co/icyubahiro1980@gmail.com"
-              method="POST"
               onSubmit={handleSubmit}
             >
               <div>
@@ -162,8 +184,6 @@ export function DevContact() {
                 ></textarea>
               </div>
 
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_next" value={window.location.href} />
 
               <button
                 type="submit"
@@ -182,9 +202,7 @@ export function DevContact() {
                   </>
                 )}
               </button>
-              <p className="text-xs text-center text-gray-500">
-                You'll be redirected after submission
-              </p>
+
             </form>
           </motion.div>
         </div>

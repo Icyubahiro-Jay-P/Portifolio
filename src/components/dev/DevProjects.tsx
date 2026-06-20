@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ExternalLinkIcon, GithubIcon, FolderGit2Icon } from "lucide-react";
 const projects = [
   {
-    title: "THIS PORTIFOLIO",
+    title: "MY PORTIFOLIO",
     description:
       "My personal portifolio that showcases my skills, projects, and achievements in the fields of both web development and being a dj.",
     tech: ["React", "TypeScript", "TailwindCSS", "Shadcn"],
@@ -22,12 +22,12 @@ const projects = [
     },
   },
   {
-    title: "BEST DECOR v 2.0",
+    title: "THERABRIDGE",
     description:
-      "A high-performance system that allows users to manage their rental products efficiently.",
-    tech: ["PHP", "Javascript", "Ajax", "MySQL"],
+      "This is an open source platform to help people with mental problems get the therapy they can not afford through secure channels.",
+    tech: ["React JS", "TailwindCSS", "Shadcn", "Magic UI"],
     links: {
-      github: "https://github.com/Icyubahiro-Jay-P/BEST-DECOR-v2",
+      github: "https://github.com/Icyubahiro-Jay-P/therabridge-frontend",
       live: "#",
     },
   },
