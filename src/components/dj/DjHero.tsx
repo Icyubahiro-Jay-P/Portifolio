@@ -46,7 +46,7 @@ export function DjHero() {
           className="inline-flex items-center gap-3 mb-4"
         >
           <div className="w-12 h-px bg-neon-pink" />
-          <span className="font-mono text-xs tracking-[0.4em] text-neon-pink uppercase">
+          <span className="font-mono text-xs tracking-[0.4em] text-neon-pink uppercase select-none">
             DJ / Producer / Performer
           </span>
           <div className="w-12 h-px bg-neon-pink" />
@@ -74,7 +74,7 @@ export function DjHero() {
 
 
         {/* CTAs */}
-        <div className="relative flex flex-col items-center justify-center gap-4 sm:flex-row mt-8">
+        <div className="relative flex flex-col items-center justify-center gap-4 mt-8 sm:flex-row">
           {/* Equalizer bars — moved behind the buttons */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-[150%] max-w-4xl h-32 gap-0.75 opacity-15 pointer-events-none -z-10">
             {[...Array(50)].map((_, i) => (

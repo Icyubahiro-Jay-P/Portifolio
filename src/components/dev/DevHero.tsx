@@ -21,12 +21,12 @@ export function DevHero() {
         
         <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 border rounded-full border-neon-cyan/30 bg-neon-cyan/5">
           <TerminalIcon className="w-4 h-4 text-neon-cyan" />
-          <span className="font-mono text-sm tracking-wider text-neon-cyan select-none">
+          <span className="font-mono text-sm tracking-wider select-none text-neon-cyan">
             SYSTEM.ONLINE
           </span>
         </div>
 
-        <h1 className="select-none mb-6 text-5xl font-black tracking-tighter text-white font-display md:text-7xl lg:text-8xl crt-flicker neon-text-cyan">
+        <h1 className="mb-6 text-5xl font-black tracking-tighter text-white select-none font-display md:text-7xl lg:text-8xl crt-flicker neon-text-cyan">
           IRAKOZE ICYUBAHIRO JEAN PIERRE
         </h1>
 
@@ -42,7 +42,7 @@ export function DevHero() {
 
         <div className="flex flex-col items-center justify-center gap-6 sm:flex-row">
           <button 
-            className="w-full px-8 py-4 font-mono font-bold tracking-widest transition-all duration-300 border sm:w-auto bg-neon-cyan/10 border-neon-cyan text-neon-cyan hover:bg-neon-cyan hover:text-dark neon-box-cyan outline-none" 
+            className="w-full px-8 py-4 font-mono font-bold tracking-widest transition-all duration-300 border outline-none cursor-pointer sm:w-auto bg-neon-cyan/10 border-neon-cyan text-neon-cyan hover:bg-neon-cyan hover:text-dark neon-box-cyan" 
             onClick={() => document.getElementById('deployments')?.scrollIntoView({ behavior: 'smooth' })}
           >
             VIEW PROJECTS
@@ -51,7 +51,7 @@ export function DevHero() {
             href="https://github.com/Icyubahiro-Jay-P" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="group flex items-center justify-center gap-3 w-full px-8 py-4 font-mono font-bold tracking-widest text-white transition-all duration-300 border sm:w-auto border-dark-border hover:border-neon-cyan hover:text-neon-cyan hover:bg-neon-cyan/5"
+            className="flex items-center justify-center w-full gap-3 px-8 py-4 font-mono font-bold tracking-widest text-white transition-all duration-300 border group sm:w-auto border-dark-border hover:border-neon-cyan hover:text-neon-cyan hover:bg-neon-cyan/5"
           >
             <GithubIcon className="w-5 h-5 transition-transform group-hover:scale-110" />
             GITHUB
