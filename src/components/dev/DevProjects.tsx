@@ -28,17 +28,17 @@ const projects = [
     tech: ["React JS", "TailwindCSS", "Shadcn", "Magic UI"],
     links: {
       github: "https://github.com/Icyubahiro-Jay-P/therabridge-frontend",
-      live: "#",
+      live: "https://therabridge.vercel.app",
     },
   },
   {
-    title: "NEURO_WRITE",
+    title: "INVENTORY MANAGEMENT SYSTEM",
     description:
-      "AI-powered writing assistant that adapts to user's tone and style using fine-tuned LLMs.",
-    tech: ["React", "OpenAI API", "Express", "MongoDB"],
+      "This is an Inventory Management System the monitors product sale, tracks profits and losses with real-time data.",
+    tech: ["React", "Express", "MongoDB", "TailwindCSS"],
     links: {
-      github: "#",
-      live: "#",
+      github: "https://github.com/Icyubahiro-Jay-P/aido-frontend",
+      live: "https://aido-group-company-ltd.vercel.app",
     },
   },
 ];
