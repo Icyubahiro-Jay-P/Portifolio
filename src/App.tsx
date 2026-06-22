@@ -4,6 +4,7 @@ import {
   Route,
   useLocation } from
 'react-router-dom';
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import { AnimatePresence } from 'framer-motion';
 import { Portal } from './pages/Portal';
 import { DevRealm } from './pages/DevRealm';
@@ -25,6 +26,7 @@ function AnimatedRoutes() {
 export function App() {
   return (
     <Router>
+      <SpeedInsights />
       <AnimatedRoutes />
       <Toaster theme="dark" richColors position='top-center'/>
     </Router>
