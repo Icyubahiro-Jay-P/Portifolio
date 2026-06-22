@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 import * as m from "motion/react-m";
-import { DjHero } from "../components/dj/DjHero";
-import { DjAbout } from "../components/dj/DjAbout";
-import { DjSets } from "../components/dj/DjSets";
-import { DjSkills } from "../components/dj/DjSkills";
-import { DjFAQ } from "../components/dj/DjFAQ";
-import { DjContact } from "../components/dj/DjContact";
+import DjHero from "../components/dj/DjHero";
+import DjAbout from "../components/dj/DjAbout";
+import DjSets from "../components/dj/DjSets";
+import DjSkills from "../components/dj/DjSkills";
+import DjFAQ from "../components/dj/DjFAQ";
+import DjContact from "../components/dj/DjContact";
 import RealmNav from "@/components/shared/RealmNav";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
 const DjRealm = () => {
@@ -26,7 +26,7 @@ const DjRealm = () => {
       transition={{
         duration: 0.5,
       }}
-      className="min-h-screen bg-dark text-white dj-theme relative"
+      className="relative min-h-screen text-white bg-dark dj-theme"
     >
       <ScrollProgress className="h-1 bg-neon-pink" />
 

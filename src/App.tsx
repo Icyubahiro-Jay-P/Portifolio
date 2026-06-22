@@ -5,7 +5,7 @@ import {
   Route,
   useLocation,
 } from 'react-router-dom';
-
+import { Spinner } from "@/components/ui/spinner"
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { LazyMotion, domAnimation, AnimatePresence } from "motion/react";
 import { Toaster } from './components/ui/sonner';
@@ -21,7 +21,7 @@ const AnimatedRoutes = () => {
   return (
     <AnimatePresence mode="wait">
       <Suspense fallback={
-        <div className="flex items-center justify-center min-h-screen text-white">Loading...</div>
+        <div className="flex items-center justify-center min-h-screen text-white"><Spinner /></div>
       }>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Portal />} />
@@ -33,7 +33,7 @@ const AnimatedRoutes = () => {
   );
 }
 
-const App = () => {
+export const App = () => {
   return (
     <Router>
       <SpeedInsights />
@@ -44,4 +44,3 @@ const App = () => {
     </Router>
   );
 }
-export default App;

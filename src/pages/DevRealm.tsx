@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 import * as m from "motion/react-m";
-import { DevHero } from "../components/dev/DevHero";
-import { DevAbout } from "../components/dev/DevAbout";
-import { DevProjects } from "../components/dev/DevProjects";
-import { DevSkills } from "../components/dev/DevSkills";
-import { DevFAQ } from "../components/dev/DevFAQ";
-import { DevContact } from "../components/dev/DevContact";
+import DevHero from "../components/dev/DevHero";
+import DevAbout from "../components/dev/DevAbout";
+import DevProjects from "../components/dev/DevProjects";
+import DevSkills from "../components/dev/DevSkills";
+import DevFAQ from "../components/dev/DevFAQ";
+import DevContact from "../components/dev/DevContact";
 import RealmNav from "@/components/shared/RealmNav";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
 

@@ -7,6 +7,7 @@ import {
   useSpring,
   useTransform,
 } from "motion/react";
+
 import type { MotionProps } from "motion/react";
 
 import { cn } from "@/lib/utils";
@@ -66,7 +67,7 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
     };
 
     return (
-      <m.div
+      <motion.div
         ref={ref}
         onMouseMove={(e) => mouseX.set(e.pageX)}
         onMouseLeave={() => mouseX.set(Infinity)}
@@ -78,7 +79,7 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
         })}
       >
         {renderChildren()}
-      </m.div>
+      </motion.div>
     );
   },
 );
@@ -133,7 +134,7 @@ const DockIcon = ({
   });
 
   return (
-    <m.div
+    <motion.div
       ref={ref}
       style={{ width: scaleSize, height: scaleSize, padding }}
       className={cn(
@@ -144,7 +145,7 @@ const DockIcon = ({
       {...props}
     >
       <div>{children}</div>
-    </m.div>
+    </motion.div>
   );
 };
 
