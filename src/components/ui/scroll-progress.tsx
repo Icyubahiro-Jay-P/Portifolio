@@ -1,4 +1,5 @@
-import { motion, useScroll, type MotionProps } from "motion/react";
+import { useScroll, type MotionProps } from "motion/react";
+import * as m from "motion/react-m";
 
 import { cn } from "@/lib/utils";
 
@@ -17,7 +18,7 @@ export function ScrollProgress({
   const { scrollYProgress } = useScroll();
 
   return (
-    <motion.div
+    <m.div
       ref={ref}
       className={cn(
         "fixed inset-x-0 top-0 z-50 h-px origin-left bg-linear-to-r",

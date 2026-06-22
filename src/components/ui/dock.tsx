@@ -1,12 +1,12 @@
 import React, { PropsWithChildren, useRef } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import {
-  motion,
   MotionValue,
   useMotionValue,
   useSpring,
   useTransform,
 } from "motion/react";
+import * as m from "motion/react-m";
 
 import type { MotionProps } from "motion/react";
 
@@ -67,7 +67,7 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
     };
 
     return (
-      <motion.div
+      <m.div
         ref={ref}
         onMouseMove={(e) => mouseX.set(e.pageX)}
         onMouseLeave={() => mouseX.set(Infinity)}
@@ -79,7 +79,7 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
         })}
       >
         {renderChildren()}
-      </motion.div>
+      </m.div>
     );
   },
 );
@@ -134,7 +134,7 @@ const DockIcon = ({
   });
 
   return (
-    <motion.div
+    <m.div
       ref={ref}
       style={{ width: scaleSize, height: scaleSize, padding }}
       className={cn(
@@ -145,7 +145,7 @@ const DockIcon = ({
       {...props}
     >
       <div>{children}</div>
-    </motion.div>
+    </m.div>
   );
 };
 
