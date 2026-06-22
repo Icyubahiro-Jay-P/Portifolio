@@ -5,6 +5,7 @@ import {
   useLocation } from
 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { Portal } from './pages/Portal';
 import { DevRealm } from './pages/DevRealm';
 import { DjRealm } from './pages/DjRealm';
@@ -27,6 +28,7 @@ export function App() {
     <Router>
       <AnimatedRoutes />
       <Toaster theme="dark" richColors position='top-center'/>
+      <SpeedInsights />
     </Router>
   );
 }
