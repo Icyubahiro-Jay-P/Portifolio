@@ -8,7 +8,7 @@ import { DjFAQ } from "../components/dj/DjFAQ";
 import { DjContact } from "../components/dj/DjContact";
 import RealmNav from "@/components/shared/RealmNav";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
-export function DjRealm() {
+const DjRealm = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -43,3 +43,5 @@ export function DjRealm() {
     </m.div>
   );
 }
+
+export default DjRealm;

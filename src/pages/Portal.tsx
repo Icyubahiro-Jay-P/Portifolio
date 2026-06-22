@@ -6,7 +6,7 @@ import {
   Disc3Icon,
   HeadphonesIcon,
 } from "lucide-react";
-export function Portal() {
+const Portal = () => {
   const navigate = useNavigate();
   return (
     <div className="relative flex flex-col items-center justify-center w-full min-h-screen p-6 overflow-hidden font-sans bg-dark">
@@ -131,3 +131,4 @@ export function Portal() {
     </div>
   );
 }
+export default Portal;
