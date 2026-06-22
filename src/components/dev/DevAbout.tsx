@@ -12,7 +12,7 @@ export function DevAbout() {
         </div>
 
         <div className="grid items-center grid-cols-1 gap-16 lg:grid-cols-2">
-          <motion.div
+          <m.div
             initial={{
               opacity: 0,
               x: -50,
@@ -36,9 +36,9 @@ export function DevAbout() {
 
             {/* <div className="absolute inset-0 transition-opacity duration-500 bg-neon-cyan/20 mix-blend-overlay group-hover:opacity-0"></div> */}
             <div className="absolute inset-0 transition-opacity duration-500 bg-neon-cyan/20 mix-blend-overlay"></div>
-          </motion.div>
+          </m.div>
 
-          <motion.div
+          <m.div
             initial={{
               opacity: 0,
               x: 50,
@@ -90,7 +90,7 @@ export function DevAbout() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>
