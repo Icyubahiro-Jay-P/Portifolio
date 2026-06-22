@@ -21,7 +21,7 @@ const AnimatedRoutes = () => {
   return (
     <AnimatePresence mode="wait">
       <Suspense fallback={
-        <div className="flex min-h-screen items-center justify-center text-white">Loading...</div>
+        <div className="flex items-center justify-center min-h-screen text-white">Loading...</div>
       }>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Portal />} />
@@ -44,3 +44,4 @@ const App = () => {
     </Router>
   );
 }
+export default App;
