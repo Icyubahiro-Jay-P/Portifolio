@@ -1,3 +1,4 @@
+import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import * as m from "motion/react-m";
 import {
@@ -72,7 +73,6 @@ import Whatsapp from "@/assets/icons/Whatsapp";
 //   );
 // }
 
-import React from "react";
 
 import { Dock, DockIcon } from "@/components/ui/dock";
 
@@ -92,7 +92,7 @@ const RealmNav = () => {
       <TooltipProvider>
         <Dock
           direction="middle"
-          className="transform-gpu border-dark-border rounded-full"
+          className="rounded-full transform-gpu border-dark-border"
         >
           <DockIcon
             onClick={() => navigate("/")}

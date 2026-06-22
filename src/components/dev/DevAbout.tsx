@@ -1,6 +1,5 @@
-import React from "react";
 import * as m from "motion/react-m";
-export function DevAbout() {
+const DevAbout = () => {
   return (
     <section className="relative px-6 py-24 border-t border-dark-border/50">
       <div className="max-w-6xl mx-auto">
@@ -31,7 +30,7 @@ export function DevAbout() {
               // src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=800&q=80"
               src="Dev Jay P.png"
               alt="Irakoze Icyubahiro Jean Pierre - Developer"
-              className="w-full h-[500px] object-cover grayscale group-hover:grayscale-0 transition-all duration-500 border border-dark-border"
+              className="object-cover w-full transition-all duration-500 border h-125 grayscale group-hover:grayscale-0 border-dark-border"
             />
 
             {/* <div className="absolute inset-0 transition-opacity duration-500 bg-neon-cyan/20 mix-blend-overlay group-hover:opacity-0"></div> */}
@@ -96,3 +95,4 @@ export function DevAbout() {
     </section>
   );
 }
+export default DevAbout;

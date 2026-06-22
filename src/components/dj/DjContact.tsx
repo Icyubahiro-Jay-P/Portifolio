@@ -30,7 +30,7 @@ const socials = [
   },
 ];
 
-export function DjContact() {
+const DjContact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -117,7 +117,7 @@ export function DjContact() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 py-4 transition-colors duration-200 border-b border-white/6 group hover:border-neon-pink/40"
                 >
-                  <s.icon className="flex-shrink-0 w-4 h-4 transition-colors text-white/20 group-hover:text-neon-pink" />
+                  <s.icon className="w-4 h-4 transition-colors shrink-0 text-white/20 group-hover:text-neon-pink" />
                   <div className="flex-1 min-w-0">
                     <div className="font-mono text-xs text-white/20 tracking-widest uppercase mb-0.5">
                       {s.label}
@@ -231,3 +231,4 @@ export function DjContact() {
     </section>
   );
 }
+export default DjContact;

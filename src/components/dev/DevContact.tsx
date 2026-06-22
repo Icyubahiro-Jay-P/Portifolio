@@ -10,7 +10,7 @@ import {
   LoaderIcon,
 } from "lucide-react";
 
-export function DevContact() {
+const DevContact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -208,3 +208,4 @@ export function DevContact() {
     </section>
   );
 }
+export default DevContact;

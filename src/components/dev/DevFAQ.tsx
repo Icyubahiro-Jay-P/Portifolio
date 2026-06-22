@@ -24,17 +24,16 @@ const faqs = [
       "While I am primarily an engineer, I have a strong eye for design and often bridge the gap between Figma and code. I specialize in implementing complex, animated interfaces.",
   },
 ];
-
-export function DevFAQ() {
+const DevFAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   return (
-    <section className="py-24 px-6 relative border-t border-dark-border/50">
+    <section className="relative px-6 py-24 border-t border-dark-border/50">
       <div className="max-w-4xl mx-auto">
         <div className="flex items-center gap-4 mb-16">
-          <h2 className="font-display text-3xl md:text-5xl font-bold text-white tracking-wider">
+          <h2 className="text-3xl font-bold tracking-wider text-white font-display md:text-5xl">
             <span className="text-neon-cyan">04.</span> QUERY_DB
           </h2>
-          <div className="h-px flex-1 bg-linear-to-r from-neon-cyan/50 to-transparent"></div>
+          <div className="flex-1 h-px bg-linear-to-r from-neon-cyan/50 to-transparent"></div>
         </div>
 
         <div className="space-y-4">
@@ -55,19 +54,19 @@ export function DevFAQ() {
               transition={{
                 delay: idx * 0.1,
               }}
-              className="border border-dark-border bg-dark-surface overflow-hidden"
+              className="overflow-hidden border border-dark-border bg-dark-surface"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
-                className="w-full flex items-center justify-between p-6 text-left hover:bg-white/5 transition-colors"
+                className="flex items-center justify-between w-full p-6 text-left transition-colors hover:bg-white/5"
               >
-                <span className="font-mono text-white tracking-wide pr-8">
+                <span className="pr-8 font-mono tracking-wide text-white">
                   {faq.question}
                 </span>
                 {openIndex === idx ? (
-                  <MinusIcon className="w-5 h-5 text-neon-cyan flex-shrink-0" />
+                  <MinusIcon className="w-5 h-5 shrink-0 text-neon-cyan" />
                 ) : (
-                  <PlusIcon className="w-5 h-5 text-gray-500 flex-shrink-0" />
+                  <PlusIcon className="w-5 h-5 text-gray-500 shrink-0" />
                 )}
               </button>
 
@@ -90,7 +89,7 @@ export function DevFAQ() {
                       duration: 0.3,
                     }}
                   >
-                    <div className="p-6 pt-0 font-sans text-gray-400 leading-relaxed border-t border-dark-border/50 mt-2">
+                    <div className="p-6 pt-0 mt-2 font-sans leading-relaxed text-gray-400 border-t border-dark-border/50">
                       {faq.answer}
                     </div>
                   </m.div>
@@ -103,3 +102,4 @@ export function DevFAQ() {
     </section>
   );
 }
+export default DevFAQ;

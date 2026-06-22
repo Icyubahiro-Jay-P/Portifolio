@@ -1,9 +1,9 @@
 import * as m from "motion/react-m";
 import { TerminalIcon, GithubIcon } from "lucide-react";
-export function DevHero() {
+const DevHero = () => {
   return (
     <section className="relative flex flex-col items-center justify-center min-h-screen px-6 pt-20">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-neon-cyan/10 via-dark to-dark -z-10"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-neon-cyan/10 via-dark to-dark -z-10"></div>
 
       <m.div
         initial={{
@@ -65,3 +65,4 @@ export function DevHero() {
     </section>
   );
 }
+export default DevHero;

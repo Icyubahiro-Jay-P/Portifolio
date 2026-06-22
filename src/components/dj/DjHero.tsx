@@ -12,7 +12,7 @@ const MARQUEE_ITEMS = [
   "HIP HOP",
 ];
 
-export function DjHero() {
+const DjHero = () => {
   const handleScrollToSets = () => {
     document.getElementById("dj-sets")?.scrollIntoView({ behavior: "smooth" });
   };
@@ -148,3 +148,4 @@ export function DjHero() {
     </section>
   );
 }
+export default DjHero;

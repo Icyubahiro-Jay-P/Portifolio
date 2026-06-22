@@ -43,7 +43,7 @@ const projects = [
   },
 ];
 
-export function DevProjects() {
+const DevProjects = () => {
   return (
     <section
       id="deployments"
@@ -122,3 +122,4 @@ export function DevProjects() {
     </section>
   );
 }
+export default DevProjects;

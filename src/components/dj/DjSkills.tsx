@@ -32,7 +32,7 @@ const itemVariants = {
   visible: { opacity: 1, y: 0 },
 };
 
-export function DjSkills() {
+const DjSkills = () => {
   return (
     <section className="relative px-6 py-32">
       <div className="mx-auto max-w-7xl">
@@ -128,3 +128,4 @@ export function DjSkills() {
     </section>
   );
 }
+export default DjSkills

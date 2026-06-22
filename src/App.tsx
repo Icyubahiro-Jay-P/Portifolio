@@ -15,7 +15,7 @@ const Portal = lazy(() => import('./pages/Portal'));
 const DevRealm = lazy(() => import('./pages/DevRealm'));
 const DjRealm = lazy(() => import('./pages/DjRealm'));
 
-function AnimatedRoutes() {
+const AnimatedRoutes = () => {
   const location = useLocation();
 
   return (
@@ -33,7 +33,7 @@ function AnimatedRoutes() {
   );
 }
 
-export function App() {
+const App = () => {
   return (
     <Router>
       <SpeedInsights />

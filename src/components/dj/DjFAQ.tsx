@@ -31,11 +31,11 @@ const faqs = [
   },
 ];
 
-export function DjFAQ() {
+const DjFAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-32 px-6 relative bg-dark-surface/20">
+    <section className="relative px-6 py-32 bg-dark-surface/20">
       <div className="max-w-4xl mx-auto">
         {/* Section label */}
         <div className="flex items-center gap-6 mb-6">
@@ -45,11 +45,11 @@ export function DjFAQ() {
           <div className="flex-1 h-px bg-white/8" />
         </div>
 
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
-          <h2 className="font-display text-4xl md:text-6xl font-black text-white tracking-tighter uppercase">
+        <div className="flex flex-col gap-6 mb-16 md:flex-row md:items-end md:justify-between">
+          <h2 className="text-4xl font-black tracking-tighter text-white uppercase font-display md:text-6xl">
             Booking <span className="text-neon-pink">Info</span>
           </h2>
-          <p className="font-sans text-gray-500 text-sm max-w-xs md:text-right">
+          <p className="max-w-xs font-sans text-sm text-gray-500 md:text-right">
             Common questions answered. For anything else, use the contact form
             below.
           </p>
@@ -67,15 +67,15 @@ export function DjFAQ() {
               <button
                 id={`faq-item-${idx}`}
                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
-                className="w-full flex items-center justify-between py-6 text-left group gap-6"
+                className="flex items-center justify-between w-full gap-6 py-6 text-left group"
               >
-                <span className="font-sans font-semibold text-base md:text-lg text-white/70 group-hover:text-white transition-colors duration-200">
+                <span className="font-sans text-base font-semibold transition-colors duration-200 md:text-lg text-white/70 group-hover:text-white">
                   {faq.question}
                 </span>
                 <m.div
                   animate={{ rotate: openIndex === idx ? 45 : 0 }}
                   transition={{ duration: 0.25 }}
-                  className="flex-shrink-0 w-6 h-6 flex items-center justify-center border border-white/10 group-hover:border-neon-pink group-hover:text-neon-pink transition-colors duration-200"
+                  className="flex items-center justify-center w-6 h-6 transition-colors duration-200 border shrink-0 border-white/10 group-hover:border-neon-pink group-hover:text-neon-pink"
                 >
                   <PlusIcon className="w-3.5 h-3.5 text-white/40 group-hover:text-neon-pink transition-colors" />
                 </m.div>
@@ -95,7 +95,7 @@ export function DjFAQ() {
                     className="overflow-hidden"
                   >
                     <div className="pb-8 pl-0 pr-12">
-                      <p className="font-sans text-gray-400 text-base leading-relaxed border-l-2 border-neon-pink/30 pl-4">
+                      <p className="pl-4 font-sans text-base leading-relaxed text-gray-400 border-l-2 border-neon-pink/30">
                         {faq.answer}
                       </p>
                     </div>
@@ -109,3 +109,4 @@ export function DjFAQ() {
     </section>
   );
 }
+export default DjFAQ;
