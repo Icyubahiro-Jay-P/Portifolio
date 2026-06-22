@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import * as m from "motion/react-m";
 import { ArrowDownIcon } from "lucide-react";
 
 const MARQUEE_ITEMS = [
@@ -17,7 +17,9 @@ export function DjHero() {
     document.getElementById("dj-sets")?.scrollIntoView({ behavior: "smooth" });
   };
   const handleScrollToContact = () => {
-    document.getElementById("dj-contact")?.scrollIntoView({ behavior: "smooth" });
+    document
+      .getElementById("dj-contact")
+      ?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -29,17 +31,15 @@ export function DjHero() {
       <div className="absolute top-0 bottom-0 hidden w-px left-12 bg-linear-to-b from-transparent via-white/5 to-transparent lg:block" />
       <div className="absolute top-0 bottom-0 hidden w-px right-12 bg-linear-to-b from-transparent via-white/5 to-transparent lg:block" />
 
-
-
       {/* Main content */}
-      <motion.div
+      <m.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: [0.25, 0.46, 0.45, 0.94] }}
         className="relative z-10 w-full max-w-6xl text-center"
       >
         {/* Pre-title label */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
@@ -50,7 +50,7 @@ export function DjHero() {
             DJ / Producer / Performer
           </span>
           <div className="w-12 h-px bg-neon-pink" />
-        </motion.div>
+        </m.div>
 
         {/* Main name */}
         <h1 className="mb-12 font-black leading-none tracking-tighter text-white uppercase select-none font-display">
@@ -65,20 +65,19 @@ export function DjHero() {
 
         {/* Divider */}
         {/* I got lost to where to put it but anyways this was superhard to pull off */}
-        
+
         {/* <div className="flex items-center justify-center gap-4 my-8 -translate-8">
           <div className="flex-1 h-px max-w-xs bg-linear-to-r from-transparent to-white/20" />
           <div className="w-2 h-2 rotate-45 bg-neon-pink" />
           <div className="flex-1 h-px max-w-xs bg-linear-to-l from-transparent to-white/20" />
         </div> */}
 
-
         {/* CTAs */}
         <div className="relative flex flex-col items-center justify-center gap-4 mt-8 sm:flex-row">
           {/* Equalizer bars — moved behind the buttons */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-[150%] max-w-4xl h-32 gap-0.75 opacity-15 pointer-events-none -z-10">
             {[...Array(50)].map((_, i) => (
-              <motion.div
+              <m.div
                 key={i}
                 animate={{ height: ["15%", "100%", "30%", "70%", "15%"] }}
                 transition={{
@@ -111,11 +110,11 @@ export function DjHero() {
             Listen Now
           </button>
         </div>
-      </motion.div>
+      </m.div>
 
       {/* Scrolling marquee strip */}
       <div className="absolute left-0 w-full py-3 overflow-hidden bottom-24 border-y border-white/5 bg-white/2">
-        <motion.div
+        <m.div
           animate={{ x: ["0%", "-50%"] }}
           transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
           className="flex gap-12 whitespace-nowrap w-max"
@@ -129,23 +128,23 @@ export function DjHero() {
               <span className="mx-6 text-neon-pink/40">◆</span>
             </span>
           ))}
-        </motion.div>
+        </m.div>
       </div>
 
       {/* Scroll hint */}
-      <motion.div
+      <m.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
         className="absolute flex flex-col items-center gap-2 -translate-x-1/2 bottom-6 left-1/2"
       >
-        <motion.div
+        <m.div
           animate={{ y: [0, 6, 0] }}
           transition={{ repeat: Infinity, duration: 1.8, ease: "easeInOut" }}
         >
           <ArrowDownIcon className="w-4 h-4 text-white/20" />
-        </motion.div>
-      </motion.div>
+        </m.div>
+      </m.div>
     </section>
   );
 }

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import * as m from "motion/react-m";
 import { useState } from "react";
 import { toast } from "sonner";
 import {
@@ -8,7 +8,6 @@ import {
   YoutubeIcon,
   LoaderIcon,
 } from "lucide-react";
-
 
 const socials = [
   {
@@ -28,7 +27,7 @@ const socials = [
     label: "YouTube",
     value: "@djprojay",
     href: "https://youtube.com/@djprojay/?utm_source=google-business-profile&utm_medium=social&utm_campaign=profile-clicks",
-  }
+  },
 ];
 
 export function DjContact() {
@@ -66,7 +65,12 @@ export function DjContact() {
       );
       if (response.ok) {
         toast.success("Message sent successfully!");
-        setFormData({ name: "", email: "", eventType: "Club Booking", message: "" });
+        setFormData({
+          name: "",
+          email: "",
+          eventType: "Club Booking",
+          message: "",
+        });
       } else {
         toast.error("Failed to send message. Please try again.");
       }
@@ -90,7 +94,7 @@ export function DjContact() {
 
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-24">
           {/* Left: info */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -125,10 +129,10 @@ export function DjContact() {
                 </a>
               ))}
             </div>
-          </motion.div>
+          </m.div>
 
           {/* Right: form */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -221,7 +225,7 @@ export function DjContact() {
                 )}
               </button>
             </form>
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>

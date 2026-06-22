@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import * as m from "motion/react-m";
 
 const genres = [
   "AFROBEAT",
@@ -18,12 +18,7 @@ const equipment = [
   "Pioneer DJ Rev 1",
 ];
 
-const software = [
-  "Serato DJ Pro",
-  "Rekordbox",
-  "Virtual DJ",
-  "FL Studio",
-];
+const software = ["Serato DJ Pro", "Rekordbox", "Virtual DJ", "FL Studio"];
 
 const containerVariants = {
   hidden: {},
@@ -55,7 +50,7 @@ export function DjSkills() {
 
         <div className="grid grid-cols-1 gap-12 md:grid-cols-3 lg:gap-16">
           {/* Genres */}
-          <motion.div
+          <m.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -66,19 +61,19 @@ export function DjSkills() {
             </h3>
             <div className="flex flex-wrap gap-2">
               {genres.map((genre, idx) => (
-                <motion.span
+                <m.span
                   key={idx}
                   variants={itemVariants}
                   className="inline-block px-4 py-2 font-mono text-xs tracking-widest uppercase transition-all duration-200 border cursor-default border-white/10 text-white/50 hover:border-neon-pink hover:text-white"
                 >
                   {genre}
-                </motion.span>
+                </m.span>
               ))}
             </div>
-          </motion.div>
+          </m.div>
 
           {/* Hardware */}
-          <motion.div
+          <m.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -89,7 +84,7 @@ export function DjSkills() {
             </h3>
             <div className="space-y-3">
               {equipment.map((item, idx) => (
-                <motion.div
+                <m.div
                   key={idx}
                   variants={itemVariants}
                   className="flex items-center gap-3 group"
@@ -98,13 +93,13 @@ export function DjSkills() {
                   <span className="font-sans text-sm transition-colors duration-200 text-white/50 group-hover:text-white">
                     {item}
                   </span>
-                </motion.div>
+                </m.div>
               ))}
             </div>
-          </motion.div>
+          </m.div>
 
           {/* Software */}
-          <motion.div
+          <m.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -115,7 +110,7 @@ export function DjSkills() {
             </h3>
             <div className="space-y-3">
               {software.map((item, idx) => (
-                <motion.div
+                <m.div
                   key={idx}
                   variants={itemVariants}
                   className="flex items-center gap-3 group"
@@ -124,10 +119,10 @@ export function DjSkills() {
                   <span className="font-sans text-sm transition-colors duration-200 text-white/50 group-hover:text-white">
                     {item}
                   </span>
-                </motion.div>
+                </m.div>
               ))}
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>

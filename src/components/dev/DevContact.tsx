@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import * as m from "motion/react-m";
 import { useState } from "react";
 import { toast } from "sonner";
 import {
@@ -30,14 +30,17 @@ export function DevContact() {
     setLoading(true);
 
     try {
-      const response = await fetch("https://formsubmit.co/ajax/icyubahiro1980@gmail.com", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
+      const response = await fetch(
+        "https://formsubmit.co/ajax/icyubahiro1980@gmail.com",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify(formData),
         },
-        body: JSON.stringify(formData),
-      });
+      );
 
       if (response.ok) {
         toast.success("Message sent successfully!");
@@ -63,7 +66,7 @@ export function DevContact() {
         </div>
 
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -125,9 +128,9 @@ export function DevContact() {
                 ))}
               </div>
             </div>
-          </motion.div>
+          </m.div>
 
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -135,10 +138,7 @@ export function DevContact() {
           >
             <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-neon-cyan to-transparent"></div>
 
-            <form
-              className="space-y-6"
-              onSubmit={handleSubmit}
-            >
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label className="block mb-2 font-mono text-xs text-neon-cyan">
                   NAME_
@@ -184,7 +184,6 @@ export function DevContact() {
                 ></textarea>
               </div>
 
-
               <button
                 type="submit"
                 disabled={loading}
@@ -202,9 +201,8 @@ export function DevContact() {
                   </>
                 )}
               </button>
-
             </form>
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>

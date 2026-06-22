@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "motion/react";
+import * as m from "motion/react-m";
 import { PlusIcon } from "lucide-react";
 
 const faqs = [
@@ -49,13 +50,14 @@ export function DjFAQ() {
             Booking <span className="text-neon-pink">Info</span>
           </h2>
           <p className="font-sans text-gray-500 text-sm max-w-xs md:text-right">
-            Common questions answered. For anything else, use the contact form below.
+            Common questions answered. For anything else, use the contact form
+            below.
           </p>
         </div>
 
         <div className="divide-y divide-white/6">
           {faqs.map((faq, idx) => (
-            <motion.div
+            <m.div
               key={idx}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -70,23 +72,26 @@ export function DjFAQ() {
                 <span className="font-sans font-semibold text-base md:text-lg text-white/70 group-hover:text-white transition-colors duration-200">
                   {faq.question}
                 </span>
-                <motion.div
+                <m.div
                   animate={{ rotate: openIndex === idx ? 45 : 0 }}
                   transition={{ duration: 0.25 }}
                   className="flex-shrink-0 w-6 h-6 flex items-center justify-center border border-white/10 group-hover:border-neon-pink group-hover:text-neon-pink transition-colors duration-200"
                 >
                   <PlusIcon className="w-3.5 h-3.5 text-white/40 group-hover:text-neon-pink transition-colors" />
-                </motion.div>
+                </m.div>
               </button>
 
               <AnimatePresence initial={false}>
                 {openIndex === idx && (
-                  <motion.div
+                  <m.div
                     key="content"
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }}
+                    transition={{
+                      duration: 0.3,
+                      ease: [0.04, 0.62, 0.23, 0.98],
+                    }}
                     className="overflow-hidden"
                   >
                     <div className="pb-8 pl-0 pr-12">
@@ -94,10 +99,10 @@ export function DjFAQ() {
                         {faq.answer}
                       </p>
                     </div>
-                  </motion.div>
+                  </m.div>
                 )}
               </AnimatePresence>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

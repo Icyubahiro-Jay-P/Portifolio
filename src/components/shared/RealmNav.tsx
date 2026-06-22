@@ -1,5 +1,5 @@
 import { useNavigate, useLocation } from "react-router-dom";
-import { motion } from "framer-motion";
+import * as m from "motion/react-m";
 import {
   HomeIcon,
   Code2Icon,
@@ -24,7 +24,7 @@ import Whatsapp from "@/assets/icons/Whatsapp";
 //   const isDev = location.pathname === '/dev';
 
 //   return (
-//     <motion.div
+//     <m.div
 //       initial={{ opacity: 0, y: 50 }}
 //       animate={{ opacity: 1, y: 0 }}
 //       transition={{ delay: 1 }}
@@ -68,7 +68,7 @@ import Whatsapp from "@/assets/icons/Whatsapp";
 //           <Disc3Icon className="w-5 h-5" />
 //         </button>
 //       </div>
-//     </motion.div>
+//     </m.div>
 //   );
 // }
 
@@ -83,7 +83,7 @@ const RealmNav = () => {
   const location = useLocation();
   const isDev = location.pathname === "/dev";
   return (
-    <motion.div
+    <m.div
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 1 }}
@@ -166,7 +166,11 @@ const RealmNav = () => {
             </a>
           </DockIcon>
           <DockIcon className="text-gray-400 rounded-full hover:bg-white/10 hover:text-white">
-            <a href="https://instagram.com/dj_pro_jay/?utm_source=google-business-profile&utm_medium=social&utm_campaign=profile-clicks" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://instagram.com/dj_pro_jay/?utm_source=google-business-profile&utm_medium=social&utm_campaign=profile-clicks"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Tooltip>
                 <TooltipTrigger asChild>
                   <InstagramIcon className="size-6" />
@@ -178,34 +182,42 @@ const RealmNav = () => {
             </a>
           </DockIcon>
           <DockIcon className="text-gray-400 rounded-full hover:bg-white/10 hover:text-white">
-            <a href="https://www.linkedin.com/in/dj-pro-jay-4956293ba/?utm_source=google-business-profile&utm_medium=social&utm_campaign=profile-clicks" target="_blank" rel="noopener noreferrer">
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Linkedin className="size-6" />
-              </TooltipTrigger>
-              <TooltipContent className="h-10 w-fit text-center flex justify-center items-center text-md rounded-lg -translate-y-2 bg-[#0a0a0a] border border-dark-border">
-                <p>LinkedIn</p>
-              </TooltipContent>
-            </Tooltip>
+            <a
+              href="https://www.linkedin.com/in/dj-pro-jay-4956293ba/?utm_source=google-business-profile&utm_medium=social&utm_campaign=profile-clicks"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Linkedin className="size-6" />
+                </TooltipTrigger>
+                <TooltipContent className="h-10 w-fit text-center flex justify-center items-center text-md rounded-lg -translate-y-2 bg-[#0a0a0a] border border-dark-border">
+                  <p>LinkedIn</p>
+                </TooltipContent>
+              </Tooltip>
             </a>
           </DockIcon>
           <DockIcon className="text-gray-400 rounded-full hover:bg-white/10 hover:text-white">
-            <a href="https://wa.me/250789124135/?utm_source=google-business-profile&utm_medium=social&utm_campaign=profile-clicks" target="_blank" rel="noopener noreferrer">
-            <Tooltip>
+            <a
+              href="https://wa.me/250789124135/?utm_source=google-business-profile&utm_medium=social&utm_campaign=profile-clicks"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Tooltip>
                 <TooltipTrigger asChild>
                   <div className="scale-50">
-                <Whatsapp />
+                    <Whatsapp />
                   </div>
-              </TooltipTrigger>
-              <TooltipContent className="h-10 w-fit text-center flex justify-center items-center text-md rounded-lg -translate-y-2 bg-[#0a0a0a] border border-dark-border">
-                <p>Whatsapp</p>
-              </TooltipContent>
-            </Tooltip>
+                </TooltipTrigger>
+                <TooltipContent className="h-10 w-fit text-center flex justify-center items-center text-md rounded-lg -translate-y-2 bg-[#0a0a0a] border border-dark-border">
+                  <p>Whatsapp</p>
+                </TooltipContent>
+              </Tooltip>
             </a>
           </DockIcon>
         </Dock>
       </TooltipProvider>
-    </motion.div>
+    </m.div>
   );
 };
 export default RealmNav;

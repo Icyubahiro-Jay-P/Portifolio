@@ -1,6 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { CodeIcon, DatabaseIcon, CpuIcon } from "lucide-react";
+import * as m from "motion/react-m";
 export function DevAbout() {
   return (
     <section className="relative px-6 py-24 border-t border-dark-border/50">

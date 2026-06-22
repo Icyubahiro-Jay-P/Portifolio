@@ -1,35 +1,36 @@
-import  { useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { DevHero } from '../components/dev/DevHero';
-import { DevAbout } from '../components/dev/DevAbout';
-import { DevProjects } from '../components/dev/DevProjects';
-import { DevSkills } from '../components/dev/DevSkills';
-import { DevFAQ } from '../components/dev/DevFAQ';
-import { DevContact } from '../components/dev/DevContact';
-import RealmNav from '@/components/shared/RealmNav';
-import { ScrollProgress } from "@/components/ui/scroll-progress"
+import { useEffect } from "react";
+import * as m from "motion/react-m";
+import { DevHero } from "../components/dev/DevHero";
+import { DevAbout } from "../components/dev/DevAbout";
+import { DevProjects } from "../components/dev/DevProjects";
+import { DevSkills } from "../components/dev/DevSkills";
+import { DevFAQ } from "../components/dev/DevFAQ";
+import { DevContact } from "../components/dev/DevContact";
+import RealmNav from "@/components/shared/RealmNav";
+import { ScrollProgress } from "@/components/ui/scroll-progress";
 
 export function DevRealm() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <motion.div
+    <m.div
       initial={{
-        opacity: 0
+        opacity: 0,
       }}
       animate={{
-        opacity: 1
+        opacity: 1,
       }}
       exit={{
-        opacity: 0
+        opacity: 0,
       }}
       transition={{
-        duration: 0.5
+        duration: 0.5,
       }}
-      className="relative min-h-screen text-white bg-dark dev-theme">
-      <ScrollProgress className='h-1 bg-neon-cyan' />
-      
+      className="relative min-h-screen text-white bg-dark dev-theme"
+    >
+      <ScrollProgress className="h-1 bg-neon-cyan" />
+
       <div className="scanlines"></div>
 
       {/* Subtle Grid Background */}
@@ -38,10 +39,10 @@ export function DevRealm() {
           className="w-full h-full"
           style={{
             backgroundImage:
-            'linear-gradient(#00f0ff 1px, transparent 1px), linear-gradient(90deg, #00f0ff 1px, transparent 1px)',
-            backgroundSize: '50px 50px'
-          }}>
-        </div>
+              "linear-gradient(#00f0ff 1px, transparent 1px), linear-gradient(90deg, #00f0ff 1px, transparent 1px)",
+            backgroundSize: "50px 50px",
+          }}
+        ></div>
       </div>
 
       <div className="relative z-10">
@@ -54,6 +55,6 @@ export function DevRealm() {
       </div>
 
       <RealmNav />
-    </motion.div>);
-
+    </m.div>
+  );
 }

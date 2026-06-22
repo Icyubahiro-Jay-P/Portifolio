@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import * as m from "motion/react-m";
 import { PlayIcon, ExternalLinkIcon } from "lucide-react";
 
 const sets = [
@@ -71,15 +71,25 @@ export function DjSets() {
         <div className="space-y-px">
           {/* Header row */}
           <div className="hidden md:grid grid-cols-[3rem_1fr_auto_auto] lg:grid-cols-[3rem_1fr_200px_80px_80px] gap-6 px-6 pb-3 border-b border-white/8">
-            <span className="font-mono text-xs text-white/20 tracking-widest">#</span>
-            <span className="font-mono text-xs text-white/20 tracking-widest uppercase">Title</span>
-            <span className="font-mono text-xs text-white/20 tracking-widest uppercase hidden lg:block">Genre</span>
-            <span className="font-mono text-xs text-white/20 tracking-widest uppercase">Plays</span>
-            <span className="font-mono text-xs text-white/20 tracking-widest uppercase text-right">Duration</span>
+            <span className="font-mono text-xs text-white/20 tracking-widest">
+              #
+            </span>
+            <span className="font-mono text-xs text-white/20 tracking-widest uppercase">
+              Title
+            </span>
+            <span className="font-mono text-xs text-white/20 tracking-widest uppercase hidden lg:block">
+              Genre
+            </span>
+            <span className="font-mono text-xs text-white/20 tracking-widest uppercase">
+              Plays
+            </span>
+            <span className="font-mono text-xs text-white/20 tracking-widest uppercase text-right">
+              Duration
+            </span>
           </div>
 
           {sets.map((set, idx) => (
-            <motion.a
+            <m.a
               key={idx}
               href={set.link}
               target="_blank"
@@ -126,14 +136,16 @@ export function DjSets() {
 
               {/* Plays */}
               <div className="hidden md:block">
-                <span className="font-mono text-sm text-white/40">{set.plays}</span>
+                <span className="font-mono text-sm text-white/40">
+                  {set.plays}
+                </span>
               </div>
 
               {/* Duration */}
               <div className="font-mono text-sm text-white/40 text-right">
                 {set.duration}
               </div>
-            </motion.a>
+            </m.a>
           ))}
         </div>
       </div>

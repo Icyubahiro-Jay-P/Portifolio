@@ -1,33 +1,34 @@
-import  { useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { DjHero } from '../components/dj/DjHero';
-import { DjAbout } from '../components/dj/DjAbout';
-import { DjSets } from '../components/dj/DjSets';
-import { DjSkills } from '../components/dj/DjSkills';
-import { DjFAQ } from '../components/dj/DjFAQ';
-import { DjContact } from '../components/dj/DjContact';
-import RealmNav from '@/components/shared/RealmNav';
-import { ScrollProgress } from "@/components/ui/scroll-progress"
+import { useEffect } from "react";
+import * as m from "motion/react-m";
+import { DjHero } from "../components/dj/DjHero";
+import { DjAbout } from "../components/dj/DjAbout";
+import { DjSets } from "../components/dj/DjSets";
+import { DjSkills } from "../components/dj/DjSkills";
+import { DjFAQ } from "../components/dj/DjFAQ";
+import { DjContact } from "../components/dj/DjContact";
+import RealmNav from "@/components/shared/RealmNav";
+import { ScrollProgress } from "@/components/ui/scroll-progress";
 export function DjRealm() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <motion.div
+    <m.div
       initial={{
-        opacity: 0
+        opacity: 0,
       }}
       animate={{
-        opacity: 1
+        opacity: 1,
       }}
       exit={{
-        opacity: 0
+        opacity: 0,
       }}
       transition={{
-        duration: 0.5
+        duration: 0.5,
       }}
-      className="min-h-screen bg-dark text-white dj-theme relative">
-      <ScrollProgress className='h-1 bg-neon-pink' />
+      className="min-h-screen bg-dark text-white dj-theme relative"
+    >
+      <ScrollProgress className="h-1 bg-neon-pink" />
 
       <div className="relative z-10">
         <DjHero />
@@ -39,6 +40,6 @@ export function DjRealm() {
       </div>
 
       <RealmNav />
-    </motion.div>);
-
+    </m.div>
+  );
 }

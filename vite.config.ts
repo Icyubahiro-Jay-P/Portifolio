@@ -9,9 +9,7 @@ export default defineConfig({
   ],
 
   resolve: {
-    alias: {
-      '@': '/src',
-    },
+    alias: { '@': '/src' },
   },
 
   build: {
@@ -19,21 +17,15 @@ export default defineConfig({
       output: {
         manualChunks: (id: string) => {
           if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router-dom')) {
-              return 'vendor';
-            }
-            if (id.includes('framer-motion') || id.includes('motion')) {
-              return 'motion';
-            }
-            if (id.includes('@emotion') || id.includes('clsx') || id.includes('tailwind') || 
-                id.includes('class-variance-authority') || id.includes('sonner')) {
-              return 'ui';
-            }
+            if (id.includes('motion') || id.includes('framer-motion')) return 'motion';
+            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router-dom')) return 'vendor-core';
+            if (id.includes('@emotion') || id.includes('clsx') || id.includes('class-variance-authority') || 
+                id.includes('sonner') || id.includes('lucide')) return 'ui';
           }
-          return undefined; // let Vite handle the rest
+          return undefined;
         },
       },
     },
-    chunkSizeWarningLimit: 700,
+    chunkSizeWarningLimit: 800,
   },
 });

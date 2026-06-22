@@ -1,11 +1,11 @@
-import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
+import * as m from "motion/react-m";
+import { useNavigate } from "react-router-dom";
 import {
   Code2Icon,
   TerminalIcon,
   Disc3Icon,
-  HeadphonesIcon } from
-'lucide-react';
+  HeadphonesIcon,
+} from "lucide-react";
 export function Portal() {
   const navigate = useNavigate();
   return (
@@ -18,65 +18,65 @@ export function Portal() {
           className="w-full h-full"
           style={{
             backgroundImage:
-            'linear-gradient(#333 1px, transparent 1px), linear-gradient(90deg, #333 1px, transparent 1px)',
-            backgroundSize: '40px 40px',
+              "linear-gradient(#333 1px, transparent 1px), linear-gradient(90deg, #333 1px, transparent 1px)",
+            backgroundSize: "40px 40px",
             transform:
-            'perspective(500px) rotateX(60deg) translateY(-100px) translateZ(-200px)',
-            transformOrigin: 'top center'
-          }}>
-        </div>
+              "perspective(500px) rotateX(60deg) translateY(-100px) translateZ(-200px)",
+            transformOrigin: "top center",
+          }}
+        ></div>
       </div>
 
       <div className="z-10 mb-16 text-center">
-        <motion.h1
+        <m.h1
           initial={{
             opacity: 0,
-            y: -20
+            y: -20,
           }}
           animate={{
             opacity: 1,
-            y: 0
+            y: 0,
           }}
-          className="p-1 text-4xl font-black tracking-widest text-white font-display md:text-6xl">
-          
+          className="p-1 text-4xl font-black tracking-widest text-white font-display md:text-6xl"
+        >
           IRAKOZE ICYUBAHIRO JEAN PIERRE
-        </motion.h1>
-        <motion.p
+        </m.h1>
+        <m.p
           initial={{
-            opacity: 0
+            opacity: 0,
           }}
           animate={{
-            opacity: 1
+            opacity: 1,
           }}
           transition={{
-            delay: 0.2
+            delay: 0.2,
           }}
-          className="font-mono text-sm md:text-base tracking-[0.3em] text-gray-400">
-          
+          className="font-mono text-sm md:text-base tracking-[0.3em] text-gray-400"
+        >
           QUIET BY DAY · QUITE LOUD AT NIGHT
-        </motion.p>
+        </m.p>
       </div>
 
       <div className="z-10 flex flex-col w-full max-w-5xl gap-8 px-6 md:flex-row md:gap-16">
         {/* DEV PORTAL */}
-        <motion.div
+        <m.div
           initial={{
             opacity: 0,
-            x: -50
+            x: -50,
           }}
           animate={{
             opacity: 1,
-            x: 0
+            x: 0,
           }}
           transition={{
-            delay: 0.4
+            delay: 0.4,
           }}
           whileHover={{
-            scale: 1.05
+            scale: 1.05,
           }}
-          onClick={() => navigate('/dev')}
-          className="flex-1 cursor-pointer group">
-          
+          onClick={() => navigate("/dev")}
+          className="flex-1 cursor-pointer group"
+        >
           <div className="h-70 md:h-95 border-2 border-dark-border group-hover:neon-border-cyan bg-dark-surface/80 backdrop-blur-sm flex flex-col items-center justify-center relative overflow-hidden transition-all duration-500">
             {/* Hover Effects */}
             <div className="absolute inset-0 transition-opacity duration-500 opacity-0 bg-neon-cyan/5 group-hover:opacity-100"></div>
@@ -91,27 +91,27 @@ export function Portal() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </m.div>
 
         {/* DJ PORTAL */}
-        <motion.div
+        <m.div
           initial={{
             opacity: 0,
-            x: 50
+            x: 50,
           }}
           animate={{
             opacity: 1,
-            x: 0
+            x: 0,
           }}
           transition={{
-            delay: 0.6
+            delay: 0.6,
           }}
           whileHover={{
-            scale: 1.05
+            scale: 1.05,
           }}
-          onClick={() => navigate('/dj')}
-          className="flex-1 cursor-pointer group">
-          
+          onClick={() => navigate("/dj")}
+          className="flex-1 cursor-pointer group"
+        >
           <div className="h-[280px] md:h-[380px] border-2 border-dark-border group-hover:neon-border-pink bg-dark-surface/80 backdrop-blur-sm flex flex-col items-center justify-center relative overflow-hidden transition-all duration-500">
             {/* Hover Effects */}
             <div className="absolute inset-0 transition-opacity duration-500 opacity-0 bg-neon-pink/5 group-hover:opacity-100"></div>
@@ -126,8 +126,8 @@ export function Portal() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </m.div>
       </div>
-    </div>);
-
+    </div>
+  );
 }

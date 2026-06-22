@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import * as m from "motion/react-m";
 
 const stats = [
   { label: "Sets Played", value: "150+" },
@@ -21,7 +21,7 @@ export function DjAbout() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Text side */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -29,29 +29,28 @@ export function DjAbout() {
             className="order-2 lg:order-1 space-y-8"
           >
             <h2 className="font-display text-4xl md:text-6xl font-black text-white tracking-tighter uppercase leading-tight">
-              The{" "}
-              <span className="text-neon-pink">Journey</span>
+              The <span className="text-neon-pink">Journey</span>
             </h2>
 
             <div className="space-y-5 border-l border-white/10 pl-6">
               <p className="font-sans text-gray-300 text-lg leading-relaxed">
-                What started as late-night coding sessions with mixes playing
-                in the background evolved into a full obsession with sound
-                design and crowd psychology.
+                What started as late-night coding sessions with mixes playing in
+                the background evolved into a full obsession with sound design
+                and crowd psychology.
               </p>
               <p className="font-sans text-gray-400 text-base leading-relaxed">
                 As DJ Pro Jay, I bring the same analytical precision from
                 software engineering into my sets — building tension, managing
-                energy levels, and executing flawless transitions. Whether
-                it's a dark warehouse techno set or a high-energy house mix,
-                the goal is always to create an immersive sonic architecture.
+                energy levels, and executing flawless transitions. Whether it's
+                a dark warehouse techno set or a high-energy house mix, the goal
+                is always to create an immersive sonic architecture.
               </p>
             </div>
 
             {/* Stats */}
             <div className="grid grid-cols-2 gap-px bg-white/5 mt-12">
               {stats.map((stat, idx) => (
-                <motion.div
+                <m.div
                   key={idx}
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
@@ -65,13 +64,13 @@ export function DjAbout() {
                   <div className="font-mono text-xs text-gray-500 tracking-[0.2em] uppercase">
                     {stat.label}
                   </div>
-                </motion.div>
+                </m.div>
               ))}
             </div>
-          </motion.div>
+          </m.div>
 
           {/* Image side */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -98,7 +97,7 @@ export function DjAbout() {
                 </span>
               </div>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>

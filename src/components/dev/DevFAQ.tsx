@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "motion/react";
+import * as m from "motion/react-m";
 import { PlusIcon, MinusIcon } from "lucide-react";
 const faqs = [
   {
@@ -38,7 +39,7 @@ export function DevFAQ() {
 
         <div className="space-y-4">
           {faqs.map((faq, idx) => (
-            <motion.div
+            <m.div
               key={idx}
               initial={{
                 opacity: 0,
@@ -72,7 +73,7 @@ export function DevFAQ() {
 
               <AnimatePresence>
                 {openIndex === idx && (
-                  <motion.div
+                  <m.div
                     initial={{
                       height: 0,
                       opacity: 0,
@@ -92,10 +93,10 @@ export function DevFAQ() {
                     <div className="p-6 pt-0 font-sans text-gray-400 leading-relaxed border-t border-dark-border/50 mt-2">
                       {faq.answer}
                     </div>
-                  </motion.div>
+                  </m.div>
                 )}
               </AnimatePresence>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

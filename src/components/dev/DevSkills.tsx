@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import * as m from "motion/react-m";
 const skillCategories = [
   {
     title: "FRONTEND",
@@ -38,7 +38,7 @@ export function DevSkills() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {skillCategories.map((category, idx) => (
-            <motion.div
+            <m.div
               key={idx}
               initial={{
                 opacity: 0,
@@ -71,7 +71,7 @@ export function DevSkills() {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>
