@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 import { Spinner } from "@/components/ui/spinner"
 import { SpeedInsights } from "@vercel/speed-insights/react";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react";
 import { LazyMotion, domAnimation, AnimatePresence } from "motion/react";
 import { Toaster } from './components/ui/sonner';
 
