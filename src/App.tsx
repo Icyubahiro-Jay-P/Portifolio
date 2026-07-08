@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import { Spinner } from "@/components/ui/spinner"
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import { Analytics } from "@vercel/analytics/next"
 import { LazyMotion, domAnimation, AnimatePresence } from "motion/react";
 import { Toaster } from './components/ui/sonner';
 
@@ -37,6 +38,7 @@ export const App = () => {
   return (
     <Router>
       <SpeedInsights />
+      <Analytics />
       <LazyMotion features={domAnimation}>
         <AnimatedRoutes />
       </LazyMotion>
