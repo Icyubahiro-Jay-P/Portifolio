@@ -8,7 +8,7 @@ Yo, what's good? This is the README for https://djprojay.vercel.app/  my slick-a
 
 A modern, dark-themed, high-performance developer portfolio showcasing my skills as a dev who's out here building shit that slaps. Clean UI, smooth animations, mobile-first, and zero fluff.
 
-It's not just a portfolio – it's a whole vibe.
+It's not just a portfolio it's a whole vibe.
 
 Deployed on Vercel because speed and reliability matter, fam.
 
