@@ -1,6 +1,6 @@
 # DJ Pro Jay Portfolio
 
-Yo, what's good? This is the README for https://djprojay.vercel.app/  my slick-ass Dual Portal Developer Portfolio built to flex hard.
+Yo, what's good? This is the README for `https://djprojay.vercel.app`  my slick-ass Dual Portal Developer Portfolio built to flex hard.
 
 ---
 
