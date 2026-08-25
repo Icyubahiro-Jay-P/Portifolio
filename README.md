@@ -100,7 +100,7 @@ Built with passion by **DJ ProjAY**
 
 # Live Demo
 
-## 🔗 Website
+## Website
 https://djprojay.vercel.app/
 
 ---
