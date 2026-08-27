@@ -158,7 +158,7 @@ const DjHero = () => {
       </div>
 
       {/* Scrolling genre marquee */}
-      <div className="relative z-10 w-full py-4 border-y border-dj-line bg-dj-void-2/40 backdrop-blur-sm">
+      <div className="relative z-10 w-full py-4 border-y border-dj-line bg-dj-void-2/40 backdrop-blur-sm overflow-hidden">
         <m.div
           animate={{ x: ["0%", "-50%"] }}
           transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
