@@ -4,6 +4,7 @@ import DjHero from "../components/dj/DjHero";
 import DjAbout from "../components/dj/DjAbout";
 import DjSets from "../components/dj/DjSets";
 import DjSkills from "../components/dj/DjSkills";
+import DjGigs from "../components/dj/DjGigs";
 import DjFAQ from "../components/dj/DjFAQ";
 import DjContact from "../components/dj/DjContact";
 import RealmNav from "@/components/shared/RealmNav";
@@ -28,7 +29,7 @@ const DjRealm = () => {
       }}
       className="relative min-h-screen text-dj-bone bg-dj-void dj-theme font-dj"
     >
-      <ScrollProgress className="h-[3px] bg-dj-bone" />
+      <ScrollProgress className="h-[3px] bg-dj-ember" />
 
       {/* Subtle tonal grid — shared motif with Dev realm, monochrome here */}
       <div className="fixed inset-0 z-0 pointer-events-none opacity-[0.05]">
@@ -43,9 +44,10 @@ const DjRealm = () => {
       </div>
       <div className="relative z-10">
         <DjHero />
-        <DjAbout />
         <DjSets />
+        <DjAbout />
         <DjSkills />
+        <DjGigs />
         <DjFAQ />
         <DjContact />
       </div>
