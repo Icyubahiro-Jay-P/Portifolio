@@ -1,21 +1,40 @@
-const Spotify = () => {
-    return (
-      <svg
-        width="45px"
-        height="60px"
-        viewBox="0 0 48 48"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="text-gray-400 transition-colors group-hover:text-neon-pink group-hover:scale-110"
-        stroke="currentColor" // ← This is the key
-        strokeWidth="1.8" // Adjusted a bit for better look
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <circle cx="24" cy="24" r="21.5" />
-        <path d="m33.8596,33.5091c-.3851.6316-1.2118.8318-1.8434.4442-5.048-3.0834-11.4027-3.7817-18.8866-2.0719-.7212.1643-1.44-.2875-1.6043-1.009-.1651-.7214.285-1.4403,1.0079-1.6046,8.1899-1.8711,15.215-1.0655,20.8822,2.3979.6316.3877.8318,1.2118.4442,1.8434Zm2.6315-5.8541c-.4852.7887-1.5173,1.0377-2.3055.5525-5.7791-3.5522-14.5885-4.5809-21.4241-2.506-.8865.2678-1.8228-.2318-2.0919-1.1168-.267-.8865.2329-1.821,1.1178-2.0906,7.8081-2.3692,17.5151-1.2216,24.1517,2.8567.7882.4852,1.0372,1.5173.552,2.3045v-.0003Zm.2259-6.0959c-6.9293-4.1157-18.3618-4.4942-24.9776-2.4862-1.0624.3222-2.1859-.2775-2.5078-1.3399-.3219-1.0629.2773-2.1856,1.3404-2.5086,7.5945-2.3055,20.2195-1.8601,28.1974,2.876.9576.5671,1.2708,1.8013.7035,2.7556-.5648.9556-1.8023,1.2706-2.7548.7032h-.001Z" />
-      </svg>
-    );
+import { forwardRef, type SVGProps } from "react";
+
+export type SpotifyProps = SVGProps<SVGSVGElement> & {
+  size?: number | string;
 };
-  
+
+/**
+ * Spotify brand icon.
+ *
+ * Behaves like a lucide-react icon: accepts `size`, `className`, `color`
+ * (via `currentColor`), and spreads any additional SVG props onto the
+ * underlying <svg>. Stroke-based glyph, inherits `currentColor`.
+ */
+const Spotify = forwardRef<SVGSVGElement, SpotifyProps>(
+  ({ size = 24, className, ...props }, ref) => (
+    <svg
+      ref={ref}
+      width={size}
+      height={size}
+      viewBox="0 0 48 48"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+      data-lucide="spotify"
+      {...props}
+    >
+      <circle cx="24" cy="24" r="21.5" />
+      <path d="m33.8596,33.5091c-.3851.6316-1.2118.8318-1.8434.4442-5.048-3.0834-11.4027-3.7817-18.8866-2.0719-.7212.1643-1.44-.2875-1.6043-1.009-.1651-.7214.285-1.4403,1.0079-1.6046,8.1899-1.8711,15.215-1.0655,20.8822,2.3979.6316.3877.8318,1.2118.4442,1.8434Zm2.6315-5.8541c-.4852.7887-1.5173,1.0377-2.3055.5525-5.7791-3.5522-14.5885-4.5809-21.4241-2.506-.8865.2678-1.8228-.2318-2.0919-1.1168-.267-.8865.2329-1.821,1.1178-2.0906,7.8081-2.3692,17.5151-1.2216,24.1517,2.8567.7882.4852,1.0372,1.5173.552,2.3045v-.0003Zm.2259-6.0959c-6.9293-4.1157-18.3618-4.4942-24.9776-2.4862-1.0624.3222-2.1859-.2775-2.5078-1.3399-.3219-1.0629.2773-2.1856,1.3404-2.5086,7.5945-2.3055,20.2195-1.8601,28.1974,2.876.9576.5671,1.2708,1.8013.7035,2.7556-.5648.9556-1.8023,1.2706-2.7548.7032h-.001Z" />
+    </svg>
+  ),
+);
+
+Spotify.displayName = "Spotify";
+
 export default Spotify;
