@@ -73,12 +73,6 @@
     background-clip: text;
     color: transparent;
   }
-  .dj-gold-text {
-    background: linear-gradient(100deg, #f4ede2 0%, #e8b04b 60%, #ff8a5c 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
   .dj-hairline {
     background: linear-gradient(
       to right,
