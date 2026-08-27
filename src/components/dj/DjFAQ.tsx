@@ -30,20 +30,17 @@ const DjFAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="relative px-6 py-28 md:py-36 bg-dj-base-2/50">
+    <section className="relative px-6 py-24 border-t border-dj-line/60 md:py-32">
       <div className="max-w-4xl mx-auto">
-        <div className="flex items-center gap-4 mb-5">
-          <span className="font-mono text-[11px] tracking-[0.4em] text-dj-heat-soft uppercase">
-            Booking info
-          </span>
-          <div className="flex-1 h-px dj-hairline" />
+        {/* Dev-style header */}
+        <div className="flex items-center gap-4 mb-10">
+          <h2 className="font-dj text-3xl font-black tracking-tight uppercase text-dj-bone md:text-5xl">
+            <span className="text-dj-stone">04.</span> Asked, answered
+          </h2>
+          <div className="flex-1 h-px bg-gradient-to-r from-dj-line to-transparent" />
         </div>
 
-        <h2 className="mb-8 font-dj text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-[0.95] tracking-tighter uppercase text-dj-paper">
-          Asked, <span className="dj-heat-text">answered</span>
-        </h2>
-
-        <p className="mb-14 max-w-md font-sans text-sm text-dj-muted">
+        <p className="mb-12 max-w-md font-sans text-sm text-dj-ash">
           Common questions answered. For anything else, use the contact form
           below.
         </p>
@@ -67,7 +64,7 @@ const DjFAQ = () => {
                 >
                   <span
                     className={`font-dj text-base font-bold transition-colors duration-200 md:text-lg ${
-                      open ? "text-dj-heat-soft" : "text-dj-paper/80 group-hover:text-dj-paper"
+                      open ? "text-dj-bone" : "text-dj-ash group-hover:text-dj-bone"
                     }`}
                   >
                     {faq.q}
@@ -75,11 +72,11 @@ const DjFAQ = () => {
                   <m.div
                     animate={{ rotate: open ? 45 : 0 }}
                     transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-                    className="flex items-center justify-center w-9 h-9 shrink-0 rounded-full border border-dj-line transition-colors group-hover:border-dj-heat/50"
+                    className="flex items-center justify-center w-9 h-9 shrink-0 rounded-full border border-dj-line transition-colors group-hover:border-dj-bone/60"
                   >
                     <PlusIcon
-                      className={`w-4 h-4 transition-colors ${
-                        open ? "text-dj-heat" : "text-dj-muted group-hover:text-dj-heat-soft"
+                      className={`w-4 h-4 transition-colors duration-200 ${
+                        open ? "text-dj-bone" : "text-dj-stone group-hover:text-dj-bone"
                       }`}
                     />
                   </m.div>
@@ -95,7 +92,7 @@ const DjFAQ = () => {
                       className="overflow-hidden"
                     >
                       <div className="pb-8">
-                        <p className="pl-5 border-l-2 border-dj-heat/40 font-sans text-base leading-relaxed text-dj-muted">
+                        <p className="pl-5 border-l-2 border-dj-stone font-sans text-base leading-relaxed text-dj-ash">
                           {faq.a}
                         </p>
                       </div>
