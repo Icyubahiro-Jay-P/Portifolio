@@ -26,9 +26,9 @@ const DjRealm = () => {
       transition={{
         duration: 0.5,
       }}
-      className="relative min-h-screen text-white bg-dark dj-theme"
+      className="relative min-h-screen text-[--color-dj-paper] bg-dj-base dj-theme font-dj"
     >
-      <ScrollProgress className="h-1 bg-neon-pink" />
+      <ScrollProgress className="h-[3px] bg-gradient-to-r from-dj-heat via-dj-gold to-dj-electric" />
 
       <div className="relative z-10">
         <DjHero />
