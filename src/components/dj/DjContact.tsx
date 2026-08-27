@@ -32,7 +32,7 @@ const socials = [
 ];
 
 const inputBase =
-  "w-full py-3 font-sans text-sm text-dj-paper transition-colors duration-200 bg-transparent border-b border-dj-line focus:border-dj-heat outline-none placeholder:text-dj-muted/40";
+  "w-full py-3 font-sans text-sm text-dj-bone transition-colors duration-200 bg-transparent border-b border-dj-line focus:border-dj-bone outline-none placeholder:text-dj-stone";
 
 const DjContact = () => {
   const [formData, setFormData] = useState({
@@ -86,14 +86,14 @@ const DjContact = () => {
   };
 
   return (
-    <section id="dj-contact" className="relative px-6 py-28 md:py-36">
+    <section id="dj-contact" className="relative px-6 py-24 border-t border-dj-line/60 md:py-32">
       <div className="mx-auto max-w-6xl">
-        {/* label */}
-        <div className="flex items-center gap-4 mb-5">
-          <span className="font-mono text-[11px] tracking-[0.4em] text-dj-heat-soft uppercase">
-            Book a slot
-          </span>
-          <div className="flex-1 h-px dj-hairline" />
+        {/* Dev-style header */}
+        <div className="flex items-center gap-4 mb-16">
+          <h2 className="font-dj text-3xl font-black tracking-tight uppercase text-dj-bone md:text-5xl">
+            <span className="text-dj-stone">05.</span> Book a slot
+          </h2>
+          <div className="flex-1 h-px bg-gradient-to-r from-dj-line to-transparent" />
         </div>
 
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-20">
@@ -104,10 +104,7 @@ const DjContact = () => {
             viewport={{ once: true, margin: "-15%" }}
             transition={{ duration: 0.7 }}
           >
-            <h2 className="mb-5 font-dj text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-[0.95] tracking-tighter uppercase text-dj-paper">
-              Let's <span className="dj-heat-text">connect</span>
-            </h2>
-            <p className="max-w-sm mb-12 font-sans text-base leading-relaxed text-dj-muted">
+            <p className="max-w-sm mb-12 font-sans text-base leading-relaxed text-dj-ash">
               For bookings, remix requests, or general inquiries — send the
               form, or reach me directly through any channel below.
             </p>
@@ -119,18 +116,18 @@ const DjContact = () => {
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-4 py-4 transition-colors duration-200 border-b border-dj-line hover:border-dj-heat/40"
+                  className="group flex items-center gap-4 py-4 transition-colors duration-200 border-b border-dj-line hover:border-dj-bone/40"
                 >
-                  <s.icon className="w-5 h-5 shrink-0 text-dj-muted/50 transition-colors group-hover:text-dj-heat" />
+                  <s.icon className="w-5 h-5 shrink-0 text-dj-stone transition-colors group-hover:text-dj-bone" />
                   <div className="flex-1 min-w-0">
-                    <div className="font-mono text-[11px] text-dj-muted/50 tracking-widest uppercase mb-0.5">
+                    <div className="font-mono text-[11px] text-dj-stone tracking-widest uppercase mb-0.5">
                       {s.label}
                     </div>
-                    <div className="font-sans text-sm truncate text-dj-paper/60 transition-colors group-hover:text-dj-paper">
+                    <div className="font-sans text-sm truncate text-dj-ash transition-colors group-hover:text-dj-bone">
                       {s.value}
                     </div>
                   </div>
-                  <ArrowUpRightIcon className="w-4 h-4 text-dj-muted/30 transition-all group-hover:text-dj-heat group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  <ArrowUpRightIcon className="w-4 h-4 text-dj-stone transition-all group-hover:text-dj-bone group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </a>
               ))}
             </div>
@@ -143,13 +140,13 @@ const DjContact = () => {
             viewport={{ once: true, margin: "-15%" }}
             transition={{ duration: 0.7 }}
           >
-            <div className="rounded-2xl border border-dj-line bg-dj-base-2/60 p-6 md:p-9 backdrop-blur-sm">
+            <div className="rounded-2xl border border-dj-line bg-dj-void-2/60 p-6 md:p-9">
               <form className="space-y-7" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-7">
                   <div>
                     <label
                       htmlFor="dj-name"
-                      className="block font-mono text-xs text-dj-muted/60 tracking-[0.2em] uppercase mb-3"
+                      className="block font-mono text-xs text-dj-stone tracking-[0.2em] uppercase mb-3"
                     >
                       Name
                     </label>
@@ -167,7 +164,7 @@ const DjContact = () => {
                   <div>
                     <label
                       htmlFor="dj-email"
-                      className="block font-mono text-xs text-dj-muted/60 tracking-[0.2em] uppercase mb-3"
+                      className="block font-mono text-xs text-dj-stone tracking-[0.2em] uppercase mb-3"
                     >
                       Email
                     </label>
@@ -187,7 +184,7 @@ const DjContact = () => {
                 <div>
                   <label
                     htmlFor="dj-type"
-                    className="block font-mono text-xs text-dj-muted/60 tracking-[0.2em] uppercase mb-3"
+                    className="block font-mono text-xs text-dj-stone tracking-[0.2em] uppercase mb-3"
                   >
                     Inquiry type
                   </label>
@@ -196,7 +193,7 @@ const DjContact = () => {
                     name="eventType"
                     value={formData.eventType}
                     onChange={handleInputChange}
-                    className={`${inputBase} appearance-none cursor-pointer bg-dj-base-2`}
+                    className={`${inputBase} appearance-none cursor-pointer bg-dj-void-2`}
                   >
                     <option>Club Booking</option>
                     <option>Festival Booking</option>
@@ -209,7 +206,7 @@ const DjContact = () => {
                 <div>
                   <label
                     htmlFor="dj-message"
-                    className="block font-mono text-xs text-dj-muted/60 tracking-[0.2em] uppercase mb-3"
+                    className="block font-mono text-xs text-dj-stone tracking-[0.2em] uppercase mb-3"
                   >
                     Message
                   </label>
@@ -229,7 +226,7 @@ const DjContact = () => {
                   id="dj-contact-submit"
                   type="submit"
                   disabled={loading}
-                  className="flex items-center justify-center gap-3 px-8 py-4 w-full text-sm font-bold tracking-widest text-dj-base uppercase rounded-full bg-dj-heat font-dj transition-all duration-200 hover:bg-dj-heat-soft active:scale-[0.98] disabled:opacity-40 disabled:cursor-not-allowed"
+                  className="flex items-center justify-center gap-3 px-8 py-4 w-full text-sm font-bold tracking-widest text-dj-void uppercase rounded-full bg-dj-bone font-dj transition-colors duration-200 hover:bg-white active:scale-[0.98] disabled:opacity-40 disabled:cursor-not-allowed"
                 >
                   {loading ? (
                     <>
