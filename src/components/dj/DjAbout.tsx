@@ -9,30 +9,37 @@ const stats = [
 
 const DjAbout = () => {
   return (
-    <section className="relative px-6 py-28 md:py-36">
-      <div className="mx-auto max-w-7xl">
-        <div className="grid items-center grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-14">
-          {/* Image — left, tall editorial frame */}
+    <section className="relative px-6 py-24 border-t border-dj-line/60 md:py-32">
+      <div className="mx-auto max-w-6xl">
+        {/* Dev-style section header: number + title + fading hairline */}
+        <div className="flex items-center gap-4 mb-16">
+          <h2 className="font-dj text-3xl font-black tracking-tight uppercase text-dj-bone md:text-5xl">
+            <span className="text-dj-stone">01.</span> The story
+          </h2>
+          <div className="flex-1 h-px bg-gradient-to-r from-dj-line to-transparent" />
+        </div>
+
+        <div className="grid items-center grid-cols-1 gap-16 lg:grid-cols-2">
+          {/* Image — left, layered frame like Dev */}
           <m.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-15%" }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="relative lg:col-span-5"
+            className="relative group"
           >
-            {/* layering frame */}
-            <div className="absolute -top-4 -left-4 right-10 bottom-10 border border-dj-heat/25 pointer-events-none" />
+            <div className="absolute inset-0 translate-x-4 translate-y-4 bg-dj-smoke -z-10 pointer-events-none transition-transform group-hover:translate-x-2 group-hover:translate-y-2" />
             <div className="relative overflow-hidden aspect-[4/5] bg-dj-smoke">
               <img
                 src="Dj Jay P.png"
                 alt="DJ Pro Jay at the decks"
+                loading="lazy"
                 className="object-cover w-full h-full transition-all duration-700 grayscale hover:grayscale-0"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-dj-base via-transparent to-transparent" />
-              {/* caption strip */}
-              <div className="absolute bottom-0 left-0 right-0 flex items-center gap-3 px-6 py-5 bg-gradient-to-r from-dj-base/90 to-dj-base/40 backdrop-blur-sm">
-                <span className="w-1.5 h-1.5 rounded-full bg-dj-heat animate-pulse" />
-                <span className="font-mono text-xs tracking-[0.3em] text-dj-paper/80 uppercase">
+              <div className="absolute inset-0 bg-gradient-to-t from-dj-void via-transparent to-transparent" />
+              {/* mono caption strip */}
+              <div className="absolute bottom-0 left-0 right-0 px-6 py-5 bg-gradient-to-r from-dj-void/90 to-dj-void/40">
+                <span className="font-mono text-xs tracking-[0.3em] text-dj-ash/80 uppercase">
                   On the ones &amp; twos — Kigali
                 </span>
               </div>
@@ -41,41 +48,32 @@ const DjAbout = () => {
 
           {/* Text — right */}
           <m.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-15%" }}
             transition={{ duration: 0.8 }}
-            className="order-first space-y-8 lg:order-none lg:col-span-7"
+            className="space-y-8"
           >
-            {/* label */}
-            <div className="flex items-center gap-4">
-              <span className="font-mono text-[11px] tracking-[0.4em] text-dj-heat-soft uppercase">
-                The story
-              </span>
-              <div className="flex-1 h-px dj-hairline" />
+            <div className="font-mono text-sm tracking-widest text-dj-bone/80">
+              {">"} STATUS: LOCKED ON THE ROOM
             </div>
 
-            <h2 className="font-dj text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-[0.95] tracking-tighter uppercase text-dj-paper">
-              Precision, from the <span className="dj-heat-text">booth to the board</span>
-            </h2>
+            <p className="font-sans text-lg leading-relaxed text-dj-bone/85">
+              What started as late-night coding sessions with mixes playing in
+              the background evolved into a full obsession with sound design
+              and crowd psychology.
+            </p>
 
-            <div className="space-y-5 border-l border-dj-line pl-6">
-              <p className="font-sans text-lg leading-relaxed text-dj-paper/90">
-                What started as late-night coding sessions with mixes playing in
-                the background evolved into a full obsession with sound design
-                and crowd psychology.
-              </p>
-              <p className="font-sans text-base leading-relaxed text-dj-muted">
-                As DJ Pro Jay, I bring the same analytical precision from
-                software engineering into my sets — building tension, managing
-                energy levels, and executing flawless transitions. Whether it's
-                a dark warehouse techno set or a high-energy house mix, the goal
-                is always an immersive sonic architecture.
-              </p>
-            </div>
+            <p className="font-sans text-lg leading-relaxed text-dj-ash">
+              As DJ Pro Jay, I bring the same analytical precision from
+              software engineering into my sets — building tension, managing
+              energy levels, and executing flawless transitions. Whether it's a
+              dark warehouse techno set or a high-energy house mix, the goal is
+              always an immersive sonic architecture.
+            </p>
 
-            {/* Stats */}
-            <div className="grid grid-cols-2 gap-px mt-12 bg-dj-line sm:grid-cols-4">
+            {/* Stats — dev-style mono counters */}
+            <div className="grid grid-cols-2 gap-6 pt-8 border-t border-dj-line lg:grid-cols-4">
               {stats.map((stat, idx) => (
                 <m.div
                   key={idx}
@@ -83,12 +81,11 @@ const DjAbout = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.08 * idx, duration: 0.5 }}
-                  className="p-6 bg-dj-base"
                 >
-                  <div className="appearance-none mb-1 font-dj text-3xl font-black text-dj-paper md:text-4xl tabular-nums">
+                  <div className="mb-2 font-dj text-3xl font-black text-dj-bone tabular-nums md:text-4xl">
                     {stat.value}
                   </div>
-                  <div className="font-mono text-[11px] text-dj-muted tracking-[0.2em] uppercase">
+                  <div className="font-mono text-[11px] tracking-[0.15em] uppercase text-dj-stone">
                     {stat.label}
                   </div>
                 </m.div>
