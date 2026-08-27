@@ -27,10 +27,9 @@ const DevAbout = () => {
           >
             <div className="absolute inset-0 transition-transform translate-x-4 translate-y-4 bg-neon-cyan -z-10 group-hover:translate-x-2 group-hover:translate-y-2"></div>
             <img
-              // src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=800&q=80"
-              src="Dev Jay P.png"
+              src="Jay P.JPG"
               alt="Irakoze Icyubahiro Jean Pierre - Developer"
-              className="object-cover w-full transition-all duration-500 border h-125 grayscale group-hover:grayscale-0 border-dark-border"
+              className="object-cover w-full transition-all duration-500 border aspect-square grayscale group-hover:grayscale-0 border-dark-border"
             />
 
             {/* <div className="absolute inset-0 transition-opacity duration-500 bg-neon-cyan/20 mix-blend-overlay group-hover:opacity-0"></div> */}
