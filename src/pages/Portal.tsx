@@ -12,7 +12,7 @@ const Portal = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="relative flex flex-col items-center justify-center w-full min-h-screen p-6 overflow-hidden font-sans bg-dark">
+    <div className="relative flex flex-col items-center justify-center w-full min-h-screen p-8 overflow-hidden font-sans bg-dark">
       <div className="scanlines"></div>
 
       {/* Background Grid — cyber floor, receding */}
@@ -39,7 +39,7 @@ const Portal = () => {
         }}
       />
 
-      <div className="z-10 mb-14 text-center md:mb-20">
+      <div className="z-10 text-center mb-14 md:mb-10">
         <m.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -77,26 +77,26 @@ const Portal = () => {
             <div className="absolute inset-0 transition-opacity duration-500 opacity-0 bg-neon-cyan/5 group-hover:opacity-100" />
 
             {/* light sweep on hover */}
-            <div className="absolute inset-0 -translate-x-full transition-transform duration-700 group-hover:translate-x-full pointer-events-none">
-              <div className="w-1/2 h-full bg-gradient-to-r from-transparent via-neon-cyan/10 to-transparent" />
+            <div className="absolute inset-0 transition-transform duration-700 -translate-x-full pointer-events-none group-hover:translate-x-full">
+              <div className="w-1/2 h-full bg-linear-to-r from-transparent via-neon-cyan/10 to-transparent" />
             </div>
 
             {/* corner brackets */}
-            <div className="absolute top-3 left-3 w-4 h-4 border-t-2 border-l-2 border-neon-cyan/0 group-hover:border-neon-cyan/70 transition-colors duration-500" />
-            <div className="absolute bottom-3 right-3 w-4 h-4 border-b-2 border-r-2 border-neon-cyan/0 group-hover:border-neon-cyan/70 transition-colors duration-500" />
+            <div className="absolute w-4 h-4 transition-colors duration-500 border-t-2 border-l-2 top-3 left-3 border-neon-cyan/0 group-hover:border-neon-cyan/70" />
+            <div className="absolute w-4 h-4 transition-colors duration-500 border-b-2 border-r-2 bottom-3 right-3 border-neon-cyan/0 group-hover:border-neon-cyan/70" />
 
             <div className="relative z-10 flex flex-col items-center">
               <m.div
                 animate={{ rotate: [0, 12, 0] }}
                 transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
               >
-                <Code2Icon className="w-14 h-14 mb-6 text-gray-600 transition-colors duration-500 group-hover:text-neon-cyan" />
+                <Code2Icon className="mb-6 text-gray-600 transition-colors duration-500 w-14 h-14 group-hover:text-neon-cyan" />
               </m.div>
               <h2 className="text-3xl font-bold tracking-wider text-gray-400 transition-all duration-500 font-display group-hover:text-white group-hover:neon-text-cyan">
                 DEV MATRIX
               </h2>
 
-              <div className="flex items-center gap-2 mt-6 font-mono text-xs tracking-widest text-neon-cyan/0 group-hover:text-neon-cyan transition-colors duration-500">
+              <div className="flex items-center gap-2 mt-6 font-mono text-xs tracking-widest transition-colors duration-500 text-neon-cyan/0 group-hover:text-neon-cyan">
                 <TerminalIcon className="w-4 h-4" />
                 <span>&gt; BOOT_SYSTEM</span>
                 <ArrowRightIcon className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
@@ -120,7 +120,7 @@ const Portal = () => {
         >
           <div className="relative flex flex-col items-center justify-center overflow-hidden transition-all duration-500 border-2 h-70 md:h-95 border-dark-border group-hover:dj-ember-border bg-dark-surface/80 backdrop-blur-sm">
             {/* ambient ember fill + rising heat from the floor */}
-            <div className="absolute inset-x-0 bottom-0 h-2/3 transition-opacity duration-500 opacity-0 group-hover:opacity-100"
+            <div className="absolute inset-x-0 bottom-0 transition-opacity duration-500 opacity-0 h-2/3 group-hover:opacity-100"
               style={{
                 background:
                   "linear-gradient(to top, rgba(255,122,26,0.16), transparent)",
@@ -128,13 +128,13 @@ const Portal = () => {
             />
 
             {/* light sweep */}
-            <div className="absolute inset-0 -translate-x-full transition-transform duration-700 group-hover:translate-x-full pointer-events-none">
-              <div className="w-1/2 h-full bg-gradient-to-r from-transparent via-dj-ember/10 to-transparent" />
+            <div className="absolute inset-0 transition-transform duration-700 -translate-x-full pointer-events-none group-hover:translate-x-full">
+              <div className="w-1/2 h-full bg-linear-to-r from-transparent via-dj-ember/10 to-transparent" />
             </div>
 
             {/* corner brackets (ember) */}
-            <div className="absolute top-3 right-3 w-4 h-4 border-t-2 border-r-2 border-dj-ember/0 group-hover:border-dj-ember/70 transition-colors duration-500" />
-            <div className="absolute bottom-3 left-3 w-4 h-4 border-b-2 border-l-2 border-dj-ember/0 group-hover:border-dj-ember/70 transition-colors duration-500" />
+            <div className="absolute w-4 h-4 transition-colors duration-500 border-t-2 border-r-2 top-3 right-3 border-dj-ember/0 group-hover:border-dj-ember/70" />
+            <div className="absolute w-4 h-4 transition-colors duration-500 border-b-2 border-l-2 bottom-3 left-3 border-dj-ember/0 group-hover:border-dj-ember/70" />
 
             <div className="relative z-10 flex flex-col items-center">
               {/* spinning record icon */}
@@ -142,17 +142,17 @@ const Portal = () => {
                 <m.div
                   animate={{ rotate: 360 }}
                   transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
-                  className="text-gray-600 group-hover:text-dj-ember transition-colors duration-500"
+                  className="text-gray-600 transition-colors duration-500 group-hover:text-dj-ember"
                 >
                   <Disc3Icon className="w-14 h-14" />
                 </m.div>
                 <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-dj-ember opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
-              <h2 className="text-3xl font-bold tracking-wider text-gray-400 transition-all duration-500 font-display group-hover:text-white group-hover:text-dj-ember">
+              <h2 className="text-3xl font-bold tracking-wider text-gray-400 transition-all duration-500 font-display group-hover:text-white">
                 DJ DEN
               </h2>
 
-              <div className="flex items-center gap-2 mt-6 font-mono text-xs tracking-widest text-dj-ember/0 group-hover:text-dj-ember transition-colors duration-500">
+              <div className="flex items-center gap-2 mt-6 font-mono text-xs tracking-widest transition-colors duration-500 text-dj-ember/0 group-hover:text-dj-ember">
                 <HeadphonesIcon className="w-4 h-4" />
                 <span>DROP_THE_BEAT</span>
                 <ArrowRightIcon className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
