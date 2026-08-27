@@ -61,7 +61,7 @@ const DjSets = () => {
                       className={cn(
                         "font-mono text-sm tabular-nums transition-all duration-300",
                         isActive
-                          ? "text-dj-ember opacity-100"
+                          ? "opacity-0 scale-50"
                           : "text-dj-stone group-hover:opacity-0 group-hover:scale-50",
                       )}
                     >
