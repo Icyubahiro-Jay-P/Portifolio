@@ -7,6 +7,7 @@ import {
   SendIcon,
   YoutubeIcon,
   LoaderIcon,
+  ArrowUpRightIcon,
 } from "lucide-react";
 
 const socials = [
@@ -20,15 +21,18 @@ const socials = [
     icon: InstagramIcon,
     label: "Instagram",
     value: "@dj_pro_jay",
-    href: "https://www.instagram.com/dj_pro_jay/?utm_source=google-business-profile&utm_medium=social&utm_campaign=profile-clicks",
+    href: "https://www.instagram.com/dj_pro_jay/",
   },
   {
     icon: YoutubeIcon,
     label: "YouTube",
     value: "@djprojay",
-    href: "https://youtube.com/@djprojay/?utm_source=google-business-profile&utm_medium=social&utm_campaign=profile-clicks",
+    href: "https://youtube.com/@djprojay/",
   },
 ];
+
+const inputBase =
+  "w-full py-3 font-sans text-sm text-dj-bone transition-colors duration-200 bg-transparent border-b border-dj-line focus:border-dj-bone outline-none placeholder:text-dj-stone";
 
 const DjContact = () => {
   const [formData, setFormData] = useState({
@@ -64,7 +68,7 @@ const DjContact = () => {
         },
       );
       if (response.ok) {
-        toast.success("Message sent successfully!");
+        toast.success("Message sent! I'll get back to you within 48 hours.");
         setFormData({
           name: "",
           email: "",
@@ -72,40 +76,37 @@ const DjContact = () => {
           message: "",
         });
       } else {
-        toast.error("Failed to send message. Please try again.");
+        toast.error("Send failed. Please check the details and try again.");
       }
     } catch {
-      toast.error("An error occurred. Please try again.");
+      toast.error("Something went wrong. Please try again.");
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <section id="dj-contact" className="relative px-6 py-32">
-      <div className="mx-auto max-w-7xl">
-        {/* Section label */}
-        <div className="flex items-center gap-6 mb-6">
-          <span className="font-mono text-xs text-white/20 tracking-[0.3em] uppercase">
-            06 — Contact
-          </span>
-          <div className="flex-1 h-px bg-white/8" />
+    <section id="dj-contact" className="relative px-6 py-24 border-t border-dj-line/60 md:py-32">
+      <div className="mx-auto max-w-6xl">
+        {/* Dev-style header */}
+        <div className="flex items-center gap-4 mb-16">
+          <h2 className="font-dj text-3xl font-black tracking-tight uppercase text-dj-bone md:text-5xl">
+            <span className="text-dj-stone">05.</span> Book a slot
+          </h2>
+          <div className="flex-1 h-px bg-gradient-to-r from-dj-line to-transparent" />
         </div>
 
-        <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-24">
+        <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-20">
           {/* Left: info */}
           <m.div
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: -24 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-15%" }}
             transition={{ duration: 0.7 }}
           >
-            <h2 className="mb-4 text-4xl font-black tracking-tighter text-white uppercase font-display md:text-6xl">
-              Let's <span className="text-neon-pink">Connect</span>
-            </h2>
-            <p className="max-w-sm mb-12 font-sans text-base leading-relaxed text-gray-400">
-              For bookings, remix requests, or general inquiries — fill out the
-              form or reach out directly via any of the channels below.
+            <p className="max-w-sm mb-12 font-sans text-base leading-relaxed text-dj-ash">
+              For bookings, remix requests, or general inquiries — send the
+              form, or reach me directly through any channel below.
             </p>
 
             <div className="space-y-1">
@@ -115,17 +116,18 @@ const DjContact = () => {
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 py-4 transition-colors duration-200 border-b border-white/6 group hover:border-neon-pink/40"
+                  className="group flex items-center gap-4 py-4 transition-colors duration-200 border-b border-dj-line hover:border-dj-bone/40"
                 >
-                  <s.icon className="w-4 h-4 transition-colors shrink-0 text-white/20 group-hover:text-neon-pink" />
+                  <s.icon className="w-5 h-5 shrink-0 text-dj-stone transition-colors group-hover:text-dj-bone" />
                   <div className="flex-1 min-w-0">
-                    <div className="font-mono text-xs text-white/20 tracking-widest uppercase mb-0.5">
+                    <div className="font-mono text-[11px] text-dj-stone tracking-widest uppercase mb-0.5">
                       {s.label}
                     </div>
-                    <div className="font-sans text-sm truncate transition-colors text-white/60 group-hover:text-white">
+                    <div className="font-sans text-sm truncate text-dj-ash transition-colors group-hover:text-dj-bone">
                       {s.value}
                     </div>
                   </div>
+                  <ArrowUpRightIcon className="w-4 h-4 text-dj-stone transition-all group-hover:text-dj-bone group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </a>
               ))}
             </div>
@@ -133,102 +135,118 @@ const DjContact = () => {
 
           {/* Right: form */}
           <m.div
-            initial={{ opacity: 0, x: 20 }}
+            initial={{ opacity: 0, x: 24 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-15%" }}
             transition={{ duration: 0.7 }}
           >
-            {/* Top accent bar */}
-            <div className="w-8 h-px mb-8 bg-neon-pink" />
+            <div className="rounded-2xl border border-dj-line bg-dj-void-2/60 p-6 md:p-9">
+              <form className="space-y-7" onSubmit={handleSubmit}>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-7">
+                  <div>
+                    <label
+                      htmlFor="dj-name"
+                      className="block font-mono text-xs text-dj-stone tracking-[0.2em] uppercase mb-3"
+                    >
+                      Name
+                    </label>
+                    <input
+                      id="dj-name"
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      className={inputBase}
+                      placeholder="Your name"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="dj-email"
+                      className="block font-mono text-xs text-dj-stone tracking-[0.2em] uppercase mb-3"
+                    >
+                      Email
+                    </label>
+                    <input
+                      id="dj-email"
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      className={inputBase}
+                      placeholder="your@email.com"
+                      required
+                    />
+                  </div>
+                </div>
 
-            <form className="space-y-7" onSubmit={handleSubmit}>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-7">
                 <div>
-                  <label className="block font-mono text-xs text-white/30 tracking-[0.2em] uppercase mb-3">
-                    Name
+                  <label
+                    htmlFor="dj-type"
+                    className="block font-mono text-xs text-dj-stone tracking-[0.2em] uppercase mb-3"
+                  >
+                    Inquiry type
                   </label>
-                  <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
+                  <select
+                    id="dj-type"
+                    name="eventType"
+                    value={formData.eventType}
                     onChange={handleInputChange}
-                    className="w-full py-3 font-sans text-sm text-white transition-colors duration-200 bg-transparent border-b outline-none border-white/10 focus:border-neon-pink placeholder:text-white/20"
-                    placeholder="Your name"
+                    className={`${inputBase} appearance-none cursor-pointer bg-dj-void-2`}
+                  >
+                    <option>Club Booking</option>
+                    <option>Festival Booking</option>
+                    <option>Private Event</option>
+                    <option>Remix Request</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="dj-message"
+                    className="block font-mono text-xs text-dj-stone tracking-[0.2em] uppercase mb-3"
+                  >
+                    Message
+                  </label>
+                  <textarea
+                    id="dj-message"
+                    rows={5}
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    className={`${inputBase} resize-none`}
+                    placeholder="Tell me about your event or project..."
                     required
                   />
                 </div>
-                <div>
-                  <label className="block font-mono text-xs text-white/30 tracking-[0.2em] uppercase mb-3">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    className="w-full py-3 font-sans text-sm text-white transition-colors duration-200 bg-transparent border-b outline-none border-white/10 focus:border-neon-pink placeholder:text-white/20"
-                    placeholder="your@email.com"
-                    required
-                  />
-                </div>
-              </div>
 
-              <div>
-                <label className="block font-mono text-xs text-white/30 tracking-[0.2em] uppercase mb-3">
-                  Inquiry Type
-                </label>
-                <select
-                  name="eventType"
-                  value={formData.eventType}
-                  onChange={handleInputChange}
-                  className="w-full py-3 font-sans text-sm text-white transition-colors duration-200 border-b outline-none appearance-none cursor-pointer bg-dark border-white/10 focus:border-neon-pink"
+                <button
+                  id="dj-contact-submit"
+                  type="submit"
+                  disabled={loading}
+                  className="flex items-center justify-center gap-3 px-8 py-4 w-full text-sm font-bold tracking-widest text-dj-void uppercase rounded-full bg-dj-bone font-dj transition-colors duration-200 hover:bg-white active:scale-[0.98] disabled:opacity-40 disabled:cursor-not-allowed"
                 >
-                  <option>Club Booking</option>
-                  <option>Festival Booking</option>
-                  <option>Private Event</option>
-                  <option>Remix Request</option>
-                  <option>Other</option>
-                </select>
-              </div>
-
-              <div>
-                <label className="block font-mono text-xs text-white/30 tracking-[0.2em] uppercase mb-3">
-                  Message
-                </label>
-                <textarea
-                  rows={5}
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  className="w-full py-3 font-sans text-sm text-white transition-colors duration-200 bg-transparent border-b outline-none resize-none border-white/10 focus:border-neon-pink placeholder:text-white/20"
-                  placeholder="Tell me about your event or project..."
-                  required
-                />
-              </div>
-
-              <button
-                id="dj-contact-submit"
-                type="submit"
-                disabled={loading}
-                className="flex items-center gap-3 px-8 py-4 text-sm font-bold tracking-widest text-white uppercase transition-all duration-300 group bg-neon-pink font-display hover:bg-white hover:text-neon-pink disabled:opacity-40 disabled:cursor-not-allowed"
-              >
-                {loading ? (
-                  <>
-                    Sending
-                    <LoaderIcon className="w-4 h-4 animate-spin" />
-                  </>
-                ) : (
-                  <>
-                    Send Message
-                    <SendIcon className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-                  </>
-                )}
-              </button>
-            </form>
+                  {loading ? (
+                    <>
+                      Sending
+                      <LoaderIcon className="w-4 h-4 animate-spin" />
+                    </>
+                  ) : (
+                    <>
+                      Send message
+                      <SendIcon className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                    </>
+                  )}
+                </button>
+              </form>
+            </div>
           </m.div>
         </div>
       </div>
     </section>
   );
-}
+};
+
 export default DjContact;

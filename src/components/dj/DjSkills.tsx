@@ -1,30 +1,28 @@
 import * as m from "motion/react-m";
 
 const genres = [
-  "AFROBEAT",
-  "AMAPIANO",
-  "DANCEHALL",
-  "AFRO HOUSE",
-  "KOMPA",
-  "3-STEP",
-  "RNB",
-  "HIP HOP",
+  "Afrobeat",
+  "Amapiano",
+  "Dancehall",
+  "Afro House",
+  "Kompa",
+  "3-Step",
+  "RnB",
+  "Hip Hop",
 ];
 
 const equipment = [
-  "CDJ-3000s",
-  "Pioneer DJ SB 3",
-  "Hercules Inpulse 300",
-  "Pioneer DJ Rev 1",
+  { name: "CDJ-3000s", tag: "Players" },
+  { name: "Pioneer DJ SB 3", tag: "Controller" },
+  { name: "Hercules Inpulse 300", tag: "Controller" },
+  { name: "Pioneer DJ Rev 1", tag: "Scratch" },
 ];
 
 const software = ["Serato DJ Pro", "Rekordbox", "Virtual DJ", "FL Studio"];
 
 const containerVariants = {
   hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.06 },
-  },
+  visible: { transition: { staggerChildren: 0.06 } },
 };
 
 const itemVariants = {
@@ -34,37 +32,33 @@ const itemVariants = {
 
 const DjSkills = () => {
   return (
-    <section className="relative px-6 py-32">
-      <div className="mx-auto max-w-7xl">
-        {/* Section label */}
-        <div className="flex items-center gap-6 mb-6">
-          <span className="font-mono text-xs text-white/20 tracking-[0.3em] uppercase">
-            04 — Craft
-          </span>
-          <div className="flex-1 h-px bg-white/8" />
+    <section className="relative px-6 py-24 border-t border-dj-line/60 md:py-32">
+      <div className="mx-auto max-w-6xl">
+        {/* Dev-style header */}
+        <div className="flex items-center gap-4 mb-16">
+          <h2 className="font-dj text-3xl font-black tracking-tight uppercase text-dj-bone md:text-5xl">
+            <span className="text-dj-stone">03.</span> Sonic signature
+          </h2>
+          <div className="flex-1 h-px bg-gradient-to-r from-dj-line to-transparent" />
         </div>
 
-        <h2 className="mb-16 text-4xl font-black tracking-tighter text-white uppercase font-display md:text-6xl">
-          Sonic <span className="text-neon-pink">Arsenal</span>
-        </h2>
-
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-3 lg:gap-16">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
           {/* Genres */}
           <m.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-12%" }}
           >
-            <h3 className="font-mono text-xs text-neon-pink tracking-[0.3em] uppercase mb-6 pb-3 border-b border-white/8">
-              Genres
+            <h3 className="pb-4 mb-6 font-mono text-sm tracking-widest border-b uppercase text-dj-bone/80 border-dj-line">
+              // genres
             </h3>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2.5">
               {genres.map((genre, idx) => (
                 <m.span
                   key={idx}
                   variants={itemVariants}
-                  className="inline-block px-4 py-2 font-mono text-xs tracking-widest uppercase transition-all duration-200 border cursor-default border-white/10 text-white/50 hover:border-neon-pink hover:text-white"
+                  className="inline-block px-4 py-2 font-dj text-sm font-semibold tracking-wide uppercase rounded-full transition-colors duration-200 border border-dj-line text-dj-ash hover:border-dj-bone hover:text-dj-bone cursor-default"
                 >
                   {genre}
                 </m.span>
@@ -77,21 +71,26 @@ const DjSkills = () => {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-12%" }}
           >
-            <h3 className="font-mono text-xs text-neon-pink tracking-[0.3em] uppercase mb-6 pb-3 border-b border-white/8">
-              Hardware
+            <h3 className="pb-4 mb-6 font-mono text-sm tracking-widest border-b uppercase text-dj-bone/80 border-dj-line">
+              // hardware
             </h3>
-            <div className="space-y-3">
+            <div className="space-y-4">
               {equipment.map((item, idx) => (
                 <m.div
                   key={idx}
                   variants={itemVariants}
-                  className="flex items-center gap-3 group"
+                  className="flex items-center justify-between gap-3 group"
                 >
-                  <div className="w-1 h-1 transition-colors duration-200 bg-neon-pink/40 group-hover:bg-neon-pink" />
-                  <span className="font-sans text-sm transition-colors duration-200 text-white/50 group-hover:text-white">
-                    {item}
+                  <div className="flex items-center gap-3">
+                    <span className="w-1.5 h-1.5 bg-dj-line transition-colors group-hover:bg-dj-bone" />
+                    <span className="font-sans text-sm text-dj-ash transition-colors group-hover:text-dj-bone">
+                      {item.name}
+                    </span>
+                  </div>
+                  <span className="font-mono text-[10px] tracking-widest uppercase text-dj-stone">
+                    {item.tag}
                   </span>
                 </m.div>
               ))}
@@ -103,20 +102,20 @@ const DjSkills = () => {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-12%" }}
           >
-            <h3 className="font-mono text-xs text-neon-pink tracking-[0.3em] uppercase mb-6 pb-3 border-b border-white/8">
-              Software
+            <h3 className="pb-4 mb-6 font-mono text-sm tracking-widest border-b uppercase text-dj-bone/80 border-dj-line">
+              // software
             </h3>
-            <div className="space-y-3">
+            <div className="space-y-4">
               {software.map((item, idx) => (
                 <m.div
                   key={idx}
                   variants={itemVariants}
                   className="flex items-center gap-3 group"
                 >
-                  <div className="w-1 h-1 transition-colors duration-200 bg-neon-pink/40 group-hover:bg-neon-pink" />
-                  <span className="font-sans text-sm transition-colors duration-200 text-white/50 group-hover:text-white">
+                  <span className="w-1.5 h-1.5 bg-dj-line transition-colors group-hover:bg-dj-bone" />
+                  <span className="font-sans text-sm text-dj-ash transition-colors group-hover:text-dj-bone">
                     {item}
                   </span>
                 </m.div>
@@ -127,5 +126,6 @@ const DjSkills = () => {
       </div>
     </section>
   );
-}
-export default DjSkills
+};
+
+export default DjSkills;

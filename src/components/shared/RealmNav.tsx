@@ -87,7 +87,7 @@ const RealmNav = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 1 }}
-      className="fixed z-50 flex items-center justify-center w-full bottom-6 " // added subtle shadow for that premium pop
+      className="fixed z-50 flex items-center justify-center w-full bottom-6 px-2 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
     >
       <TooltipProvider>
         <Dock

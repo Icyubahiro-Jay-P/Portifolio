@@ -1,5 +1,5 @@
 /* FONT IMPORTS - MUST STAY AT THE TOP */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Orbitron:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:wght@400;500;700&display=swap');
 
 /* TAILWIND v4 */
 @import "tailwindcss";
@@ -23,6 +23,17 @@
   --font-display: "Orbitron", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
   --font-sans: "Inter", sans-serif;
+
+  /* DJ realm — warm black & bone monochrome */
+  --color-dj-void: #0a0a09;
+  --color-dj-void-2: #121110;
+  --color-dj-smoke: #1c1b19;
+  --color-dj-line: rgba(242, 240, 235, 0.1);
+  --color-dj-bone: #f2f0ea;
+  --color-dj-ash: #9b9992;
+  --color-dj-stone: #7e7c75;
+
+  --font-dj: "Archivo", system-ui, sans-serif;
 
   --animate-pulse-fast: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
@@ -49,6 +60,41 @@
     border-color: #ff00e5;
     box-shadow: 0 0 10px #ff00e5, inset 0 0 10px #ff00e5;
   }
+}
+
+/* ============ DJ REALM — monochrome minimal helpers ============ */
+@layer utilities {
+  .dj-fade-text {
+    background: linear-gradient(115deg, #ffffff 0%, var(--color-dj-bone) 30%, var(--color-dj-stone) 95%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .dj-hairline {
+    background: linear-gradient(
+      to right,
+      var(--color-dj-line),
+      rgba(242, 240, 235, 0.02)
+    );
+  }
+}
+
+/* ============ REDUCED MOTION ============ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============ VISIBLE KEYBOARD FOCUS ============ */
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--color-dj-bone);
+  outline-offset: 3px;
 }
 
 /* ====================== GLOBAL STYLES ====================== */
@@ -101,7 +147,7 @@ body {
   background: #00f0ff;
 }
 .dj-theme ::-webkit-scrollbar-thumb {
-  background: #ff00e5;
+  background: #4a4a47;
 }
 
 @theme inline {

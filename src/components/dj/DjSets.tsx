@@ -42,107 +42,82 @@ const sets = [
 
 const DjSets = () => {
   return (
-    <section id="dj-sets" className="relative px-6 py-32 bg-dark-surface/30">
-      <div className="mx-auto max-w-7xl">
-        {/* Section header */}
-        <div className="flex items-center gap-6 mb-6">
-          <span className="font-mono text-xs text-white/20 tracking-[0.3em] uppercase">
-            03 — Mixes
-          </span>
-          <div className="flex-1 h-px bg-white/8" />
-        </div>
-
-        <div className="flex flex-col items-end justify-between gap-6 mb-16 md:flex-row">
-          <h2 className="text-4xl font-black tracking-tighter text-white uppercase font-display md:text-6xl">
-            Latest <span className="text-neon-pink">Mixes</span>
+    <section id="dj-sets" className="relative px-6 py-24 border-t border-dj-line/60 md:py-32">
+      <div className="mx-auto max-w-6xl">
+        {/* Header */}
+        <div className="flex flex-col items-start justify-between gap-8 mb-14 md:flex-row md:items-end">
+          <h2 className="font-dj text-3xl font-black tracking-tight uppercase text-dj-bone md:text-5xl">
+            <span className="text-dj-stone">02.</span> Recent mixes
           </h2>
           <a
             href="https://soundcloud.com/djprojay"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 pb-1 font-mono text-xs tracking-widest uppercase transition-colors border-b text-white/40 hover:text-neon-pink border-white/10 hover:border-neon-pink"
+            className="group flex items-center gap-2 pb-1 font-mono text-xs tracking-widest uppercase border-b transition-colors text-dj-ash hover:text-dj-bone border-dj-line hover:border-dj-bone"
           >
             All on SoundCloud
-            <ExternalLinkIcon className="w-3 h-3" />
+            <ExternalLinkIcon className="w-3 h-3 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
         </div>
 
-        {/* Track listing */}
-        <div className="space-y-px">
-          {/* Header row */}
-          <div className="hidden md:grid grid-cols-[3rem_1fr_auto_auto] lg:grid-cols-[3rem_1fr_200px_80px_80px] gap-6 px-6 pb-3 border-b border-white/8">
-            <span className="font-mono text-xs tracking-widest text-white/20">
-              #
-            </span>
-            <span className="font-mono text-xs tracking-widest uppercase text-white/20">
-              Title
-            </span>
-            <span className="hidden font-mono text-xs tracking-widest uppercase text-white/20 lg:block">
-              Genre
-            </span>
-            <span className="font-mono text-xs tracking-widest uppercase text-white/20">
-              Plays
-            </span>
-            <span className="font-mono text-xs tracking-widest text-right uppercase text-white/20">
-              Duration
-            </span>
-          </div>
-
+        {/* Track list — set order is genuine sequence data */}
+        <div className="border-t border-dj-line">
           {sets.map((set, idx) => (
             <m.a
               key={idx}
               href={set.link}
               target="_blank"
               rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 10 }}
+              initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.08 }}
-              className="group grid grid-cols-[3rem_1fr_auto] md:grid-cols-[3rem_1fr_auto_auto] lg:grid-cols-[3rem_1fr_200px_80px_80px] gap-6 items-center px-6 py-5 border-b border-white/5 hover:bg-white/3 transition-all duration-200 cursor-pointer"
+              viewport={{ once: true, margin: "-10%" }}
+              transition={{ delay: idx * 0.06, duration: 0.5 }}
+              className="group grid grid-cols-[2.5rem_1fr_auto] md:grid-cols-[2.5rem_1fr_200px_80px_70px] gap-4 md:gap-6 items-center px-3 py-5 md:px-5 border-b border-dj-line transition-colors duration-200 hover:bg-dj-smoke cursor-pointer"
             >
-              {/* Number / Play toggle */}
-              <div className="relative flex items-center justify-center w-8 h-8 shrink-0">
-                <span className="font-mono text-sm transition-opacity text-white/20 group-hover:opacity-0">
+              {/* number / play */}
+              <div className="relative flex items-center justify-center w-9 h-9 shrink-0">
+                <span className="font-mono text-sm text-dj-stone transition-all duration-300 group-hover:opacity-0 group-hover:scale-50 tabular-nums">
                   {set.number}
                 </span>
-                <PlayIcon className="w-4 h-4 text-neon-pink absolute opacity-0 group-hover:opacity-100 transition-opacity ml-0.5" />
+                <PlayIcon className="w-4 h-4 text-dj-bone absolute opacity-0 scale-50 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100 ml-0.5" />
               </div>
 
-              {/* Title + image */}
-              <div className="flex items-center min-w-0 gap-4">
-                <div className="w-10 h-10 overflow-hidden shrink-0 bg-dark-surface">
+              {/* title + cover */}
+              <div className="flex items-center gap-4 min-w-0">
+                <div className="relative w-14 h-14 shrink-0 overflow-hidden rounded-sm bg-dj-smoke">
                   <img
                     src={set.image}
                     alt={set.title}
-                    className="object-cover w-full h-full transition-all duration-500 grayscale group-hover:grayscale-0"
+                    loading="lazy"
+                    className="object-cover w-full h-full grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105"
                   />
                 </div>
                 <div className="min-w-0">
-                  <div className="text-sm font-bold text-white truncate transition-colors font-display md:text-base group-hover:text-neon-pink">
+                  <div className="font-dj text-sm font-bold text-dj-bone truncate transition-colors group-hover:text-white md:text-base">
                     {set.title}
                   </div>
-                  <div className="font-mono text-xs text-white/30 md:hidden mt-0.5">
+                  <div className="font-mono text-xs text-dj-stone mt-0.5 md:hidden uppercase">
                     {set.genre}
                   </div>
                 </div>
               </div>
 
-              {/* Genre */}
+              {/* genre */}
               <div className="hidden lg:block">
-                <span className="font-mono text-xs tracking-wider uppercase text-white/30">
+                <span className="font-mono text-xs tracking-wider uppercase text-dj-stone">
                   {set.genre}
                 </span>
               </div>
 
-              {/* Plays */}
+              {/* plays */}
               <div className="hidden md:block">
-                <span className="font-mono text-sm text-white/40">
+                <span className="font-mono text-sm text-dj-stone tabular-nums">
                   {set.plays}
                 </span>
               </div>
 
-              {/* Duration */}
-              <div className="font-mono text-sm text-right text-white/40">
+              {/* duration */}
+              <div className="font-mono text-sm text-right text-dj-stone tabular-nums">
                 {set.duration}
               </div>
             </m.a>
@@ -151,5 +126,6 @@ const DjSets = () => {
       </div>
     </section>
   );
-}
+};
+
 export default DjSets;
