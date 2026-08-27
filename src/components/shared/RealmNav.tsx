@@ -206,9 +206,7 @@ const RealmNav = () => {
             >
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <div className="scale-50">
-                    <Whatsapp />
-                  </div>
+                  <Whatsapp size={24} className="text-gray-400 transition-colors group-hover:text-white" />
                 </TooltipTrigger>
                 <TooltipContent className="h-10 w-fit text-center flex justify-center items-center text-md rounded-lg -translate-y-2 bg-[#0a0a0a] border border-dark-border">
                   <p>Whatsapp</p>
