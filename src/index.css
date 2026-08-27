@@ -24,17 +24,14 @@
   --font-mono: "JetBrains Mono", monospace;
   --font-sans: "Inter", sans-serif;
 
-  /* DJ REalm palette */
-  --color-dj-base: #0b0806;
-  --color-dj-base-2: #120d09;
-  --color-dj-smoke: #171310;
-  --color-dj-line: rgba(255, 241, 224, 0.09);
-  --color-dj-heat: #ff6a3d;
-  --color-dj-heat-soft: #ff9d7a;
-  --color-dj-electric: #7c5cff;
-  --color-dj-gold: #e8b04b;
-  --color-dj-paper: #f4ede2;
-  --color-dj-muted: #b4a89b;
+  /* DJ realm — warm black & bone monochrome */
+  --color-dj-void: #0a0a09;
+  --color-dj-void-2: #121110;
+  --color-dj-smoke: #1c1b19;
+  --color-dj-line: rgba(242, 240, 235, 0.1);
+  --color-dj-bone: #f2f0ea;
+  --color-dj-ash: #9b9992;
+  --color-dj-stone: #55534e;
 
   --font-dj: "Archivo", system-ui, sans-serif;
 
@@ -65,10 +62,10 @@
   }
 }
 
-/* ============ DJ REALM — rich text / heat gradient helpers ============ */
+/* ============ DJ REALM — monochrome minimal helpers ============ */
 @layer utilities {
-  .dj-heat-text {
-    background: linear-gradient(100deg, #ff8a5c 0%, #ff6a3d 40%, #7c5cff 90%);
+  .dj-fade-text {
+    background: linear-gradient(115deg, #ffffff 0%, var(--color-dj-bone) 30%, var(--color-dj-stone) 95%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -77,12 +74,8 @@
     background: linear-gradient(
       to right,
       var(--color-dj-line),
-      rgba(255, 241, 224, 0.02)
+      rgba(242, 240, 235, 0.02)
     );
-  }
-  .dj-glow-heat {
-    box-shadow: 0 0 0 1px rgba(255, 106, 61, 0.35),
-      0 20px 60px -20px rgba(255, 106, 61, 0.55);
   }
 }
 
@@ -100,7 +93,7 @@
 
 /* ============ VISIBLE KEYBOARD FOCUS ============ */
 :where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
-  outline: 2px solid var(--color-dj-heat);
+  outline: 2px solid var(--color-dj-bone);
   outline-offset: 3px;
 }
 
@@ -154,7 +147,7 @@ body {
   background: #00f0ff;
 }
 .dj-theme ::-webkit-scrollbar-thumb {
-  background: #ff6a3d;
+  background: #4a4a47;
 }
 
 @theme inline {
