@@ -26,7 +26,7 @@ const DjAbout = () => {
               <img
                 src="Dj Jay P.png"
                 alt="DJ Pro Jay at the decks"
-                className="object-cover w-full h-full transition-all duration-700 grayscale group-hover:grayscale-0"
+                className="object-cover w-full h-full transition-all duration-700 grayscale hover:grayscale-0"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-dj-base via-transparent to-transparent" />
               {/* caption strip */}
