@@ -42,33 +42,25 @@ const sets = [
 
 const DjSets = () => {
   return (
-    <section id="dj-sets" className="relative px-6 py-28 md:py-36 bg-dj-base-2/50">
+    <section id="dj-sets" className="relative px-6 py-24 border-t border-dj-line/60 md:py-32">
       <div className="mx-auto max-w-6xl">
         {/* Header */}
         <div className="flex flex-col items-start justify-between gap-8 mb-14 md:flex-row md:items-end">
-          <div>
-            <div className="flex items-center gap-4 mb-5">
-              <span className="font-mono text-[11px] tracking-[0.4em] text-dj-heat-soft uppercase">
-                Recent sets
-              </span>
-              <div className="flex-1 h-px dj-hairline" />
-            </div>
-            <h2 className="font-dj text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-[0.95] tracking-tighter uppercase text-dj-paper">
-              Latest <span className="dj-heat-text">mixes</span>
-            </h2>
-          </div>
+          <h2 className="font-dj text-3xl font-black tracking-tight uppercase text-dj-bone md:text-5xl">
+            <span className="text-dj-stone">02.</span> Recent mixes
+          </h2>
           <a
             href="https://soundcloud.com/djprojay"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center gap-2 pb-1 font-mono text-xs tracking-widest uppercase transition-colors border-b text-dj-muted hover:text-dj-heat-soft border-dj-line hover:border-dj-heat"
+            className="group flex items-center gap-2 pb-1 font-mono text-xs tracking-widest uppercase border-b transition-colors text-dj-ash hover:text-dj-bone border-dj-line hover:border-dj-bone"
           >
             All on SoundCloud
             <ExternalLinkIcon className="w-3 h-3 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
         </div>
 
-        {/* Track listing — a mix set is genuinely sequential, so the ordering is real data */}
+        {/* Track list — set order is genuine sequence data */}
         <div className="border-t border-dj-line">
           {sets.map((set, idx) => (
             <m.a
@@ -84,10 +76,10 @@ const DjSets = () => {
             >
               {/* number / play */}
               <div className="relative flex items-center justify-center w-9 h-9 shrink-0">
-                <span className="font-mono text-sm text-dj-muted transition-all duration-300 group-hover:opacity-0 group-hover:scale-50 tabular-nums">
+                <span className="font-mono text-sm text-dj-stone transition-all duration-300 group-hover:opacity-0 group-hover:scale-50 tabular-nums">
                   {set.number}
                 </span>
-                <PlayIcon className="w-4 h-4 text-dj-heat absolute opacity-0 scale-50 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100 ml-0.5" />
+                <PlayIcon className="w-4 h-4 text-dj-bone absolute opacity-0 scale-50 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100 ml-0.5" />
               </div>
 
               {/* title + cover */}
@@ -97,14 +89,14 @@ const DjSets = () => {
                     src={set.image}
                     alt={set.title}
                     loading="lazy"
-                    className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+                    className="object-cover w-full h-full grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105"
                   />
                 </div>
                 <div className="min-w-0">
-                  <div className="font-dj text-sm font-bold text-dj-paper truncate transition-colors group-hover:text-dj-heat-soft md:text-base">
+                  <div className="font-dj text-sm font-bold text-dj-bone truncate transition-colors group-hover:text-white md:text-base">
                     {set.title}
                   </div>
-                  <div className="font-mono text-xs text-dj-muted mt-0.5 md:hidden">
+                  <div className="font-mono text-xs text-dj-stone mt-0.5 md:hidden uppercase">
                     {set.genre}
                   </div>
                 </div>
@@ -112,20 +104,20 @@ const DjSets = () => {
 
               {/* genre */}
               <div className="hidden lg:block">
-                <span className="font-mono text-xs tracking-wider uppercase text-dj-muted">
+                <span className="font-mono text-xs tracking-wider uppercase text-dj-stone">
                   {set.genre}
                 </span>
               </div>
 
               {/* plays */}
               <div className="hidden md:block">
-                <span className="font-mono text-sm text-dj-muted tabular-nums">
+                <span className="font-mono text-sm text-dj-stone tabular-nums">
                   {set.plays}
                 </span>
               </div>
 
               {/* duration */}
-              <div className="font-mono text-sm text-right text-dj-muted tabular-nums">
+              <div className="font-mono text-sm text-right text-dj-stone tabular-nums">
                 {set.duration}
               </div>
             </m.a>
