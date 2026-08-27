@@ -82,6 +82,7 @@ const RealmNav = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const isDev = location.pathname === "/dev";
+  const isDj = location.pathname === "/dj";
   return (
     <m.div
       initial={{ opacity: 0, y: 50 }}
@@ -131,16 +132,16 @@ const RealmNav = () => {
           <DockIcon
             onClick={() => navigate("/dj")}
             className={`${
-              !isDev
-                ? "bg-neon-pink/20 text-neon-pink neon-box-pink"
-                : "text-gray-400 hover:text-neon-pink hover:bg-neon-pink/20"
+              isDj
+                ? "bg-dj-ember/20 text-dj-ember dj-ember-box"
+                : "text-gray-400 hover:text-dj-ember hover:bg-dj-ember/10"
             }`}
           >
             <Tooltip>
               <TooltipTrigger asChild>
                 <Disc3Icon className="size-6" />
               </TooltipTrigger>
-              <TooltipContent className="h-10 w-fit text-center flex justify-center items-center text-md rounded-lg -translate-y-2 bg-[#0a0a0a] border border-dark-border">
+              <TooltipContent className="h-10 w-fit text-center flex justify-center items-center text-md rounded-lg -translate-y-2 bg-[#0a0a0a] border border-dj-ember/40">
                 <p>DJ Den</p>
               </TooltipContent>
             </Tooltip>
