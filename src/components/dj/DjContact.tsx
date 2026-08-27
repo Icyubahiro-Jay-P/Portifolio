@@ -2,37 +2,16 @@ import * as m from "motion/react-m";
 import { useState } from "react";
 import { toast } from "sonner";
 import {
-  InstagramIcon,
   MailIcon,
   SendIcon,
-  YoutubeIcon,
   LoaderIcon,
   ArrowUpRightIcon,
 } from "lucide-react";
-
-const socials = [
-  {
-    icon: MailIcon,
-    label: "Email",
-    value: "icyubahiro1980@gmail.com",
-    href: "mailto:icyubahiro1980@gmail.com",
-  },
-  {
-    icon: InstagramIcon,
-    label: "Instagram",
-    value: "@dj_pro_jay",
-    href: "https://www.instagram.com/dj_pro_jay/",
-  },
-  {
-    icon: YoutubeIcon,
-    label: "YouTube",
-    value: "@djprojay",
-    href: "https://youtube.com/@djprojay/",
-  },
-];
+import { djSocials } from "@/data/dj";
+import { DjSectionHeader } from "./DjSectionHeader";
 
 const inputBase =
-  "w-full py-3 font-sans text-sm text-dj-bone transition-colors duration-200 bg-transparent border-b border-dj-line focus:border-dj-bone outline-none placeholder:text-dj-stone";
+  "w-full py-3 font-sans text-sm text-dj-bone transition-colors duration-200 bg-transparent border-b border-dj-line focus:border-dj-ember outline-none placeholder:text-dj-stone";
 
 const DjContact = () => {
   const [formData, setFormData] = useState({
@@ -86,15 +65,20 @@ const DjContact = () => {
   };
 
   return (
-    <section id="dj-contact" className="relative px-6 py-24 border-t border-dj-line/60 md:py-32">
-      <div className="mx-auto max-w-6xl">
-        {/* Dev-style header */}
-        <div className="flex items-center gap-4 mb-16">
-          <h2 className="font-dj text-3xl font-black tracking-tight uppercase text-dj-bone md:text-5xl">
-            <span className="text-dj-stone">05.</span> Book a slot
-          </h2>
-          <div className="flex-1 h-px bg-gradient-to-r from-dj-line to-transparent" />
-        </div>
+    <section
+      id="dj-contact"
+      className="relative px-6 py-24 pb-40 border-t border-dj-line/60 md:py-32"
+    >
+      {/* ember footlight near the form */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse 60% 40% at 80% 110%, rgba(255,122,26,0.08), transparent 65%)",
+        }}
+      />
+      <div className="relative mx-auto max-w-6xl">
+        <DjSectionHeader index="07" title="Book a slot" />
 
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-20">
           {/* Left: info */}
@@ -110,15 +94,17 @@ const DjContact = () => {
             </p>
 
             <div className="space-y-1">
-              {socials.map((s, idx) => (
+              {djSocials.map((s, idx) => (
                 <a
                   key={idx}
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-4 py-4 transition-colors duration-200 border-b border-dj-line hover:border-dj-bone/40"
+                  className="group flex items-center gap-4 py-4 transition-colors duration-200 border-b border-dj-line hover:border-dj-ember/40"
                 >
-                  <s.icon className="w-5 h-5 shrink-0 text-dj-stone transition-colors group-hover:text-dj-bone" />
+                  <s.label === "Email" ? <MailIcon className="w-5 h-5 shrink-0 text-dj-stone transition-colors group-hover:text-dj-ember" /> : (
+                    <ArrowUpRightIcon className="w-5 h-5 shrink-0 text-dj-stone transition-colors group-hover:text-dj-ember" />
+                  )}
                   <div className="flex-1 min-w-0">
                     <div className="font-mono text-[11px] text-dj-stone tracking-widest uppercase mb-0.5">
                       {s.label}
@@ -127,7 +113,7 @@ const DjContact = () => {
                       {s.value}
                     </div>
                   </div>
-                  <ArrowUpRightIcon className="w-4 h-4 text-dj-stone transition-all group-hover:text-dj-bone group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  <ArrowUpRightIcon className="w-4 h-4 text-dj-stone transition-all group-hover:text-dj-ember group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </a>
               ))}
             </div>
@@ -226,7 +212,7 @@ const DjContact = () => {
                   id="dj-contact-submit"
                   type="submit"
                   disabled={loading}
-                  className="flex items-center justify-center gap-3 px-8 py-4 w-full text-sm font-bold tracking-widest text-dj-void uppercase rounded-full bg-dj-bone font-dj transition-colors duration-200 hover:bg-white active:scale-[0.98] disabled:opacity-40 disabled:cursor-not-allowed"
+                  className="flex items-center justify-center gap-3 px-8 py-4 w-full text-sm font-bold tracking-widest text-dj-void uppercase rounded-full bg-dj-bone font-dj transition-all duration-200 hover:bg-white hover:dj-ember-box active:scale-[0.98] disabled:opacity-40 disabled:cursor-not-allowed"
                 >
                   {loading ? (
                     <>
@@ -235,8 +221,8 @@ const DjContact = () => {
                     </>
                   ) : (
                     <>
-                      Send message
-                      <SendIcon className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                      Lock in your slot
+                      <SendIcon className="w-4 h-4" />
                     </>
                   )}
                 </button>
