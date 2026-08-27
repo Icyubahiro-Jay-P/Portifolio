@@ -33,7 +33,7 @@ const DjRealm = () => {
       }}
       className="relative min-h-screen text-dj-bone bg-dj-void dj-theme font-dj"
     >
-      <ScrollProgress className="h-[3px] bg-dj-ember" />
+      <ScrollProgress className="h-0.75 bg-dj-ember" />
 
       {/* Subtle tonal grid — shared motif with Dev realm, monochrome here */}
       <div className="fixed inset-0 z-0 pointer-events-none opacity-[0.05]">
