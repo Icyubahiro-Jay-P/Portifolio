@@ -1,7 +1,7 @@
 import * as m from "motion/react-m";
 import { ArrowDownIcon, Volume2Icon, PauseIcon, PlayIcon } from "lucide-react";
 import { marqueeItems } from "@/data/dj";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 const scrollTo = (id: string) => {
   document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
