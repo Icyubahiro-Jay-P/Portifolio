@@ -31,7 +31,7 @@ const DevHero = () => {
             FULL-STACK DEVELOPER
           </h2>
 
-          <p className="max-w-xl mx-auto mb-9 font-sans text-base leading-relaxed text-gray-400 lg:mx-0 md:text-lg">
+          <p className="max-w-xl mx-auto font-sans text-base leading-relaxed text-gray-400 mb-9 lg:mx-0 md:text-lg">
             Architecting scalable systems and crafting immersive digital
             experiences. Bridging the gap between complex backend logic and
             sleek frontend interfaces.
@@ -39,7 +39,7 @@ const DevHero = () => {
 
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start">
             <button
-              className="w-full px-7 py-4 font-mono font-bold tracking-widest transition-all duration-300 border outline-none cursor-pointer sm:w-auto bg-neon-cyan/10 border-neon-cyan text-neon-cyan hover:bg-neon-cyan hover:text-dark neon-box-cyan"
+              className="w-full py-4 font-mono font-bold tracking-widest transition-all duration-300 border outline-none cursor-pointer px-7 sm:w-auto bg-neon-cyan/10 border-neon-cyan text-neon-cyan hover:bg-neon-cyan hover:text-dark neon-box-cyan"
               onClick={() => scrollTo("deployments")}
             >
               VIEW PROJECTS
@@ -48,7 +48,7 @@ const DevHero = () => {
               href="https://github.com/Icyubahiro-Jay-P"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-full gap-3 px-7 py-4 font-mono font-bold tracking-widest text-white transition-all duration-300 border group sm:w-auto border-dark-border hover:border-neon-cyan hover:text-neon-cyan hover:bg-neon-cyan/5"
+              className="flex items-center justify-center w-full gap-3 py-4 font-mono font-bold tracking-widest text-white transition-all duration-300 border px-7 group sm:w-auto border-dark-border hover:border-neon-cyan hover:text-neon-cyan hover:bg-neon-cyan/5"
             >
               <GithubIcon className="w-5 h-5 transition-transform group-hover:scale-110" />
               GITHUB
@@ -63,15 +63,15 @@ const DevHero = () => {
           transition={{ delay: 0.3, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           className="relative hidden lg:block group"
         >
-          <div className="absolute inset-0 translate-x-4 translate-y-4 bg-neon-cyan/60 -z-10 transition-transform group-hover:translate-x-2 group-hover:translate-y-2" />
+          <div className="absolute inset-0 transition-transform translate-x-4 translate-y-4 bg-neon-cyan/60 -z-10 group-hover:translate-x-2 group-hover:translate-y-2" />
           <div className="relative overflow-hidden border border-dark-border">
             <img
               src="Jay P.JPG"
               alt="Irakoze Icyubahiro Jean Pierre — developer"
-              className="object-cover w-full h-full aspect-square grayscale group-hover:grayscale-0 transition-all duration-700"
+              className="object-cover w-full h-full transition-all duration-700 aspect-square grayscale group-hover:grayscale-0"
             />
             <div className="absolute inset-0 bg-neon-cyan/10 mix-blend-overlay" />
-            <div className="absolute bottom-0 left-0 right-0 px-5 py-4 bg-gradient-to-r from-dark/95 to-dark/40">
+            <div className="absolute bottom-0 left-0 right-0 px-5 py-4 bg-linear-to-r from-dark/95 to-dark/40">
               <span className="font-mono text-xs tracking-[0.3em] text-neon-cyan uppercase">
                 {'{ full_stack.dev }'}
               </span>
@@ -87,7 +87,7 @@ const DevHero = () => {
         transition={{ delay: 1.1 }}
         onClick={() => scrollTo("init-profile")}
         aria-label="Scroll down"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-neon-cyan/50 hover:text-neon-cyan transition-colors cursor-pointer"
+        className="absolute transition-colors -translate-x-1/2 cursor-pointer bottom-8 left-1/2 text-neon-cyan/50 hover:text-neon-cyan"
       >
         <ChevronDownIcon className="w-7 h-7 animate-bounce" />
       </m.button>
