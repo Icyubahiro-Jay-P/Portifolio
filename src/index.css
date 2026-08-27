@@ -24,7 +24,7 @@
   --font-mono: "JetBrains Mono", monospace;
   --font-sans: "Inter", sans-serif;
 
-  /* DJ realm — warm black & bone monochrome */
+  /* DJ realm — warm black & bone, single ember accent (one hot light source) */
   --color-dj-void: #0a0a09;
   --color-dj-void-2: #121110;
   --color-dj-smoke: #1c1b19;
@@ -32,6 +32,8 @@
   --color-dj-bone: #f2f0ea;
   --color-dj-ash: #9b9992;
   --color-dj-stone: #7e7c75;
+  --color-dj-ember: #ff7a1a;
+  --color-dj-amber: #ffb347;
 
   --font-dj: "Archivo", system-ui, sans-serif;
 
@@ -77,6 +79,63 @@
       rgba(242, 240, 235, 0.02)
     );
   }
+  /* Ember heat text — warm white bleeding into the single accent */
+  .dj-heat-text {
+    background: linear-gradient(
+      100deg,
+      #ffffff 0%,
+      var(--color-dj-bone) 38%,
+      var(--color-dj-amber) 88%,
+      var(--color-dj-ember) 115%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  /* Ember glow text — pure accent, for select display moments */
+  .dj-ember-glow {
+    color: var(--color-dj-ember);
+    text-shadow:
+      0 0 12px rgba(255, 122, 26, 0.45),
+      0 0 34px rgba(255, 122, 26, 0.22);
+  }
+  /* Ember box/ring glow — used on the interactive player CTA */
+  .dj-ember-box {
+    box-shadow:
+      0 0 18px rgba(255, 122, 26, 0.28),
+      inset 0 0 12px rgba(255, 122, 26, 0.12);
+    border-color: var(--color-dj-ember);
+  }
+  .dj-ember-border {
+    box-shadow: 0 0 14px rgba(255, 122, 26, 0.22);
+    border-color: color-mix(in srgb, var(--color-dj-ember) 70%, transparent);
+  }
+  /* Text with an outline/stroke — for display numerals over imagery */
+  .dj-outline-text {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(242, 240, 235, 0.22);
+  }
+}
+
+/* ============ DJ REALM — equalizer bars & now-playing pulse ============ */
+@keyframes dj-eq {
+  0%, 100% { transform: scaleY(0.28); }
+  50% { transform: scaleY(1); }
+}
+.dj-eq-bar {
+  transform-origin: bottom;
+  animation: dj-eq 0.9s ease-in-out infinite;
+}
+.dj-eq-bar:nth-child(2) { animation-delay: 0.18s; }
+.dj-eq-bar:nth-child(3) { animation-delay: 0.36s; }
+.dj-eq-bar:nth-child(4) { animation-delay: 0.12s; }
+
+@keyframes dj-live-pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(255, 122, 26, 0.6); }
+  50% { opacity: 0.7; box-shadow: 0 0 0 6px rgba(255, 122, 26, 0); }
+}
+.dj-live-dot {
+  animation: dj-live-pulse 1.6s ease-in-out infinite;
 }
 
 /* ============ REDUCED MOTION ============ */
