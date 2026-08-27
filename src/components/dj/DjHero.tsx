@@ -12,7 +12,7 @@ const LiveEq = ({ active }: { active: boolean }) => (
     {[0, 1, 2, 3, 4].map((i) => (
       <span
         key={i}
-        className={`w-[3px] rounded-full ${
+        className={`w-0.75 rounded-full ${
           active
             ? "dj-eq-bar bg-dj-ember"
             : "bg-dj-stone/50"
@@ -111,14 +111,14 @@ const DjHero = () => {
           >
             <button
               onClick={() => scrollTo("dj-contact")}
-              className="relative flex items-center gap-3 px-9 py-4 text-sm font-bold tracking-widest text-dj-void uppercase rounded-full bg-dj-bone font-dj transition-all duration-200 hover:text-dj-void hover:bg-white active:scale-[0.98] min-w-[44px] min-h-[44px]"
+              className="relative flex items-center gap-3 px-9 py-4 text-sm font-bold tracking-widest text-dj-void uppercase rounded-full bg-dj-bone font-dj transition-all duration-200 hover:text-dj-void hover:bg-white active:scale-[0.98] min-w-11 min-h-11"
             >
               Book a set
               <ArrowDownIcon className="w-4 h-4" />
             </button>
             <button
               onClick={() => scrollTo("dj-sets")}
-              className="flex items-center gap-3 px-9 py-4 text-sm font-bold tracking-widest text-dj-bone uppercase rounded-full border border-dj-line font-dj transition-all duration-200 hover:border-dj-ember/60 hover:dj-ember-border hover:text-white active:scale-[0.98] min-w-[44px] min-h-[44px]"
+              className="flex items-center gap-3 px-9 py-4 text-sm font-bold tracking-widest text-dj-bone uppercase rounded-full border border-dj-line font-dj transition-all duration-200 hover:border-dj-ember/60 hover:dj-ember-border hover:text-white active:scale-[0.98] min-w-11 min-h-11"
             >
               <Volume2Icon className="w-4 h-4" />
               Listen now
@@ -170,7 +170,7 @@ const DjHero = () => {
                     "radial-gradient(circle at 50% 118%, rgba(255,122,26,0.32), transparent 60%)",
                 }}
               />
-              <div className="absolute inset-0 rounded-full bg-gradient-to-t from-dj-void/50 via-transparent to-transparent" />
+              <div className="absolute inset-0 rounded-full bg-linear-to-t from-dj-void/50 via-transparent to-transparent" />
             </div>
             {/* centre spindle */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-dj-bone/70" />
