@@ -7,7 +7,7 @@ import {
   Disc3Icon,
   InstagramIcon,
   Github,
-  Linkedin,
+  // Linkedin,
 } from "lucide-react";
 import {
   Tooltip,
