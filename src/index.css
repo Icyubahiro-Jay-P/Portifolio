@@ -1,5 +1,5 @@
 /* FONT IMPORTS - MUST STAY AT THE TOP */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Orbitron:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:wght@400;500;700&display=swap');
 
 /* TAILWIND v4 */
 @import "tailwindcss";
@@ -23,6 +23,20 @@
   --font-display: "Orbitron", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
   --font-sans: "Inter", sans-serif;
+
+  /* DJ REalm palette */
+  --color-dj-base: #0b0806;
+  --color-dj-base-2: #120d09;
+  --color-dj-smoke: #171310;
+  --color-dj-line: rgba(255, 241, 224, 0.09);
+  --color-dj-heat: #ff6a3d;
+  --color-dj-heat-soft: #ff9d7a;
+  --color-dj-electric: #7c5cff;
+  --color-dj-gold: #e8b04b;
+  --color-dj-paper: #f4ede2;
+  --color-dj-muted: #b4a89b;
+
+  --font-dj: "Archivo", system-ui, sans-serif;
 
   --animate-pulse-fast: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
@@ -49,6 +63,51 @@
     border-color: #ff00e5;
     box-shadow: 0 0 10px #ff00e5, inset 0 0 10px #ff00e5;
   }
+}
+
+/* ============ DJ REALM — rich text / heat gradient helpers ============ */
+@layer utilities {
+  .dj-heat-text {
+    background: linear-gradient(100deg, #ff8a5c 0%, #ff6a3d 40%, #7c5cff 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .dj-gold-text {
+    background: linear-gradient(100deg, #f4ede2 0%, #e8b04b 60%, #ff8a5c 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .dj-hairline {
+    background: linear-gradient(
+      to right,
+      var(--color-dj-line),
+      rgba(255, 241, 224, 0.02)
+    );
+  }
+  .dj-glow-heat {
+    box-shadow: 0 0 0 1px rgba(255, 106, 61, 0.35),
+      0 20px 60px -20px rgba(255, 106, 61, 0.55);
+  }
+}
+
+/* ============ REDUCED MOTION ============ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============ VISIBLE KEYBOARD FOCUS ============ */
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--color-dj-heat);
+  outline-offset: 3px;
 }
 
 /* ====================== GLOBAL STYLES ====================== */
