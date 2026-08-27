@@ -5,13 +5,28 @@ import {
   MailIcon,
   SendIcon,
   LoaderIcon,
-  ArrowUpRightIcon,
+  InstagramIcon,
+  YoutubeIcon,
 } from "lucide-react";
+import SoundCloud from "@/assets/icons/SoundCloud";
 import { djSocials } from "@/data/dj";
 import { DjSectionHeader } from "./DjSectionHeader";
 
 const inputBase =
   "w-full py-3 font-sans text-sm text-dj-bone transition-colors duration-200 bg-transparent border-b border-dj-line focus:border-dj-ember outline-none placeholder:text-dj-stone";
+
+const socialIcon = (label: string) => {
+  switch (label) {
+    case "Instagram":
+      return InstagramIcon;
+    case "YouTube":
+      return YoutubeIcon;
+    case "SoundCloud":
+      return SoundCloud;
+    default:
+      return MailIcon;
+  }
+};
 
 const DjContact = () => {
   const [formData, setFormData] = useState({
@@ -77,7 +92,7 @@ const DjContact = () => {
             "radial-gradient(ellipse 60% 40% at 80% 110%, rgba(255,122,26,0.08), transparent 65%)",
         }}
       />
-      <div className="relative mx-auto max-w-6xl">
+      <div className="relative max-w-6xl mx-auto">
         <DjSectionHeader index="07" title="Book a slot" />
 
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-20">
@@ -89,34 +104,33 @@ const DjContact = () => {
             transition={{ duration: 0.7 }}
           >
             <p className="max-w-sm mb-12 font-sans text-base leading-relaxed text-dj-ash">
-              For bookings, remix requests, or general inquiries — send the
+              For bookings, remix requests, or general inquiries send the
               form, or reach me directly through any channel below.
             </p>
 
             <div className="space-y-1">
-              {djSocials.map((s, idx) => (
-                <a
-                  key={idx}
-                  href={s.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-4 py-4 transition-colors duration-200 border-b border-dj-line hover:border-dj-ember/40"
-                >
-                  {s.label === "Email" ? (
-                    <MailIcon className="w-5 h-5 shrink-0 text-dj-stone transition-colors group-hover:text-dj-ember" />
-                  ) : (
-                    <ArrowUpRightIcon className="w-5 h-5 shrink-0 text-dj-stone transition-colors group-hover:text-dj-ember" />
-                  )}
-                  <div className="flex-1 min-w-0">
-                    <div className="font-mono text-[11px] text-dj-stone tracking-widest uppercase mb-0.5">
-                      {s.label}
+              {djSocials.map((s, idx) => {
+                const Icon = socialIcon(s.label);
+                return (
+                  <a
+                    key={idx}
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 py-4 transition-colors duration-200 border-b group border-dj-line hover:border-dj-ember/40"
+                  >
+                    <Icon className="w-5 h-5 transition-colors shrink-0 text-dj-stone group-hover:text-dj-ember" />
+                    <div className="flex-1 min-w-0">
+                      <div className="font-mono text-[11px] text-dj-stone tracking-widest uppercase mb-0.5">
+                        {s.label}
+                      </div>
+                      <div className="font-sans text-sm truncate transition-colors text-dj-ash group-hover:text-dj-bone">
+                        {s.value}
+                      </div>
                     </div>
-                    <div className="font-sans text-sm truncate text-dj-ash transition-colors group-hover:text-dj-bone">
-                      {s.value}
-                    </div>
-                  </div>
-                </a>
-              ))}
+                  </a>
+                );
+              })}
             </div>
           </m.div>
 
@@ -127,7 +141,7 @@ const DjContact = () => {
             viewport={{ once: true, margin: "-15%" }}
             transition={{ duration: 0.7 }}
           >
-            <div className="rounded-2xl border border-dj-line bg-dj-void-2/60 p-6 md:p-9">
+            <div className="p-6 border rounded-2xl border-dj-line bg-dj-void-2/60 md:p-9">
               <form className="space-y-7" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-7">
                   <div>
