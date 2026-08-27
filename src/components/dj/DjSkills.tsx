@@ -32,21 +32,17 @@ const itemVariants = {
 
 const DjSkills = () => {
   return (
-    <section className="relative px-6 py-28 md:py-36 overflow-hidden">
-      <div className="mx-auto max-w-7xl">
-        {/* label */}
-        <div className="flex items-center gap-4 mb-5">
-          <span className="font-mono text-[11px] tracking-[0.4em] text-dj-heat-soft uppercase">
-            The arsenal
-          </span>
-          <div className="flex-1 h-px dj-hairline" />
+    <section className="relative px-6 py-24 border-t border-dj-line/60 md:py-32">
+      <div className="mx-auto max-w-6xl">
+        {/* Dev-style header */}
+        <div className="flex items-center gap-4 mb-16">
+          <h2 className="font-dj text-3xl font-black tracking-tight uppercase text-dj-bone md:text-5xl">
+            <span className="text-dj-stone">03.</span> Sonic signature
+          </h2>
+          <div className="flex-1 h-px bg-gradient-to-r from-dj-line to-transparent" />
         </div>
 
-        <h2 className="mb-16 font-dj text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-[0.95] tracking-tighter uppercase text-dj-paper">
-          Sonic <span className="dj-heat-text">signature</span>
-        </h2>
-
-        <div className="grid grid-cols-1 gap-14 lg:grid-cols-3 lg:gap-10">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
           {/* Genres */}
           <m.div
             variants={containerVariants}
@@ -54,15 +50,15 @@ const DjSkills = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-12%" }}
           >
-            <h3 className="font-mono text-xs tracking-[0.3em] uppercase text-dj-heat-soft mb-6 pb-3 border-b border-dj-line">
-              Genres
+            <h3 className="pb-4 mb-6 font-mono text-sm tracking-widest border-b uppercase text-dj-bone/80 border-dj-line">
+              // genres
             </h3>
             <div className="flex flex-wrap gap-2.5">
               {genres.map((genre, idx) => (
                 <m.span
                   key={idx}
                   variants={itemVariants}
-                  className="inline-block px-4 py-2 font-dj text-sm font-semibold tracking-wide uppercase rounded-full transition-all duration-200 border border-dj-line text-dj-muted hover:border-dj-heat/50 hover:text-dj-heat-soft cursor-default"
+                  className="inline-block px-4 py-2 font-dj text-sm font-semibold tracking-wide uppercase rounded-full transition-colors duration-200 border border-dj-line text-dj-ash hover:border-dj-bone hover:text-dj-bone cursor-default"
                 >
                   {genre}
                 </m.span>
@@ -77,8 +73,8 @@ const DjSkills = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-12%" }}
           >
-            <h3 className="font-mono text-xs tracking-[0.3em] uppercase text-dj-heat-soft mb-6 pb-3 border-b border-dj-line">
-              Hardware
+            <h3 className="pb-4 mb-6 font-mono text-sm tracking-widest border-b uppercase text-dj-bone/80 border-dj-line">
+              // hardware
             </h3>
             <div className="space-y-4">
               {equipment.map((item, idx) => (
@@ -88,12 +84,12 @@ const DjSkills = () => {
                   className="flex items-center justify-between gap-3 group"
                 >
                   <div className="flex items-center gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-dj-electric/50 transition-colors group-hover:bg-dj-heat" />
-                    <span className="font-sans text-sm text-dj-muted transition-colors group-hover:text-dj-paper">
+                    <span className="w-1.5 h-1.5 bg-dj-line transition-colors group-hover:bg-dj-bone" />
+                    <span className="font-sans text-sm text-dj-ash transition-colors group-hover:text-dj-bone">
                       {item.name}
                     </span>
                   </div>
-                  <span className="font-mono text-[10px] tracking-widest uppercase text-dj-muted/40">
+                  <span className="font-mono text-[10px] tracking-widest uppercase text-dj-stone">
                     {item.tag}
                   </span>
                 </m.div>
@@ -108,8 +104,8 @@ const DjSkills = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-12%" }}
           >
-            <h3 className="font-mono text-xs tracking-[0.3em] uppercase text-dj-heat-soft mb-6 pb-3 border-b border-dj-line">
-              Software
+            <h3 className="pb-4 mb-6 font-mono text-sm tracking-widest border-b uppercase text-dj-bone/80 border-dj-line">
+              // software
             </h3>
             <div className="space-y-4">
               {software.map((item, idx) => (
@@ -118,8 +114,8 @@ const DjSkills = () => {
                   variants={itemVariants}
                   className="flex items-center gap-3 group"
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-dj-electric/50 transition-colors group-hover:bg-dj-heat" />
-                  <span className="font-sans text-sm text-dj-muted transition-colors group-hover:text-dj-paper">
+                  <span className="w-1.5 h-1.5 bg-dj-line transition-colors group-hover:bg-dj-bone" />
+                  <span className="font-sans text-sm text-dj-ash transition-colors group-hover:text-dj-bone">
                     {item}
                   </span>
                 </m.div>
