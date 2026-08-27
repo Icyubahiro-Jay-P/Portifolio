@@ -102,7 +102,9 @@ const DjContact = () => {
                   rel="noopener noreferrer"
                   className="group flex items-center gap-4 py-4 transition-colors duration-200 border-b border-dj-line hover:border-dj-ember/40"
                 >
-                  <s.label === "Email" ? <MailIcon className="w-5 h-5 shrink-0 text-dj-stone transition-colors group-hover:text-dj-ember" /> : (
+                  {s.label === "Email" ? (
+                    <MailIcon className="w-5 h-5 shrink-0 text-dj-stone transition-colors group-hover:text-dj-ember" />
+                  ) : (
                     <ArrowUpRightIcon className="w-5 h-5 shrink-0 text-dj-stone transition-colors group-hover:text-dj-ember" />
                   )}
                   <div className="flex-1 min-w-0">
