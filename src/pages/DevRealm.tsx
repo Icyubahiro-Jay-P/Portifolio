@@ -17,15 +17,19 @@ const DevRealm = () => {
     <m.div
       initial={{
         opacity: 0,
+        scale: 0.985,
       }}
       animate={{
         opacity: 1,
+        scale: 1,
       }}
       exit={{
         opacity: 0,
+        scale: 0.99,
       }}
       transition={{
         duration: 0.5,
+        ease: [0.22, 1, 0.36, 1],
       }}
       className="relative min-h-screen text-white bg-dark dev-theme"
     >
