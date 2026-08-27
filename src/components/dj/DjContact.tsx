@@ -115,7 +115,6 @@ const DjContact = () => {
                       {s.value}
                     </div>
                   </div>
-                  <ArrowUpRightIcon className="w-4 h-4 text-dj-stone transition-all group-hover:text-dj-ember group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </a>
               ))}
             </div>
