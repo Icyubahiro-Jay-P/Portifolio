@@ -88,7 +88,7 @@ const RealmNav = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 1 }}
-      className="fixed z-50 flex items-center justify-center w-full bottom-6 px-2 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      className="fixed z-50 flex items-center justify-center w-full px-2 overflow-x-auto bottom-6 scrollbar-none"
     >
       <TooltipProvider>
         <Dock
