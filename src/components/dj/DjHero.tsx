@@ -8,7 +8,7 @@ const scrollTo = (id: string) => {
 };
 
 const LiveEq = ({ active }: { active: boolean }) => (
-  <div className="flex items-end gap-[3px] h-3.5" aria-hidden>
+  <div className="flex items-end gap-0.75 h-3.5" aria-hidden>
     {[0, 1, 2, 3, 4].map((i) => (
       <span
         key={i}
@@ -47,14 +47,14 @@ const DjHero = () => {
       />
 
       {/* Status readout — mirrors Dev's SYSTEM.ONLINE, ember-lit live indicator */}
-      <div className="absolute top-6 left-1/2 -translate-x-1/2 w-max flex items-center gap-3 px-5 py-2 border border-dj-line rounded-full backdrop-blur-sm bg-dj-void-2/60">
+      <div className="absolute flex items-center gap-3 px-5 py-2 -translate-x-1/2 border rounded-full top-6 left-1/2 w-max border-dj-line backdrop-blur-sm bg-dj-void-2/60">
         <span className="flex items-center gap-2">
           <span className="dj-live-dot w-1.5 h-1.5 rounded-full bg-dj-ember" />
           <span className="font-mono text-[11px] tracking-[0.3em] text-dj-bone/80 uppercase">
             Now playing
           </span>
         </span>
-        <span className="hidden h-3 w-px bg-dj-line sm:block" />
+        <span className="hidden w-px h-3 bg-dj-line sm:block" />
         <LiveEq active={playing} />
         <span className="hidden font-mono text-[11px] tracking-[0.2em] text-dj-ash sm:block tabular-nums">
           BPM 132
@@ -64,7 +64,7 @@ const DjHero = () => {
       {/* Main grid — asymmetric, like a record sleeve */}
       <div className="relative z-10 flex flex-col items-center justify-center flex-1 gap-12 py-28 md:flex-row md:gap-10">
         {/* Left: copy */}
-        <div className="w-full max-w-xl text-center md:text-left order-2 md:order-1 md:ml-8 lg:ml-16">
+        <div className="order-2 w-full max-w-xl text-center md:text-left md:order-1 md:ml-8 lg:ml-16">
           <m.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -97,7 +97,7 @@ const DjHero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="mx-auto mt-7 max-w-md font-sans text-base leading-relaxed text-dj-ash md:mx-0 md:text-lg"
+            className="max-w-md mx-auto font-sans text-base leading-relaxed mt-7 text-dj-ash md:mx-0 md:text-lg"
           >
             Engineering nights out of sound — building tension, dropping
             basslines, and reading the room like a waveform.
@@ -181,7 +181,7 @@ const DjHero = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.6 }}
-            className="absolute -left-3 bottom-8 flex items-center gap-2 px-3 py-2 border border-dj-line rounded-full bg-dj-void-2/90 backdrop-blur-sm"
+            className="absolute flex items-center gap-2 px-3 py-2 border rounded-full -left-3 bottom-8 border-dj-line bg-dj-void-2/90 backdrop-blur-sm"
           >
             <button
               onClick={toggle}
@@ -206,7 +206,7 @@ const DjHero = () => {
       </div>
 
       {/* Scrolling genre marquee */}
-      <div className="relative z-10 w-full py-4 border-y border-dj-line bg-dj-void-2/40 backdrop-blur-sm overflow-hidden">
+      <div className="relative z-10 w-full py-4 overflow-hidden border-y border-dj-line bg-dj-void-2/40 backdrop-blur-sm">
         <m.div
           animate={{ x: ["0%", "-50%"] }}
           transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
@@ -218,7 +218,7 @@ const DjHero = () => {
               className="font-dj text-sm font-semibold tracking-[0.3em] text-dj-stone uppercase"
             >
               <span className="text-dj-ember/70">{item}</span>
-              <span className="mx-5 inline-block w-1 h-1 rounded-full align-middle bg-dj-stone" />
+              <span className="inline-block w-1 h-1 mx-5 align-middle rounded-full bg-dj-stone" />
             </span>
           ))}
         </m.div>
