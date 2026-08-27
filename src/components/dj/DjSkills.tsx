@@ -15,7 +15,7 @@ const itemVariants = {
 const DjSkills = () => {
   return (
     <section className="relative px-6 py-24 border-t border-dj-line/60 md:py-32">
-      <div className="mx-auto max-w-6xl">
+      <div className="max-w-6xl mx-auto">
         <DjSectionHeader index="03" title="Sonic signature" />
 
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
@@ -26,7 +26,7 @@ const DjSkills = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-12%" }}
           >
-            <h3 className="pb-4 mb-6 font-mono text-sm tracking-widest border-b uppercase text-dj-bone/80 border-dj-line">
+            <h3 className="pb-4 mb-6 font-mono text-sm tracking-widest uppercase border-b text-dj-bone/80 border-dj-line">
               <span className="text-dj-ember">//</span> genres
             </h3>
             <div className="flex flex-wrap gap-2.5">
@@ -34,7 +34,7 @@ const DjSkills = () => {
                 <m.span
                   key={idx}
                   variants={itemVariants}
-                  className="inline-block px-4 py-2 font-dj text-sm font-semibold tracking-wide uppercase rounded-full transition-colors duration-200 border border-dj-line text-dj-ash hover:border-dj-ember/60 hover:text-dj-bone cursor-default"
+                  className="inline-block px-4 py-2 text-sm font-semibold tracking-wide uppercase transition-colors duration-200 border rounded-full cursor-default font-dj border-dj-line text-dj-ash hover:border-dj-ember/60 hover:text-dj-bone"
                 >
                   {genre}
                 </m.span>
@@ -49,7 +49,7 @@ const DjSkills = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-12%" }}
           >
-            <h3 className="pb-4 mb-6 font-mono text-sm tracking-widest border-b uppercase text-dj-bone/80 border-dj-line">
+            <h3 className="pb-4 mb-6 font-mono text-sm tracking-widest uppercase border-b text-dj-bone/80 border-dj-line">
               <span className="text-dj-ember">//</span> hardware
             </h3>
             <div className="space-y-4">
@@ -61,7 +61,7 @@ const DjSkills = () => {
                 >
                   <div className="flex items-center gap-3">
                     <span className="w-1.5 h-1.5 bg-dj-line transition-colors group-hover:bg-dj-ember" />
-                    <span className="font-sans text-sm text-dj-ash transition-colors group-hover:text-dj-bone">
+                    <span className="font-sans text-sm transition-colors text-dj-ash group-hover:text-dj-bone">
                       {item.name}
                     </span>
                   </div>
@@ -79,16 +79,16 @@ const DjSkills = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-12%" }}
-            className="flex flex-col items-start justify-between p-7 rounded-2xl border border-dj-ember/25 bg-gradient-to-br from-dj-ember/10 to-transparent"
+            className="flex flex-col items-start justify-between border p-7 rounded-2xl border-dj-ember/25 bg-linear-to-br from-dj-ember/10 to-transparent"
           >
             <m.div variants={itemVariants} className="w-full">
               <div className="flex items-center gap-2 mb-5">
-                <span className="dj-live-dot w-2 h-2 rounded-full bg-dj-ember" />
+                <span className="w-2 h-2 rounded-full dj-live-dot bg-dj-ember" />
                 <span className="font-mono text-xs tracking-[0.3em] text-dj-ember uppercase">
                   The tip
                 </span>
               </div>
-              <p className="font-dj text-2xl font-black uppercase leading-tight text-dj-bone">
+              <p className="text-2xl font-black leading-tight uppercase font-dj text-dj-bone">
                 Deep bass,
                 <br />
                 tight mixes,
