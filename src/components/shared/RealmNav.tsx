@@ -182,7 +182,7 @@ const RealmNav = () => {
               </Tooltip>
             </a>
           </DockIcon>
-          <DockIcon className="text-gray-400 rounded-full hover:bg-white/10 hover:text-white">
+          {/* <DockIcon className="text-gray-400 rounded-full hover:bg-white/10 hover:text-white">
             <a
               href="https://www.linkedin.com/in/dj-pro-jay-4956293ba/?utm_source=google-business-profile&utm_medium=social&utm_campaign=profile-clicks"
               target="_blank"
@@ -197,7 +197,7 @@ const RealmNav = () => {
                 </TooltipContent>
               </Tooltip>
             </a>
-          </DockIcon>
+          </DockIcon> */}
           <DockIcon className="text-gray-400 rounded-full hover:bg-white/10 hover:text-white">
             <a
               href="https://wa.me/250789124135/?utm_source=google-business-profile&utm_medium=social&utm_campaign=profile-clicks"
