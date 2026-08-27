@@ -1,13 +1,29 @@
-const Whatsapp = () => {
-  return (
+import { forwardRef, type SVGProps } from "react";
+
+export type WhatsappProps = SVGProps<SVGSVGElement> & {
+  size?: number | string;
+};
+
+/**
+ * WhatsApp brand icon.
+ *
+ * Behaves like a lucide-react icon: accepts `size`, `className`, `color`
+ * (via `currentColor`), and spreads any additional SVG props onto the
+ * underlying <svg>. Fill-based glyph, inherits `currentColor`.
+ */
+const Whatsapp = forwardRef<SVGSVGElement, WhatsappProps>(
+  ({ size = 24, className, ...props }, ref) => (
     <svg
-      width="55px"
-      height="55px"
+      ref={ref}
+      width={size}
+      height={size}
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      strokeWidth="0.00001"
-      className="text-[#767676] transition-colors group-hover:text-neon-pink group-hover:scale-110"
+      className={className}
+      aria-hidden="true"
+      data-lucide="whatsapp"
+      {...props}
     >
       <path
         fillRule="evenodd"
@@ -16,7 +32,9 @@ const Whatsapp = () => {
         fill="currentColor"
       />
     </svg>
-  );
-};
+  ),
+);
+
+Whatsapp.displayName = "Whatsapp";
 
 export default Whatsapp;
