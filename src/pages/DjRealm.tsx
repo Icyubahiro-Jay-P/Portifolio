@@ -26,10 +26,21 @@ const DjRealm = () => {
       transition={{
         duration: 0.5,
       }}
-      className="relative min-h-screen text-[--color-dj-paper] bg-dj-base dj-theme font-dj"
+      className="relative min-h-screen text-dj-bone bg-dj-void dj-theme font-dj"
     >
-      <ScrollProgress className="h-[3px] bg-gradient-to-r from-dj-heat via-dj-gold to-dj-electric" />
+      <ScrollProgress className="h-[3px] bg-dj-bone" />
 
+      {/* Subtle tonal grid — shared motif with Dev realm, monochrome here */}
+      <div className="fixed inset-0 z-0 pointer-events-none opacity-[0.05]">
+        <div
+          className="w-full h-full"
+          style={{
+            backgroundImage:
+              "linear-gradient(#f2f0ea 1px, transparent 1px), linear-gradient(90deg, #f2f0ea 1px, transparent 1px)",
+            backgroundSize: "56px 56px",
+          }}
+        />
+      </div>
       <div className="relative z-10">
         <DjHero />
         <DjAbout />
