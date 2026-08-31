@@ -66,7 +66,7 @@ const DevHero = () => {
           <div className="absolute inset-0 transition-transform translate-x-4 translate-y-4 bg-neon-cyan/60 -z-10 group-hover:translate-x-2 group-hover:translate-y-2" />
           <div className="relative overflow-hidden border border-dark-border">
             <img
-              src="Jay P.JPG"
+              src="Jay P 2.JPG"
               alt="Irakoze Icyubahiro Jean Pierre — developer"
               className="object-cover w-full h-full transition-all duration-700 aspect-square grayscale group-hover:grayscale-0"
             />
