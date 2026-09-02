@@ -17,7 +17,7 @@ Deployed on Vercel because speed and reliability matter, fam.
 # Features
 
 - **Dual Portal Design**  
-  Switch between two fire modes/portals
+  Switch between two fire modes/portals.
 
 - **Fully Responsive**  
   Looks elite on phone, tablet, or desktop.
