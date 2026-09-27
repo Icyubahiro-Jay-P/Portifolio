@@ -1,10 +1,44 @@
-/* Google Fonts are loaded non-blocking from index.html */
-
 /* TAILWIND v4 */
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
-@import "@fontsource-variable/figtree";
+
+/* Self-hosted variable fonts, latin subset only (the site has no other scripts) */
+@font-face {
+  font-family: "Figtree Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300 900;
+  src: url("@fontsource-variable/figtree/files/figtree-latin-wght-normal.woff2") format("woff2-variations");
+}
+@font-face {
+  font-family: "Orbitron Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400 900;
+  src: url("@fontsource-variable/orbitron/files/orbitron-latin-wght-normal.woff2") format("woff2-variations");
+}
+@font-face {
+  font-family: "Archivo Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("@fontsource-variable/archivo/files/archivo-latin-wght-normal.woff2") format("woff2-variations");
+}
+@font-face {
+  font-family: "Big Shoulders Display Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("@fontsource-variable/big-shoulders-display/files/big-shoulders-display-latin-wght-normal.woff2") format("woff2-variations");
+}
+@font-face {
+  font-family: "JetBrains Mono Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 800;
+  src: url("@fontsource-variable/jetbrains-mono/files/jetbrains-mono-latin-wght-normal.woff2") format("woff2-variations");
+}
 
 @custom-variant dark (&:is(.dark *));
 
@@ -18,9 +52,8 @@
   --color-dark-surface: #111111;
   --color-dark-border: #222222;
 
-  --font-display: "Orbitron", sans-serif;
-  --font-mono: "JetBrains Mono", monospace;
-  --font-sans: "Inter", sans-serif;
+  --font-display: "Orbitron Variable", sans-serif;
+  --font-mono: "JetBrains Mono Variable", monospace;
 
   /* DJ realm  Imigongo: soot, bone, terracotta */
   --color-dj-soot: #0e0c0a;
@@ -33,8 +66,8 @@
   --color-dj-ash: #9a8f82;
   --color-dj-umber: #5c5248;
 
-  --font-dj: "Archivo", system-ui, sans-serif;
-  --font-poster: "Big Shoulders Display", "Archivo", sans-serif;
+  --font-dj: "Archivo Variable", system-ui, sans-serif;
+  --font-poster: "Big Shoulders Display Variable", "Archivo Variable", sans-serif;
 
   --animate-pulse-fast: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
