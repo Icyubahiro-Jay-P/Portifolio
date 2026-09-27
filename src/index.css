@@ -1,5 +1,4 @@
-/* FONT IMPORTS - MUST STAY AT THE TOP */
-@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:wght@400;500;700&family=Big+Shoulders+Display:wght@600;800;900&family=Orbitron:wght@400;500;700;900&display=swap");
+/* Google Fonts are loaded non-blocking from index.html */
 
 /* TAILWIND v4 */
 @import "tailwindcss";
