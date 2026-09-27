@@ -9,88 +9,81 @@ const stats = [
 
 const DjAbout = () => {
   return (
-    <section className="relative px-6 py-24 border-t border-dj-line/60 md:py-32">
-      <div className="mx-auto max-w-6xl">
-        {/* Dev-style section header: number + title + fading hairline */}
-        <div className="flex items-center gap-4 mb-16">
-          <h2 className="font-dj text-3xl font-black tracking-tight uppercase text-dj-bone md:text-5xl">
-            <span className="text-dj-stone">01.</span> The story
-          </h2>
-          <div className="flex-1 h-px bg-gradient-to-r from-dj-line to-transparent" />
-        </div>
-
-        <div className="grid items-center grid-cols-1 gap-16 lg:grid-cols-2">
-          {/* Image — left, layered frame like Dev */}
+    <section className="relative px-6 py-24 bg-dj-bone text-dj-soot md:px-12 md:py-36">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid grid-cols-1 gap-16 lg:grid-cols-[0.9fr_1.1fr] lg:gap-24">
+          {/* Photo: hard frame on an offset clay block */}
           <m.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-15%" }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="relative group"
+            className="relative self-start max-w-md mb-5 mr-5 group"
           >
-            <div className="absolute inset-0 translate-x-4 translate-y-4 bg-dj-smoke -z-10 pointer-events-none transition-transform group-hover:translate-x-2 group-hover:translate-y-2" />
-            <div className="relative overflow-hidden aspect-[4/5] bg-dj-smoke">
+            <div className="absolute inset-0 translate-x-5 translate-y-5 bg-dj-soot transition-transform duration-500 group-hover:translate-x-3 group-hover:translate-y-3" />
+            <div className="relative overflow-hidden aspect-[4/5] bg-dj-clay">
               <img
-                src="Dj Jay P.png"
-                alt="DJ Pro Jay at the decks"
+                src="jay-p-2.webp"
+                alt="DJ Pro Jay"
                 loading="lazy"
-                className="object-cover w-full h-full transition-all duration-700 grayscale hover:grayscale-0"
+                className="object-cover object-[50%_20%] w-full h-full grayscale contrast-[1.35] brightness-110 mix-blend-multiply transition-transform duration-700 group-hover:scale-[1.03]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-dj-void via-transparent to-transparent" />
-              {/* mono caption strip */}
-              <div className="absolute bottom-0 left-0 right-0 px-6 py-5 bg-gradient-to-r from-dj-void/90 to-dj-void/40">
-                <span className="font-mono text-xs tracking-[0.3em] text-dj-ash/80 uppercase">
-                  On the ones &amp; twos — Kigali
+              <div className="absolute inset-x-0 bottom-0 px-5 py-4 bg-dj-soot">
+                <span className="text-[11px] font-semibold tracking-[0.3em] uppercase text-dj-bone">
+                  On the ones &amp; twos Kigali
                 </span>
               </div>
             </div>
           </m.div>
 
-          {/* Text — right */}
+          {/* Text */}
           <m.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-15%" }}
             transition={{ duration: 0.8 }}
-            className="space-y-8"
+            className="flex flex-col"
           >
-            <div className="font-mono text-sm tracking-widest text-dj-bone/80">
-              {">"} STATUS: LOCKED ON THE ROOM
-            </div>
+            <span className="mb-4 text-xs font-bold tracking-[0.35em] uppercase text-dj-clay-deep">
+              Status: locked on the room
+            </span>
+            <h2 className="mb-10 font-poster text-[clamp(3.5rem,9vw,7.5rem)] font-black uppercase leading-[0.85]">
+              The story
+            </h2>
 
-            <p className="font-sans text-lg leading-relaxed text-dj-bone/85">
+            <p className="mb-6 text-xl leading-relaxed md:text-2xl">
               What started as late-night coding sessions with mixes playing in
-              the background evolved into a full obsession with sound design
-              and crowd psychology.
+              the background evolved into a full obsession with sound design and
+              crowd psychology.
+            </p>
+            <p className="text-lg leading-relaxed text-dj-umber">
+              As DJ Pro Jay, I bring the same analytical precision from software
+              engineering into my sets building tension, managing energy levels,
+              and executing flawless transitions. Whether it's a dark warehouse
+              techno set or a high-energy house mix, the goal is always an
+              immersive sonic architecture.
             </p>
 
-            <p className="font-sans text-lg leading-relaxed text-dj-ash">
-              As DJ Pro Jay, I bring the same analytical precision from
-              software engineering into my sets — building tension, managing
-              energy levels, and executing flawless transitions. Whether it's a
-              dark warehouse techno set or a high-energy house mix, the goal is
-              always an immersive sonic architecture.
-            </p>
-
-            {/* Stats — dev-style mono counters */}
-            <div className="grid grid-cols-2 gap-6 pt-8 border-t border-dj-line lg:grid-cols-4">
+            {/* gap-px over a tinted background draws the rules between cells */}
+            <dl className="grid grid-cols-2 gap-px mt-14 border-t-[3px] border-dj-soot bg-dj-soot/20 lg:grid-cols-4">
               {stats.map((stat, idx) => (
                 <m.div
-                  key={idx}
+                  key={stat.label}
                   initial={{ opacity: 0, y: 14 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.08 * idx, duration: 0.5 }}
+                  className="flex flex-col-reverse px-4 pt-5 pb-3 bg-dj-bone"
                 >
-                  <div className="mb-2 font-dj text-3xl font-black text-dj-bone tabular-nums md:text-4xl">
-                    {stat.value}
-                  </div>
-                  <div className="font-mono text-[11px] tracking-[0.15em] uppercase text-dj-stone">
+                  <dt className="mt-1 text-[11px] font-bold tracking-[0.2em] uppercase text-dj-umber">
                     {stat.label}
-                  </div>
+                  </dt>
+                  <dd className="font-poster text-5xl font-black tabular-nums md:text-6xl">
+                    {stat.value}
+                  </dd>
                 </m.div>
               ))}
-            </div>
+            </dl>
           </m.div>
         </div>
       </div>
