@@ -7,7 +7,7 @@ const Whatsapp = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       strokeWidth="0.00001"
-      className="text-[#767676] transition-colors group-hover:text-neon-pink group-hover:scale-110"
+      className="text-[#767676] transition-colors group-hover:text-neon-clay group-hover:scale-110"
     >
       <path
         fillRule="evenodd"
