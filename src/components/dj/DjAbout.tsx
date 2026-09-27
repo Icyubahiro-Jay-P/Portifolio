@@ -21,7 +21,7 @@ const DjAbout = () => {
             className="relative self-start max-w-md mb-5 mr-5 group"
           >
             <div className="absolute inset-0 translate-x-5 translate-y-5 bg-dj-soot transition-transform duration-500 group-hover:translate-x-3 group-hover:translate-y-3" />
-            <div className="relative overflow-hidden aspect-[4/5] bg-dj-clay">
+            <div className="relative overflow-hidden aspect-4/5 bg-dj-clay">
               <img
                 src="jay-p-2.webp"
                 alt="DJ Pro Jay"
