@@ -81,7 +81,7 @@ const DjSets = () => {
               <div className="relative">
                 <div
                   aria-hidden="true"
-                  className="absolute top-[5%] left-[30%] w-[68%] aspect-square rounded-full shadow-[inset_0_0_0_1px_rgba(239,231,218,0.18)] transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-[14%] group-hover:rotate-[120deg]"
+                  className="absolute top-[5%] left-[30%] w-[68%] aspect-square rounded-full shadow-[inset_0_0_0_1px_rgba(239,231,218,0.18)] transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-[14%] group-hover:rotate-120"
                   style={{
                     background:
                       "conic-gradient(from 30deg, rgba(239,231,218,0.10), transparent 18%, rgba(239,231,218,0.08) 50%, transparent 68%), repeating-radial-gradient(circle, #2a2520 0 1.5px, #110f0d 1.5px 4px)",
