@@ -8,7 +8,7 @@ const SoundCloud = () => {
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="-271 345.8 256 111.2"
-      className="text-gray-400 transition-colors group-hover:text-neon-pink group-hover:scale-110"
+      className="text-gray-400 transition-colors group-hover:text-neon-clay group-hover:scale-110"
       stroke="currentColor"
     >
       <g>
