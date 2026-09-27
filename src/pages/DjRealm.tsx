@@ -25,11 +25,11 @@ const DjRealm = () => {
       transition={{ duration: 0.5 }}
       className="relative min-h-screen overflow-x-clip text-dj-bone bg-dj-soot dj-theme font-dj"
     >
-      <ScrollProgress className="h-[3px] bg-dj-clay" />
+      <ScrollProgress className="h-0.75 bg-dj-clay" />
 
       <div
         aria-hidden="true"
-        className="fixed inset-0 z-[60] pointer-events-none opacity-[0.07] mix-blend-overlay"
+        className="fixed inset-0 z-60 pointer-events-none opacity-[0.07] mix-blend-overlay"
         style={{ backgroundImage: GRAIN }}
       />
 
