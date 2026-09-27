@@ -1,20 +1,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-KMHJ18LNPT"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-KMHJ18LNPT");
-    </script>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vinyl.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,6 +9,48 @@
       content="DJ PRO JAY is a Rwandan DJ and music producer known for his energetic performances and unique sound. With a passion for music that started at a young age, DJ PRO JAY has become a prominent figure in the Rwandan music scene, captivating audiences with his dynamic mixes and infectious beats."
     />
     <title>DJ PRO JAY</title>
+
+    <!-- Google Fonts: preconnect + non-render-blocking stylesheet (display=swap) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:wght@400;500;700&family=Big+Shoulders+Display:wght@600;800;900&family=Orbitron:wght@400;500;700;900&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:wght@400;500;700&family=Big+Shoulders+Display:wght@600;800;900&family=Orbitron:wght@400;500;700;900&display=swap"
+      />
+    </noscript>
+
+    <!-- Google tag (gtag.js): loaded on first interaction so it stays off the critical path -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-KMHJ18LNPT");
+
+      (function () {
+        var events = ["pointerdown", "keydown", "scroll", "touchstart"];
+        function load() {
+          events.forEach(function (e) {
+            removeEventListener(e, load);
+          });
+          var s = document.createElement("script");
+          s.async = true;
+          s.src = "https://www.googletagmanager.com/gtag/js?id=G-KMHJ18LNPT";
+          document.head.appendChild(s);
+        }
+        events.forEach(function (e) {
+          addEventListener(e, load, { once: true, passive: true });
+        });
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
