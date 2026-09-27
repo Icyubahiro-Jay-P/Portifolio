@@ -100,7 +100,11 @@ const DjHero = () => {
           className="relative min-h-[70svh] overflow-hidden bg-dj-bone lg:min-h-0"
         >
           <img
-            src="jay-p-2.webp"
+            src="/jay-p-2.webp"
+            width={900}
+            height={900}
+            decoding="async"
+            fetchPriority="high"
             alt="DJ Pro Jay"
             className="absolute inset-0 object-cover object-[50%_15%] w-full h-full mix-blend-multiply contrast-[1.08]"
           />
