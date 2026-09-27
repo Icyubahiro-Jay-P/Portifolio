@@ -6,7 +6,7 @@ const Snapchat = () => {
       viewBox="0 0 192 192"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
-      className="text-gray-400 transition-colors group-hover:text-neon-pink group-hover:scale-110"
+      className="text-gray-400 transition-colors group-hover:text-neon-clay group-hover:scale-110"
     >
       <path
         stroke="currentColor"
