@@ -1,5 +1,5 @@
 /* FONT IMPORTS - MUST STAY AT THE TOP */
-@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:wght@400;500;700&family=Big+Shoulders+Display:wght@600;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:wght@400;500;700&family=Big+Shoulders+Display:wght@600;800;900&family=Orbitron:wght@400;500;700;900&display=swap");
 
 /* TAILWIND v4 */
 @import "tailwindcss";
@@ -13,8 +13,7 @@
 @theme {
   --color-neon-cyan: #00f0ff;
   --color-neon-blue: #0080ff;
-  --color-neon-pink: #ff00e5;
-  --color-neon-purple: #a020f0;
+  --color-neon-clay: #d2572e;
 
   --color-dark: #050505;
   --color-dark-surface: #111111;
@@ -49,11 +48,11 @@
       0 0 10px #00f0ff,
       0 0 20px #00f0ff;
   }
-  .neon-text-pink {
+  .neon-text-clay {
     text-shadow:
-      0 0 5px #ff00e5,
-      0 0 10px #ff00e5,
-      0 0 20px #ff00e5;
+      0 0 5px #d2572e,
+      0 0 10px #d2572e,
+      0 0 20px #d2572e;
   }
   .neon-box-cyan {
     box-shadow:
@@ -61,11 +60,11 @@
       0 0 10px #00f0ff,
       inset 0 0 5px #00f0ff;
   }
-  .neon-box-pink {
+  .neon-box-clay {
     box-shadow:
-      0 0 5px #ff00e5,
-      0 0 10px #ff00e5,
-      inset 0 0 5px #ff00e5;
+      0 0 5px #d2572e,
+      0 0 10px #d2572e,
+      inset 0 0 5px #d2572e;
   }
   .neon-border-cyan {
     border-color: #00f0ff;
@@ -73,16 +72,21 @@
       0 0 10px #00f0ff,
       inset 0 0 10px #00f0ff;
   }
-  .neon-border-pink {
-    border-color: #ff00e5;
+  .neon-border-clay {
+    border-color: #d2572e;
     box-shadow:
-      0 0 10px #ff00e5,
-      inset 0 0 10px #ff00e5;
+      0 0 10px #d2572e,
+      inset 0 0 10px #d2572e;
   }
 }
 
 /* ============ DJ REALM ============ */
 @layer utilities {
+  /* soft clay glow for the Portal's DJ card */
+  .dj-clay-border {
+    border-color: color-mix(in srgb, var(--color-dj-clay) 75%, transparent);
+    box-shadow: 0 0 14px rgba(210, 87, 46, 0.25);
+  }
   /* outlined poster type */
   .dj-outline {
     color: transparent;

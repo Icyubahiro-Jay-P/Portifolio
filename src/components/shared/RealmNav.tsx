@@ -7,7 +7,7 @@ import {
   Disc3Icon,
   InstagramIcon,
   Github,
-  Linkedin,
+  // Linkedin,
 } from "lucide-react";
 import {
   Tooltip,
@@ -61,8 +61,8 @@ import Whatsapp from "@/assets/icons/Whatsapp";
 //           onClick={() => navigate('/dj')}
 //           className={`p-3 rounded-full transition-all ${
 //             !isDev
-//               ? 'bg-neon-pink/20 text-neon-pink neon-box-pink'
-//               : 'text-gray-400 hover:text-neon-pink hover:bg-neon-pink/10'
+//               ? 'bg-neon-clay/20 text-neon-clay neon-box-clay'
+//               : 'text-gray-400 hover:text-neon-clay hover:bg-neon-clay/10'
 //           }`}
 //           title="DJ Den"
 //         >
@@ -82,12 +82,13 @@ const RealmNav = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const isDev = location.pathname === "/dev";
+  const isDj = location.pathname === "/dj";
   return (
     <m.div
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 1 }}
-      className="fixed z-50 flex items-center justify-center w-full bottom-6 px-2 overflow-x-auto scrollbar-none [&::-webkit-scrollbar]:hidden"
+      className="fixed z-50 flex items-center justify-center w-full px-2 overflow-x-auto bottom-6 scrollbar-none"
     >
       <TooltipProvider>
         <Dock
@@ -131,7 +132,7 @@ const RealmNav = () => {
           <DockIcon
             onClick={() => navigate("/dj")}
             className={`${
-              !isDev
+              isDj
                 ? "bg-dj-clay text-dj-soot"
                 : "text-gray-400 hover:text-dj-clay hover:bg-dj-clay/15"
             }`}
@@ -140,7 +141,7 @@ const RealmNav = () => {
               <TooltipTrigger asChild>
                 <Disc3Icon className="size-6" />
               </TooltipTrigger>
-              <TooltipContent className="h-10 w-fit text-center flex justify-center items-center text-md rounded-lg -translate-y-2 bg-[#0a0a0a] border border-dark-border">
+              <TooltipContent className="h-10 w-fit text-center flex justify-center items-center text-md rounded-lg -translate-y-2 bg-[#0a0a0a] border border-dj-clay/40">
                 <p>DJ Den</p>
               </TooltipContent>
             </Tooltip>
@@ -181,7 +182,7 @@ const RealmNav = () => {
               </Tooltip>
             </a>
           </DockIcon>
-          <DockIcon className="text-gray-400 rounded-full hover:bg-white/10 hover:text-white">
+          {/* <DockIcon className="text-gray-400 rounded-full hover:bg-white/10 hover:text-white">
             <a
               href="https://www.linkedin.com/in/dj-pro-jay-4956293ba/?utm_source=google-business-profile&utm_medium=social&utm_campaign=profile-clicks"
               target="_blank"
@@ -196,7 +197,7 @@ const RealmNav = () => {
                 </TooltipContent>
               </Tooltip>
             </a>
-          </DockIcon>
+          </DockIcon> */}
           <DockIcon className="text-gray-400 rounded-full hover:bg-white/10 hover:text-white">
             <a
               href="https://wa.me/250789124135/?utm_source=google-business-profile&utm_medium=social&utm_campaign=profile-clicks"
@@ -205,9 +206,7 @@ const RealmNav = () => {
             >
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <div className="scale-50">
-                    <Whatsapp />
-                  </div>
+                  <Whatsapp size={24} className="text-gray-400 transition-colors group-hover:text-white" />
                 </TooltipTrigger>
                 <TooltipContent className="h-10 w-fit text-center flex justify-center items-center text-md rounded-lg -translate-y-2 bg-[#0a0a0a] border border-dark-border">
                   <p>Whatsapp</p>

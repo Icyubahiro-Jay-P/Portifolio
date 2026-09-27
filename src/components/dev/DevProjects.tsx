@@ -80,7 +80,12 @@ const DevProjects = () => {
               <div className="absolute top-0 left-0 w-full h-1 transition-transform duration-300 origin-left scale-x-0 bg-neon-cyan group-hover:scale-x-100"></div>
 
               <div className="flex items-start justify-between mb-6">
-                <FolderGit2Icon className="w-10 h-10 text-neon-cyan" />
+                <div className="flex items-center gap-4">
+                  <FolderGit2Icon className="w-10 h-10 text-neon-cyan" />
+                  <span className="font-mono text-xs text-gray-600 tabular-nums">
+                    {String(idx + 1).padStart(2, "0")}
+                  </span>
+                </div>
                 <div className="flex gap-4">
                   <a
                     href={project.links.github}
@@ -109,7 +114,7 @@ const DevProjects = () => {
                 {project.tech.map((tech, i) => (
                   <span
                     key={i}
-                    className="px-3 py-1 font-mono text-xs text-gray-300 border rounded-full bg-white/5 border-white/10"
+                    className="px-3 py-1 font-mono text-xs text-gray-300 border rounded-full bg-white/5 border-white/10 transition-colors duration-200 group-hover:border-neon-cyan/40 group-hover:text-neon-cyan/80"
                   >
                     {tech}
                   </span>
