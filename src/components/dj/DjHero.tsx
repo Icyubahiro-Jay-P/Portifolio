@@ -21,7 +21,7 @@ const DjHero = () => {
   };
 
   return (
-    <section className="relative flex flex-col min-h-[100svh]">
+    <section className="relative flex flex-col min-h-svh">
       <div className="grid flex-1 grid-cols-1 lg:grid-cols-[1.1fr_1fr]">
         {/* Left: the poster */}
         <div className="relative flex flex-col justify-between gap-12 px-6 pt-8 pb-12 md:px-12 lg:pb-16">
