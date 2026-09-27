@@ -61,8 +61,8 @@ import Whatsapp from "@/assets/icons/Whatsapp";
 //           onClick={() => navigate('/dj')}
 //           className={`p-3 rounded-full transition-all ${
 //             !isDev
-//               ? 'bg-neon-pink/20 text-neon-pink neon-box-pink'
-//               : 'text-gray-400 hover:text-neon-pink hover:bg-neon-pink/10'
+//               ? 'bg-neon-clay/20 text-neon-clay neon-box-clay'
+//               : 'text-gray-400 hover:text-neon-clay hover:bg-neon-clay/10'
 //           }`}
 //           title="DJ Den"
 //         >
