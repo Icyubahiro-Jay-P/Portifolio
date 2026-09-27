@@ -132,8 +132,8 @@ const RealmNav = () => {
             onClick={() => navigate("/dj")}
             className={`${
               !isDev
-                ? "bg-neon-pink/20 text-neon-pink neon-box-pink"
-                : "text-gray-400 hover:text-neon-pink hover:bg-neon-pink/20"
+                ? "bg-dj-clay text-dj-soot"
+                : "text-gray-400 hover:text-dj-clay hover:bg-dj-clay/15"
             }`}
           >
             <Tooltip>
