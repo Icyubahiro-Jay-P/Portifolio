@@ -1,0 +1,13 @@
+# DJ PRO JAY
+
+> Portfolio of Irakoze Icyubahiro Jean Pierre (DJ PRO JAY): a Rwandan DJ, music producer and software developer. The site has two realms, one for DJ work and one for software development.
+
+## Pages
+
+- [Portal](https://djprojay.vercel.app/): landing page to choose a realm
+- [DJ realm](https://djprojay.vercel.app/dj): mixes, sets, skills, FAQ and booking contact
+- [Dev realm](https://djprojay.vercel.app/dev): software projects, skills, FAQ and contact
+
+## Optional
+
+- [Sitemap](https://djprojay.vercel.app/sitemap.xml)
