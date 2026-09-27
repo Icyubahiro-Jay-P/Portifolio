@@ -23,9 +23,12 @@ const DjAbout = () => {
             <div className="absolute inset-0 translate-x-5 translate-y-5 bg-dj-soot transition-transform duration-500 group-hover:translate-x-3 group-hover:translate-y-3" />
             <div className="relative overflow-hidden aspect-4/5 bg-dj-clay">
               <img
-                src="jay-p-2.webp"
+                src="/jay-p-2.webp"
                 alt="DJ Pro Jay"
+                width={900}
+                height={900}
                 loading="lazy"
+                decoding="async"
                 className="object-cover object-[50%_20%] w-full h-full grayscale contrast-[1.35] brightness-110 mix-blend-multiply transition-transform duration-700 group-hover:scale-[1.03]"
               />
               <div className="absolute inset-x-0 bottom-0 px-5 py-4 bg-dj-soot">
