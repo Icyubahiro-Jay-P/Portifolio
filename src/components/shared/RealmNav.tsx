@@ -87,7 +87,7 @@ const RealmNav = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 1 }}
-      className="fixed z-50 flex items-center justify-center w-full bottom-6 px-2 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      className="fixed z-50 flex items-center justify-center w-full bottom-6 px-2 overflow-x-auto scrollbar-none [&::-webkit-scrollbar]:hidden"
     >
       <TooltipProvider>
         <Dock
@@ -132,8 +132,8 @@ const RealmNav = () => {
             onClick={() => navigate("/dj")}
             className={`${
               !isDev
-                ? "bg-neon-pink/20 text-neon-pink neon-box-pink"
-                : "text-gray-400 hover:text-neon-pink hover:bg-neon-pink/20"
+                ? "bg-dj-clay text-dj-soot"
+                : "text-gray-400 hover:text-dj-clay hover:bg-dj-clay/15"
             }`}
           >
             <Tooltip>

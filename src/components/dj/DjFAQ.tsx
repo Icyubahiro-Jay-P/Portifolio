@@ -18,11 +18,11 @@ const faqs = [
   },
   {
     q: "Do you travel internationally?",
-    a: "Yes — international bookings are available. Travel, accommodation, and visa costs are to be covered by the promoter or event organiser.",
+    a: "Yes  international bookings are available. Travel, accommodation, and visa costs are to be covered by the promoter or event organiser.",
   },
   {
     q: "Do you offer remix or production services?",
-    a: "Yes. I take on selective remix and original production work. Timelines and fees vary by project — send me your brief and I'll respond with availability.",
+    a: "Yes. I take on selective remix and original production work. Timelines and fees vary by project  send me your brief and I'll respond with availability.",
   },
 ];
 
@@ -30,76 +30,76 @@ const DjFAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="relative px-6 py-24 border-t border-dj-line/60 md:py-32">
-      <div className="max-w-4xl mx-auto">
-        {/* Dev-style header */}
-        <div className="flex items-center gap-4 mb-10">
-          <h2 className="font-dj text-3xl font-black tracking-tight uppercase text-dj-bone md:text-5xl">
-            <span className="text-dj-stone">04.</span> Asked, answered
+    <section className="relative px-6 py-24 bg-dj-bone text-dj-soot md:px-12 md:py-36">
+      <div className="grid grid-cols-1 gap-12 mx-auto max-w-7xl lg:grid-cols-[1fr_1.4fr] lg:gap-24">
+        <div className="lg:sticky lg:top-24 lg:self-start">
+          <span className="block mb-4 text-xs font-bold tracking-[0.35em] uppercase text-dj-clay-deep">
+            FAQ
+          </span>
+          <h2 className="mb-8 font-poster text-[clamp(3.5rem,9vw,7.5rem)] font-black uppercase leading-[0.95]">
+            Asked, answered
           </h2>
-          <div className="flex-1 h-px bg-gradient-to-r from-dj-line to-transparent" />
+          <p className="max-w-xs text-base leading-relaxed text-dj-umber">
+            Common questions answered. For anything else, use the contact form
+            below.
+          </p>
         </div>
 
-        <p className="mb-12 max-w-md font-sans text-sm text-dj-ash">
-          Common questions answered. For anything else, use the contact form
-          below.
-        </p>
-
-        <div className="divide-y divide-dj-line">
+        <div className="border-t-[3px] border-dj-soot">
           {faqs.map((faq, idx) => {
             const open = openIndex === idx;
             return (
-              <m.div
-                key={idx}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.05 }}
-              >
+              <div key={faq.q} className="border-b border-dj-soot/20">
                 <button
                   id={`faq-item-${idx}`}
                   aria-expanded={open}
+                  aria-controls={`faq-panel-${idx}`}
                   onClick={() => setOpenIndex(open ? null : idx)}
-                  className="flex items-center justify-between w-full gap-6 py-6 text-left group"
+                  className="flex items-center justify-between w-full gap-6 py-7 text-left group"
                 >
+                  <span className="flex items-baseline gap-5">
+                    <span className="text-xs font-bold tabular-nums text-dj-clay-deep">
+                      {String(idx + 1).padStart(2, "0")}
+                    </span>
+                    <span className="text-xl font-extrabold leading-snug md:text-2xl">
+                      {faq.q}
+                    </span>
+                  </span>
                   <span
-                    className={`font-dj text-base font-bold transition-colors duration-200 md:text-lg ${
-                      open ? "text-dj-bone" : "text-dj-ash group-hover:text-dj-bone"
+                    className={`flex items-center justify-center w-10 h-10 shrink-0 border-2 transition-colors duration-200 ${
+                      open
+                        ? "bg-dj-clay border-dj-clay"
+                        : "border-dj-soot group-hover:bg-dj-soot group-hover:text-dj-bone"
                     }`}
                   >
-                    {faq.q}
-                  </span>
-                  <m.div
-                    animate={{ rotate: open ? 45 : 0 }}
-                    transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-                    className="flex items-center justify-center w-9 h-9 shrink-0 rounded-full border border-dj-line transition-colors group-hover:border-dj-bone/60"
-                  >
                     <PlusIcon
-                      className={`w-4 h-4 transition-colors duration-200 ${
-                        open ? "text-dj-bone" : "text-dj-stone group-hover:text-dj-bone"
-                      }`}
+                      className={`w-5 h-5 transition-transform duration-300 ${open ? "rotate-45" : ""}`}
                     />
-                  </m.div>
+                  </span>
                 </button>
 
                 <AnimatePresence initial={false}>
                   {open && (
                     <m.div
+                      id={`faq-panel-${idx}`}
+                      role="region"
+                      aria-labelledby={`faq-item-${idx}`}
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.32, ease: [0.04, 0.62, 0.23, 0.98] }}
+                      transition={{
+                        duration: 0.32,
+                        ease: [0.04, 0.62, 0.23, 0.98],
+                      }}
                       className="overflow-hidden"
                     >
-                      <div className="pb-8">
-                        <p className="pl-5 border-l-2 border-dj-stone font-sans text-base leading-relaxed text-dj-ash">
-                          {faq.a}
-                        </p>
-                      </div>
+                      <p className="pb-8 pl-10 text-lg leading-relaxed md:pr-16 text-dj-umber">
+                        {faq.a}
+                      </p>
                     </m.div>
                   )}
                 </AnimatePresence>
-              </m.div>
+              </div>
             );
           })}
         </div>
