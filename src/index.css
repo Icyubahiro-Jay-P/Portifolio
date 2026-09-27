@@ -1,5 +1,5 @@
 /* FONT IMPORTS - MUST STAY AT THE TOP */
-@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:wght@400;500;700&family=Big+Shoulders+Display:wght@600;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:wght@400;500;700&family=Big+Shoulders+Display:wght@600;800;900&family=Orbitron:wght@400;500;700;900&display=swap");
 
 /* TAILWIND v4 */
 @import "tailwindcss";
@@ -82,6 +82,11 @@
 
 /* ============ DJ REALM ============ */
 @layer utilities {
+  /* soft clay glow for the Portal's DJ card */
+  .dj-clay-border {
+    border-color: color-mix(in srgb, var(--color-dj-clay) 75%, transparent);
+    box-shadow: 0 0 14px rgba(210, 87, 46, 0.25);
+  }
   /* outlined poster type */
   .dj-outline {
     color: transparent;
