@@ -27,7 +27,11 @@ const DevAbout = () => {
           >
             <div className="absolute inset-0 transition-transform translate-x-4 translate-y-4 bg-neon-cyan -z-10 group-hover:translate-x-2 group-hover:translate-y-2"></div>
             <img
-              src="jay-p.webp"
+              src="/jay-p.webp"
+              width={899}
+              height={900}
+              loading="lazy"
+              decoding="async"
               alt="Irakoze Icyubahiro Jean Pierre - Developer"
               className="object-cover w-full transition-all duration-500 border aspect-square grayscale group-hover:grayscale-0 border-dark-border"
             />
