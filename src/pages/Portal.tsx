@@ -112,17 +112,17 @@ const Portal = () => {
           onClick={() => navigate("/dj")}
           className="flex-1 cursor-pointer group"
         >
-          <div className="relative flex flex-col items-center justify-center overflow-hidden transition-all duration-500 border-2 h-70 md:h-95 border-dark-border group-hover:neon-border-pink bg-dark-surface/80 backdrop-blur-sm">
+          <div className="relative flex flex-col items-center justify-center overflow-hidden transition-all duration-500 border-2 h-70 md:h-95 border-dark-border group-hover:neon-border-clay bg-dark-surface/80 backdrop-blur-sm">
             {/* Hover Effects */}
-            <div className="absolute inset-0 transition-opacity duration-500 opacity-0 bg-neon-pink/5 group-hover:opacity-100"></div>
+            <div className="absolute inset-0 transition-opacity duration-500 opacity-0 bg-neon-clay/5 group-hover:opacity-100"></div>
 
             <div className="relative z-10 flex flex-col items-center">
-              <Disc3Icon className="w-16 h-16 mb-6 text-gray-600 transition-colors duration-500 group-hover:text-neon-pink" />
-              <h2 className="text-3xl font-bold tracking-wider text-gray-400 transition-all duration-500 font-display group-hover:text-white group-hover:neon-text-pink">
+              <Disc3Icon className="w-16 h-16 mb-6 text-gray-600 transition-colors duration-500 group-hover:text-neon-clay" />
+              <h2 className="text-3xl font-bold tracking-wider text-gray-400 transition-all duration-500 font-display group-hover:text-white group-hover:neon-text-clay">
                 DJ DEN
               </h2>
               <div className="flex gap-4 mt-8 transition-opacity duration-500 opacity-0 group-hover:opacity-100">
-                <HeadphonesIcon className="w-6 h-6 text-neon-pink" />
+                <HeadphonesIcon className="w-6 h-6 text-neon-clay" />
               </div>
             </div>
           </div>
