@@ -1,28 +1,40 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-KMHJ18LNPT"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-KMHJ18LNPT");
-    </script>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vinyl.png" />
+    <link rel="icon" type="image/png" href="/vinyl.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
       content="DJ PRO JAY is a Rwandan DJ and music producer known for his energetic performances and unique sound. With a passion for music that started at a young age, DJ PRO JAY has become a prominent figure in the Rwandan music scene, captivating audiences with his dynamic mixes and infectious beats."
     />
     <title>DJ PRO JAY</title>
+
+    <!-- Google tag (gtag.js): loaded on first interaction so it stays off the critical path -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-KMHJ18LNPT");
+
+      (function () {
+        var events = ["pointerdown", "keydown", "scroll", "touchstart"];
+        function load() {
+          events.forEach(function (e) {
+            removeEventListener(e, load);
+          });
+          var s = document.createElement("script");
+          s.async = true;
+          s.src = "https://www.googletagmanager.com/gtag/js?id=G-KMHJ18LNPT";
+          document.head.appendChild(s);
+        }
+        events.forEach(function (e) {
+          addEventListener(e, load, { once: true, passive: true });
+        });
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

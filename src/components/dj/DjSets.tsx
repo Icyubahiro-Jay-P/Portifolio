@@ -8,7 +8,9 @@ const sets = [
     genre: "Techno / Peak Time",
     duration: "1:02:45",
     plays: "12.4K",
-    image: "Mix 1.png",
+    image: "/mix-1.webp",
+    width: 600,
+    height: 450,
     link: "https://soundcloud.com/djprojay",
   },
   {
@@ -17,7 +19,9 @@ const sets = [
     genre: "Hard Techno / Industrial",
     duration: "2:15:30",
     plays: "8.9K",
-    image: "Mix 2.png",
+    image: "/mix-2.webp",
+    width: 736,
+    height: 917,
     link: "https://soundcloud.com/djprojay",
   },
   {
@@ -26,7 +30,9 @@ const sets = [
     genre: "Deep House / Melodic",
     duration: "0:58:20",
     plays: "15.2K",
-    image: "Mix 3.png",
+    image: "/mix-3.webp",
+    width: 736,
+    height: 1104,
     link: "https://soundcloud.com/djprojay",
   },
   {
@@ -35,7 +41,9 @@ const sets = [
     genre: "Tech House",
     duration: "1:30:00",
     plays: "22.1K",
-    image: "Mix 4.png",
+    image: "/mix-4.webp",
+    width: 600,
+    height: 400,
     link: "https://soundcloud.com/djprojay",
   },
 ];
@@ -99,7 +107,10 @@ const DjSets = () => {
                   <img
                     src={set.image}
                     alt={set.title}
+                    width={set.width}
+                    height={set.height}
                     loading="lazy"
+                    decoding="async"
                     className="object-cover w-full h-full grayscale contrast-125 mix-blend-multiply transition duration-700 group-hover:grayscale-0 group-hover:contrast-100 group-hover:mix-blend-normal"
                   />
                   <span className="absolute bottom-0 left-0 flex items-center justify-center w-14 h-14 bg-dj-clay text-dj-soot translate-y-full transition-transform duration-300 group-hover:translate-y-0 group-focus-visible:translate-y-0">
