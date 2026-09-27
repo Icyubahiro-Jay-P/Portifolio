@@ -39,7 +39,7 @@ const Portal = () => {
         }}
       />
 
-      <div className="z-10 text-center mb-14 md:mb-10">
+      <div className="z-10 text-center mb-12 md:mb-8">
         <m.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -72,7 +72,7 @@ const Portal = () => {
           aria-label="Enter Dev Matrix"
           className="flex-1 cursor-pointer group focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-neon-cyan"
         >
-          <div className="relative flex flex-col items-center justify-center overflow-hidden transition-all duration-500 border-2 h-70 md:h-95 border-dark-border group-hover:neon-border-cyan bg-dark-surface/80 backdrop-blur-sm">
+          <div className="relative flex flex-col items-center justify-center overflow-hidden transition-all duration-500 border-2 h-70 md:h-85 border-dark-border group-hover:neon-border-cyan bg-dark-surface/80 backdrop-blur-sm">
             {/* ambient cyan fill on hover */}
             <div className="absolute inset-0 transition-opacity duration-500 opacity-0 bg-neon-cyan/5 group-hover:opacity-100" />
 
@@ -118,7 +118,7 @@ const Portal = () => {
           aria-label="Enter DJ Den"
           className="flex-1 cursor-pointer group focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-dj-clay"
         >
-          <div className="relative flex flex-col items-center justify-center overflow-hidden transition-all duration-500 border-2 h-70 md:h-95 border-dark-border group-hover:dj-clay-border bg-dark-surface/80 backdrop-blur-sm">
+          <div className="relative flex flex-col items-center justify-center overflow-hidden transition-all duration-500 border-2 h-70 md:h-85 border-dark-border group-hover:dj-clay-border bg-dark-surface/80 backdrop-blur-sm">
             {/* ambient clay fill + rising heat from the floor */}
             <div className="absolute inset-x-0 bottom-0 transition-opacity duration-500 opacity-0 h-2/3 group-hover:opacity-100"
               style={{
