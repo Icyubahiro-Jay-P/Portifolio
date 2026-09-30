@@ -1,45 +1,69 @@
 import * as m from "motion/react-m";
-import { ExternalLinkIcon, GithubIcon, FolderGit2Icon } from "lucide-react";
-const projects = [
+import {
+  ExternalLinkIcon,
+  GithubIcon,
+  FolderGit2Icon,
+  LockIcon,
+} from "lucide-react";
+
+type Project = {
+  title: string;
+  description: string;
+  tech: string[];
+  visibility: "public" | "private";
+  github?: string;
+  live?: string;
+};
+
+const projects: Project[] = [
   {
-    title: "MY PORTIFOLIO",
+    title: "MYDOCK LINUX",
     description:
-      "My personal portifolio that showcases my skills, projects, and achievements in the fields of both web development and being a dj.",
-    tech: ["React", "TypeScript", "TailwindCSS", "Shadcn"],
-    links: {
-      github: "https://github.com/Icyubahiro-Jay-P/Portifolio",
-      live: "https://djprojay.vercel.app",
-    },
+      "A macOS-style dock, Finder bar, Launchpad, Stage Manager and genie minimize for GNOME Shell 46-48 on X11 and Wayland.",
+    tech: ["GNOME Shell", "JavaScript", "Python", "Shell"],
+    visibility: "public",
+    github: "https://github.com/Icyubahiro-Jay-P/MyDock-Linux",
   },
   {
-    title: "BEST DECOR v 3.0",
+    title: "MY PORTFOLIO",
     description:
-      "A high-performance system that allows users to manage their rental products efficiently.",
-    tech: ["React JS", "Express JS", "Node.js", "MongoDB"],
-    links: {
-      github: "https://github.com/Icyubahiro-Jay-P/BEST-DECOR-v3",
-      live: "#",
-    },
+      "My personal portfolio that showcases my skills, projects, and achievements in the fields of both web development and being a dj.",
+    tech: ["React", "TypeScript", "TailwindCSS", "Shadcn"],
+    visibility: "public",
+    github: "https://github.com/Icyubahiro-Jay-P/Portifolio",
+    live: "https://djprojay.vercel.app",
+  },
+  {
+    title: "SOCIETE NIANDAKORO MINING COMPANY",
+    description:
+      "A French-language storefront for certified Guinean gold ingots from 1g to 1kg, with certificate verification and WhatsApp ordering.",
+    tech: ["Next.js", "TypeScript", "TailwindCSS"],
+    visibility: "private",
+    live: "https://societe-niandakoro-mining-company.com",
+  },
+  {
+    title: "AIDO GROUP COMPANY LIMITED",
+    description:
+      "An Inventory Management System that monitors product sales and tracks profits and losses with real-time data.",
+    tech: ["React", "Express", "MongoDB", "TailwindCSS"],
+    visibility: "private",
+    live: "https://aido-group-company-ltd.vercel.app",
+  },
+  {
+    title: "SAINT VINCENT PALLOTTI MASAKA",
+    description:
+      "The official website of a Catholic school in Kigali: programs from Day Care to TVET, Cambridge and National curricula, admissions, gallery and news.",
+    tech: ["Next.js", "TypeScript", "TailwindCSS"],
+    visibility: "private",
+    live: "https://stvincentpallottimasaka.vercel.app",
   },
   {
     title: "THERABRIDGE",
     description:
-      "This is an open source platform to help people with mental problems get the therapy they can not afford through secure channels.",
+      "A platform that helps people with mental health challenges get the therapy they cannot afford through secure channels.",
     tech: ["React JS", "TailwindCSS", "Shadcn", "Magic UI"],
-    links: {
-      github: "https://github.com/Icyubahiro-Jay-P/therabridge-frontend",
-      live: "https://therabridge.vercel.app",
-    },
-  },
-  {
-    title: "INVENTORY MANAGEMENT SYSTEM",
-    description:
-      "This is an Inventory Management System the monitors product sale, tracks profits and losses with real-time data.",
-    tech: ["React", "Express", "MongoDB", "TailwindCSS"],
-    links: {
-      github: "https://github.com/Icyubahiro-Jay-P/aido-frontend",
-      live: "https://aido-group-company-ltd.vercel.app",
-    },
+    visibility: "private",
+    live: "https://therabridge.vercel.app",
   },
 ];
 
@@ -86,19 +110,39 @@ const DevProjects = () => {
                     {String(idx + 1).padStart(2, "0")}
                   </span>
                 </div>
-                <div className="flex gap-4">
-                  <a
-                    href={project.links.github}
-                    className="text-gray-400 transition-colors hover:text-white"
-                  >
-                    <GithubIcon className="w-6 h-6" />
-                  </a>
-                  <a
-                    href={project.links.live}
-                    className="text-gray-400 transition-colors hover:text-neon-cyan"
-                  >
-                    <ExternalLinkIcon className="w-6 h-6" />
-                  </a>
+                <div className="flex items-center gap-4">
+                  {project.visibility === "public" ? (
+                    <span className="px-3 py-1 font-mono text-xs border rounded-full text-neon-cyan border-neon-cyan/40 bg-neon-cyan/5">
+                      OPEN SOURCE
+                    </span>
+                  ) : (
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 font-mono text-xs text-gray-400 border rounded-full bg-white/5 border-white/10">
+                      <LockIcon className="w-3 h-3" />
+                      PRIVATE
+                    </span>
+                  )}
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${project.title} source code on GitHub`}
+                      className="text-gray-400 transition-colors hover:text-white"
+                    >
+                      <GithubIcon className="w-6 h-6" />
+                    </a>
+                  )}
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Visit ${project.title} live site`}
+                      className="text-gray-400 transition-colors hover:text-neon-cyan"
+                    >
+                      <ExternalLinkIcon className="w-6 h-6" />
+                    </a>
+                  )}
                 </div>
               </div>
 
