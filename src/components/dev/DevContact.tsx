@@ -60,7 +60,7 @@ const DevContact = () => {
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center gap-4 mb-16">
           <h2 className="text-3xl font-bold tracking-wider text-white font-display md:text-5xl">
-            <span className="text-neon-cyan">05.</span> ESTABLISH_CONNECTION
+            <span className="text-neon-cyan">05.</span> ESTABLISH_<wbr />CONNECTION
           </h2>
           <div className="flex-1 h-px bg-linear-to-r from-neon-cyan/50 to-transparent"></div>
         </div>
@@ -80,22 +80,22 @@ const DevContact = () => {
             <div className="space-y-6">
               <a
                 href="mailto:icyubahiro1980@gmail.com"
-                className="flex items-center gap-6 p-4 transition-colors border group border-dark-border hover:border-neon-cyan bg-dark-surface"
+                className="flex items-center gap-3 p-4 transition-colors border sm:gap-6 group border-dark-border hover:border-neon-cyan bg-dark-surface"
               >
                 <div className="p-4 transition-colors border bg-dark border-dark-border group-hover:border-neon-cyan">
                   <MailIcon className="w-6 h-6 text-gray-400 transition-colors group-hover:text-neon-cyan" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <div className="mb-1 font-mono text-xs text-gray-500">
                     EMAIL
                   </div>
                   <div className="font-sans text-white transition-colors group-hover:text-neon-cyan">
-                    icyubahiro1980@gmail.com
+                    icyubahiro1980<wbr />@gmail.com
                   </div>
                 </div>
               </a>
 
-              <div className="flex gap-4">
+              <div className="flex gap-2 sm:gap-4">
                 {[
                   {
                     icon: GithubIcon,
@@ -118,7 +118,7 @@ const DevContact = () => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex flex-col items-center justify-center flex-1 p-6 transition-colors border group border-dark-border hover:border-neon-cyan bg-dark-surface"
+                    className="flex flex-col items-center justify-center flex-1 p-3 transition-colors border sm:p-6 group border-dark-border hover:border-neon-cyan bg-dark-surface"
                   >
                     <social.icon className="w-8 h-8 mb-3 text-gray-400 transition-colors group-hover:text-neon-cyan" />
                     <span className="font-mono text-xs text-gray-500 transition-colors group-hover:text-white">
