@@ -31,7 +31,7 @@ const DevRealm = () => {
         duration: 0.5,
         ease: [0.22, 1, 0.36, 1],
       }}
-      className="relative min-h-screen text-white bg-dark dev-theme"
+      className="relative min-h-screen overflow-x-clip text-white bg-dark dev-theme"
     >
       <ScrollProgress className="h-1 bg-neon-cyan" />
 
